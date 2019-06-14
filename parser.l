@@ -486,15 +486,15 @@ lexp:   strcat(newtoken, "e");
         case 13:    /* n_, PTCP_1 */
             yylval = mknode0(strjoin(newtoken,
                 ": participle, valence=1, level=0"));
-            return ADJ_1;
-        case 14:    /* ni, PTCP_1 */
+            return PTCP_1;
+        case 14:    /* ni, PTCPI_1 */
             yylval = mknode0(strjoin(newtoken,
                 ": participle, valence=1, level=1"));
-            return ADJI_1;
-        case 15:    /* nu, PTCP_1 */
+            return PTCPI_1;
+        case 15:    /* nu, PTCPU_1 */
             yylval = mknode0(strjoin(newtoken,
                 ": participle, valence=1, level=2"));
-            return ADJU_1;
+            return PTCPU_1;
     }
     err_num();
     return -1;
