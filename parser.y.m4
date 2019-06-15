@@ -45,505 +45,354 @@ int printtree_level = 0;
 %}
 
 %start START
-%token V_0 V_1 V_2
-%token ART ARTI ARTU
-%token CONJSENT CONJARG CONJARGI CONJARGU CONJADJ CONJADJI CONJADJU
-%token INF_0 INF_1 INF_2 INFI_0 INFI_1 INFI_2 INFU_0
-%token N_1 N_2 NI_1 NI_2 NU_1
-%token ADJ_1 ADJ_2 ADJI_1 ADJI_2 ADJU_1
-%token ADV_1 ADV_2 ADVI_1 ADVI_2 ADVU_1
-%token PTCP_1 PTCP_2 PTCPI_1 PTCPI_2 PTCPU_1
-%token CONJADV CONJADVI CONJADVU
-%token CONJPTCP CONJPTCPI CONJPTCPU
+%token V_V0 V_V1 V_V2
+%token ART
+%token CONJ_SENT CONJ_ARG CONJ_ARG_L1 CONJ_ARG_L2 CONJ_ADJ CONJ_ADJ_L1 CONJ_ADJ_L2
+%token CONJ_ADV CONJ_ADV_L1 CONJ_ADV_L2
+%token CONJ_PTCP CONJ_PTCP_L1 CONJ_PTCP_L2
+%token INF_V0 INF_V1 INF_V2 INF_L1_V0 INF_L1_V1 INF_L1_V2 INF_L2_V0
+%token N_V1 N_V2 N_L1_V1 N_L1_V2 N_L2_V1
+%token ADJ_V1 ADJ_V2 ADJ_L1_V1 ADJ_L1_V2 ADJ_L2_V1
+%token ADV_V1 ADV_V2 ADV_L1_V1 ADV_L1_V2 ADV_L2_V1
+%token PTCP_V1 PTCP_V2 PTCP_L1_V1 PTCP_L1_V2 PTCP_L2_V1
 
 %%
 
-START   : text {
-                printtree($1);
-            }
-        ;
+START
+    : text { printtree($1); }
+    ;
 
-text    : sentence {                            /* s */
-                NODE1("[text]");
-            }
-        | sentence text1 {                      /* s(cs)+ */
-                NODE2("[text]");
-            }
-        | text1 {                               /* (cs)+ */
-                NODE1("[text]");
-            }
-        ;
+text
+    : sentence       { NODE1("[text]"); } /* s      */
+    | sentence aux30 { NODE2("[text]"); } /* s(cs)+ */
+    | aux30          { NODE1("[text]"); } /* (cs)+  */
+    ;
 
-text1
-    : CONJSENT sentence {
-            NODE2(""); /* token "" is dummy */
-        }
-    | text1 CONJSENT sentence {
-            NODE3("");
-        }
+aux30
+    : CONJ_SENT sentence       { NODE2(""); } /* token "" is dummy */
+    | aux30 CONJ_SENT sentence { NODE3(""); }
     ;
 
 sentence
-    : adverb_phrase V_0 adverb_phrase {
+    : adverb_phrase V_V0 adverb_phrase {
             NODE3("[sentence]");
         }
-    | adverb_phrase argument adverb_phrase V_1 adverb_phrase {
+    | adverb_phrase argument adverb_phrase V_V1 adverb_phrase {
             NODE5("[sentence]");
         }
-    | adverb_phrase argument adverb_phrase V_2 adverb_phrase argument adverb_phrase {
+    | adverb_phrase argument adverb_phrase V_V2 adverb_phrase argument adverb_phrase {
             NODE7("[sentence]");
         }
     ;
 
 argument
-    : argument0 {                           /* a */
-            $$ = $1;
-        }
-    | argument CONJARG argument0 {          /* a(ca)+ */
-            NODE3("");
-        }
+    : aux0                   { $$ = $1; }   /* a      */
+    | argument CONJ_ARG aux0 { NODE3(""); } /* a(ca)+ */
     ;
 
-argument0
-    : ART noun_phrase       { NODE2(`"[argument, level=0]"'); }
+aux0
+    : ART noun_phrase       { NODE2(`"[argument, level=0]"'); } /* `quoted' because m4 splits strings with a space */
     | ART infinitive_phrase { NODE2(`"[argument, level=0]"'); }
+    | noun_phrase           { NODE1(`"[argument, level=0]"'); }
+    | infinitive_phrase     { NODE1(`"[argument, level=0]"'); }
     ;
 
-argument_i
-    : argument_i0 {                           /* a */
-            $$ = $1;
-        }
-    | argument_i CONJARGI argument_i0 {          /* a(ca)+ */
-            NODE3("");
-        }
+argument_L1
+    : aux1                         { $$ = $1; }   /* a      */
+    | argument_L1 CONJ_ARG_L1 aux1 { NODE3(""); } /* a(ca)+ */
     ;
 
-argument_i0
-    : ARTI noun_i_phrase       { NODE2(`"[argument, level=1]"'); }
-    | ARTI infinitive_i_phrase { NODE2(`"[argument, level=1]"'); }
+aux1
+    : ART noun_L1_phrase       { NODE2(`"[argument, level=1]"'); }
+    | ART infinitive_L1_phrase { NODE2(`"[argument, level=1]"'); }
+    | noun_L1_phrase           { NODE1(`"[argument, level=1]"'); }
+    | infinitive_L1_phrase     { NODE1(`"[argument, level=1]"'); }
     ;
 
-argument_u
-    : argument_u0 {                           /* a */
-            $$ = $1;
-        }
-    | argument_u CONJARGU argument_u0 {          /* a(ca)+ */
-            NODE3("");
-        }
+argument_L2
+    : aux2                         { $$ = $1; }   /* a      */
+    | argument_L2 CONJ_ARG_L2 aux2 { NODE3(""); } /* a(ca)+ */
     ;
 
-argument_u0
-    : ARTU noun_u_phrase       { NODE2(`"[argument, level=2]"'); }
-    | ARTU infinitive_u_phrase { NODE2(`"[argument, level=2]"'); }
+aux2
+    : ART noun_L2_phrase       { NODE2(`"[argument, level=2]"'); }
+    | ART infinitive_L2_phrase { NODE2(`"[argument, level=2]"'); }
+    | noun_L2_phrase           { NODE1(`"[argument, level=2]"'); }
+    | infinitive_L2_phrase     { NODE1(`"[argument, level=2]"'); }
     ;
 
 noun_phrase
-    : N_1 participle_phrase adjective_phrase {
+    : N_V1 participle_phrase adjective_phrase {
             NODE3(`"[noun phrase, level=0]"');
         }
-    | N_2 participle_phrase argument_i adjective_phrase {
+    | N_V2 participle_phrase argument_L1 adjective_phrase {
             NODE4(`"[noun phrase, level=0]"');
         }
     ;
 
-noun_i_phrase
-    : NI_1 participle_i_phrase adjective_i_phrase {
+noun_L1_phrase
+    : N_L1_V1 participle_L1_phrase adjective_L1_phrase {
             NODE3(`"[noun phrase, level=1]"');
         }
-    | NI_2 participle_i_phrase argument_u adjective_i_phrase {
+    | N_L1_V2 participle_L1_phrase argument_L2 adjective_L1_phrase {
             NODE4(`"[noun phrase, level=1]"');
         }
     ;
 
-noun_u_phrase
-    : NU_1 participle_u_phrase adjective_u_phrase { NODE3(`"[noun phrase, level=2]"'); }
+noun_L2_phrase
+    : N_L2_V1 participle_L2_phrase adjective_L2_phrase { NODE3(`"[noun phrase, level=2]"'); }
     ;
 
 infinitive_phrase
-    : INF_0 participle_phrase adjective_phrase {
+    : INF_V0 participle_phrase adjective_phrase {
             NODE3(`"[infinitive phrase, level=0]"');
         }
-    | INF_1 participle_phrase argument_i adjective_phrase {
+    | INF_V1 participle_phrase argument_L1 adjective_phrase {
             NODE4(`"[infinitive phrase, level=0]"');
         }
-    | INF_2 participle_phrase argument_i argument_i adjective_phrase {
+    | INF_V2 participle_phrase argument_L1 argument_L1 adjective_phrase {
             NODE5(`"[infinitive phrase, level=0]"');
         }
     ;
 
-infinitive_i_phrase
-    : INFI_0 participle_i_phrase adjective_i_phrase {
+infinitive_L1_phrase
+    : INF_L1_V0 participle_L1_phrase adjective_L1_phrase {
             NODE3(`"[infinitive phrase, level=1]"');
         }
-    | INFI_1 participle_i_phrase argument_u adjective_i_phrase {
+    | INF_L1_V1 participle_L1_phrase argument_L2 adjective_L1_phrase {
             NODE4(`"[infinitive phrase, level=1]"');
         }
-    | INFI_2 participle_i_phrase argument_u argument_u adjective_i_phrase {
+    | INF_L1_V2 participle_L1_phrase argument_L2 argument_L2 adjective_L1_phrase {
             NODE5(`"[infinitive phrase, level=1]"');
         }
     ;
 
-infinitive_u_phrase
-    : INFU_0 participle_u_phrase adjective_u_phrase {
+infinitive_L2_phrase
+    : INF_L2_V0 participle_L2_phrase adjective_L2_phrase {
             NODE3(`"[infinitive phrase, level=2]"');
         }
     ;
 
 adjective_phrase
-    : /* empty */ {                                     /* () */
-            $$ = NULL;
-        }
-    | adjective_phrase1 {                               /* a+ */
-            $$ = $1;
-        }
-    | adjective_phrase0 adjective_phrase2 {             /* a(ca)+ */
-            NODE2("");
-        }
-    | CONJADJ adjective_phrase0 adjective_phrase2 {     /* ca(ca)+ */
-            NODE3("");
-        }
+    : /* empty */        { $$ = NULL; } /* ()      */
+    | aux3               { $$ = $1; }   /* a+      */
+    | aux5 aux4          { NODE2(""); } /* a(ca)+  */
+    | CONJ_ADJ aux5 aux4 { NODE3(""); } /* ca(ca)+ */
     ;
 
-adjective_phrase1
-    : adjective_phrase0                     { $$ = $1; }
-    | adjective_phrase1 adjective_phrase0   { NODE2(""); }
+aux3
+    : aux5      { $$ = $1; }
+    | aux3 aux5 { NODE2(""); }
     ;
 
-adjective_phrase2
-    : CONJADJ adjective_phrase0 {
-            NODE2("");
-        }
-    | adjective_phrase2 CONJADJ adjective_phrase0 {
-            NODE3("");
-        }
+aux4 
+    : CONJ_ADJ aux5      { NODE2(""); }
+    | aux4 CONJ_ADJ aux5 { NODE3(""); }
     ;
 
-adjective_phrase0
-    : ADJ_1 participle_phrase {
+aux5 
+    : ADJ_V1 participle_phrase {
             NODE2(`"[adjective phrase, level=0]"');
         }
-    | ADJ_2 participle_phrase argument_i {
+    | ADJ_V2 participle_phrase argument_L1 {
             NODE3(`"[adjective phrase, level=0]"');
         }
     ;
 
-adjective_i_phrase
-    : /* empty */ {                                         /* () */
-            $$ = NULL;
-        }
-    | adjective_i_phrase1 {                                 /* a+ */
-            $$ = $1;
-        }
-    | adjective_i_phrase0 adjective_i_phrase2 {             /* a(ca)+ */
-            NODE2("");
-        }
-    | CONJADJI adjective_i_phrase0 adjective_i_phrase2 {    /* ca(ca)+ */
-            NODE3("");
-        }
+adjective_L1_phrase
+    : /* empty */           { $$ = NULL; } /* ()      */
+    | aux6                  { $$ = $1; }   /* a+      */
+    | aux8 aux7             { NODE2(""); } /* a(ca)+  */
+    | CONJ_ADJ_L1 aux8 aux7 { NODE3(""); } /* ca(ca)+ */
     ;
 
-adjective_i_phrase1
-    : adjective_i_phrase0 {
-            $$ = $1;
-        }
-    | adjective_i_phrase1 adjective_i_phrase0 {
-            NODE2("");
-        }
+aux6 
+    : aux8      { $$ = $1; }
+    | aux6 aux8 { NODE2(""); }
     ;
 
-adjective_i_phrase2
-    : CONJADJI adjective_i_phrase0 {
-            NODE2("");
-        }
-    | adjective_i_phrase2 CONJADJI adjective_i_phrase0 {
-            NODE3("");
-        }
+aux7 
+    : CONJ_ADJ_L1 aux8   { NODE2(""); }
+    | aux7 CONJ_ADJ_L1 aux8 { NODE3(""); }
     ;
 
-adjective_i_phrase0
-    : ADJI_1 participle_i_phrase {
+aux8
+    : ADJ_L1_V1 participle_L1_phrase {
             NODE2(`"[adjective phrase, level=1]"');
         }
-    | ADJI_2 participle_i_phrase argument_u {
+    | ADJ_L1_V2 participle_L1_phrase argument_L2 {
             NODE3(`"[adjective phrase, level=1]"');
         }
     ;
 
-adjective_u_phrase
-    : /* empty */ {                                         /* () */
-            $$ = NULL;
-        }
-    | adjective_u_phrase1 {                                 /* a+ */
-            $$ = $1;
-        }
-    | adjective_u_phrase0 adjective_u_phrase2 {             /* a(ca)+ */
-            NODE2("");
-        }
-    | CONJADJU adjective_u_phrase0 adjective_u_phrase2 {    /* ca(ca)+ */
-            NODE3("");
-        }
+adjective_L2_phrase
+    : /* empty */             { $$ = NULL; } /* ()      */
+    | aux9                    { $$ = $1; }   /* a+      */
+    | aux11 aux10             { NODE2(""); } /* a(ca)+  */
+    | CONJ_ADJ_L2 aux11 aux10 { NODE3(""); } /* ca(ca)+ */
     ;
 
-adjective_u_phrase1
-    : adjective_u_phrase0 {
-            $$ = $1;
-        }
-    | adjective_u_phrase1 adjective_u_phrase0 {
-            NODE2("");
-        }
+aux9
+    : aux11      { $$ = $1; }
+    | aux9 aux11 { NODE2(""); }
     ;
 
-adjective_u_phrase2
-    : CONJADJU adjective_u_phrase0 {
-            NODE2("");
-        }
-    | adjective_u_phrase2 CONJADJU adjective_u_phrase0 {
-            NODE3("");
-        }
+aux10
+    : CONJ_ADJ_L2 aux11       { NODE2(""); }
+    | aux10 CONJ_ADJ_L2 aux11 { NODE3(""); }
     ;
 
-adjective_u_phrase0
-    : ADJU_1 participle_u_phrase {
+aux11
+    : ADJ_L2_V1 participle_L2_phrase {
             NODE2(`"[adjective phrase, level=2]"');
         }
     ;
 
 adverb_phrase
-    : /* empty */ {                                     /* () */
-            $$ = NULL;
-        }
-    | adverb_phrase1 {                               /* a+ */
-            $$ = $1;
-        }
-    | adverb_phrase0 adverb_phrase2 {             /* a(ca)+ */
-            NODE2("");
-        }
-    | CONJADV adverb_phrase0 adverb_phrase2 {     /* ca(ca)+ */
-            NODE3("");
-        }
+    : /* empty */          { $$ = NULL; } /* ()      */
+    | aux12                { $$ = $1; }   /* a+      */
+    | aux14 aux13          { NODE2(""); } /* a(ca)+  */
+    | CONJ_ADV aux14 aux13 { NODE3(""); } /* ca(ca)+ */
+            
     ;
 
-adverb_phrase1
-    : adverb_phrase0                     { $$ = $1; }
-    | adverb_phrase1 adverb_phrase0   { NODE2(""); }
+aux12
+    : aux14       { $$ = $1; }
+    | aux12 aux14 { NODE2(""); }
     ;
 
-adverb_phrase2
-    : CONJADV adverb_phrase0 {
-            NODE2("");
-        }
-    | adverb_phrase2 CONJADV adverb_phrase0 {
-            NODE3("");
-        }
+aux13
+    : CONJ_ADV aux14       { NODE2(""); }
+    | aux13 CONJ_ADV aux14 { NODE3(""); }
     ;
 
-adverb_phrase0
-    : ADV_1 adverb_i_phrase {
+aux14
+    : ADV_V1 adverb_L1_phrase {
             NODE1(`"[adverb phrase, level=0]"');
         }
-    | ADV_2 adverb_i_phrase argument_i {
+    | ADV_V2 adverb_L1_phrase argument_L1 {
             NODE2(`"[adverb phrase, level=0]"');
         }
     ;
 
-adverb_i_phrase
-    : /* empty */ {                                         /* () */
-            $$ = NULL;
-        }
-    | adverb_i_phrase1 {                                 /* a+ */
-            $$ = $1;
-        }
-    | adverb_i_phrase0 adverb_i_phrase2 {             /* a(ca)+ */
-            NODE2("");
-        }
-    | CONJADVI adverb_i_phrase0 adverb_i_phrase2 {    /* ca(ca)+ */
-            NODE3("");
-        }
+adverb_L1_phrase
+    : /* empty */             { $$ = NULL; } /* ()      */
+    | aux15                   { $$ = $1; }   /* a+      */
+    | aux17 aux16             { NODE2(""); } /* a(ca)+  */
+    | CONJ_ADV_L1 aux17 aux16 { NODE3(""); } /* ca(ca)+ */
     ;
 
-adverb_i_phrase1
-    : adverb_i_phrase0 {
-            $$ = $1;
-        }
-    | adverb_i_phrase1 adverb_i_phrase0 {
-            NODE2("");
-        }
+aux15
+    : aux17       { $$ = $1; }
+    | aux15 aux17 { NODE2(""); }
     ;
 
-adverb_i_phrase2
-    : CONJADVI adverb_i_phrase0 {
-            NODE2("");
-        }
-    | adverb_i_phrase2 CONJADVI adverb_i_phrase0 {
-            NODE3("");
-        }
+aux16
+    : CONJ_ADV_L1 aux17       { NODE2(""); }
+    | aux16 CONJ_ADV_L1 aux17 { NODE3(""); }
     ;
 
-adverb_i_phrase0
-    : ADVI_1 adverb_u_phrase {
+aux17
+    : ADV_L1_V1 adverb_L2_phrase {
             NODE1(`"[adverb phrase, level=1]"');
         }
-    | ADVI_2 adverb_u_phrase argument_u {
+    | ADV_L1_V2 adverb_L2_phrase argument_L2 {
             NODE2(`"[adverb phrase, level=1]"');
         }
     ;
 
-adverb_u_phrase
-    : /* empty */ {                                         /* () */
-            $$ = NULL;
-        }
-    | adverb_u_phrase1 {                                 /* a+ */
-            $$ = $1;
-        }
-    | adverb_u_phrase0 adverb_u_phrase2 {             /* a(ca)+ */
-            NODE2("");
-        }
-    | CONJADVU adverb_u_phrase0 adverb_u_phrase2 {    /* ca(ca)+ */
-            NODE3("");
-        }
+adverb_L2_phrase
+    : /* empty */             { $$ = NULL; } /* ()      */
+    | aux18                   { $$ = $1; }   /* a+      */
+    | aux20 aux19             { NODE2(""); } /* a(ca)+  */
+    | CONJ_ADV_L2 aux20 aux19 { NODE3(""); } /* ca(ca)+ */
     ;
 
-adverb_u_phrase1
-    : adverb_u_phrase0 {
-            $$ = $1;
-        }
-    | adverb_u_phrase1 adverb_u_phrase0 {
-            NODE2("");
-        }
+aux18
+    : aux20       { $$ = $1; }
+    | aux18 aux20 { NODE2(""); }
     ;
 
-adverb_u_phrase2
-    : CONJADVU adverb_u_phrase0 {
-            NODE2("");
-        }
-    | adverb_u_phrase2 CONJADVU adverb_u_phrase0 {
-            NODE3("");
-        }
+aux19
+    : CONJ_ADV_L2 aux20       { NODE2(""); }
+    | aux19 CONJ_ADV_L2 aux20 { NODE3(""); }
     ;
 
-adverb_u_phrase0
-    : ADVU_1 {
-            NODE1(`"[adjective phrase, level=2]"');
-        }
+aux20
+    : ADV_L2_V1 { NODE1(`"[adjective phrase, level=2]"'); }
     ;
 
 participle_phrase
-    : /* empty */ {                                     /* () */
-            $$ = NULL;
-        }
-    | participle_phrase1 {                               /* a+ */
-            $$ = $1;
-        }
-    | participle_phrase0 participle_phrase2 {             /* a(ca)+ */
-            NODE2("");
-        }
-    | CONJPTCP participle_phrase0 participle_phrase2 {     /* ca(ca)+ */
-            NODE3("");
-        }
+    : /* empty */           { $$ = NULL; } /* ()      */
+    | aux21                 { $$ = $1; }   /* a+      */
+    | aux23 aux22           { NODE2(""); } /* a(ca)+  */
+    | CONJ_PTCP aux23 aux22 { NODE3(""); } /* ca(ca)+ */
     ;
 
-participle_phrase1
-    : participle_phrase0                     { $$ = $1; }
-    | participle_phrase1 participle_phrase0   { NODE2(""); }
+aux21
+    : aux23       { $$ = $1; }
+    | aux21 aux23 { NODE2(""); }
     ;
 
-participle_phrase2
-    : CONJPTCP participle_phrase0 {
-            NODE2("");
-        }
-    | participle_phrase2 CONJPTCP participle_phrase0 {
-            NODE3("");
-        }
+aux22
+    : CONJ_PTCP aux23       { NODE2(""); }
+    | aux22 CONJ_PTCP aux23 { NODE3(""); }
     ;
 
-participle_phrase0
-    : PTCP_1 participle_i_phrase {
+aux23
+    : PTCP_V1 participle_L1_phrase {
             NODE2(`"[participle phrase, level=0]"');
         }
-    | PTCP_2 participle_i_phrase argument_i {
+    | PTCP_V2 participle_L1_phrase argument_L2 {
             NODE3(`"[participle phrase, level=0]"');
         }
     ;
 
-participle_i_phrase
-    : /* empty */ {                                         /* () */
-            $$ = NULL;
-        }
-    | participle_i_phrase1 {                                 /* a+ */
-            $$ = $1;
-        }
-    | participle_i_phrase0 participle_i_phrase2 {             /* a(ca)+ */
-            NODE2("");
-        }
-    | CONJPTCPI participle_i_phrase0 participle_i_phrase2 {    /* ca(ca)+ */
-            NODE3("");
-        }
+participle_L1_phrase
+    : /* empty */              { $$ = NULL; } /* ()      */
+    | aux24                    { $$ = $1; }   /* a+      */
+    | aux26 aux25              { NODE2(""); } /* a(ca)+  */
+    | CONJ_PTCP_L1 aux26 aux25 { NODE3(""); } /* ca(ca)+ */
     ;
 
-participle_i_phrase1
-    : participle_i_phrase0 {
-            $$ = $1;
-        }
-    | participle_i_phrase1 participle_i_phrase0 {
-            NODE2("");
-        }
+aux24
+    : aux26       { $$ = $1; }
+    | aux24 aux26 { NODE2(""); }
     ;
 
-participle_i_phrase2
-    : CONJPTCPI participle_i_phrase0 {
-            NODE2("");
-        }
-    | participle_i_phrase2 CONJPTCPI participle_i_phrase0 {
-            NODE3("");
-        }
+aux25
+    : CONJ_PTCP_L1 aux26       { NODE2(""); }
+    | aux25 CONJ_PTCP_L1 aux26 { NODE3(""); }
     ;
 
-participle_i_phrase0
-    : PTCPI_1 participle_u_phrase {
+aux26
+    : PTCP_L1_V1 participle_L2_phrase {
             NODE2(`"[participle phrase, level=1]"');
         }
-    | PTCPI_2 participle_u_phrase argument_u {
+    | PTCP_L1_V2 participle_L2_phrase argument_L2 {
             NODE3(`"[participle phrase, level=1]"');
         }
     ;
 
-participle_u_phrase
-    : /* empty */ {                                         /* () */
-            $$ = NULL;
-        }
-    | participle_u_phrase1 {                                 /* a+ */
-            $$ = $1;
-        }
-    | participle_u_phrase0 participle_u_phrase2 {             /* a(ca)+ */
-            NODE2("");
-        }
-    | CONJPTCPU participle_u_phrase0 participle_u_phrase2 {    /* ca(ca)+ */
-            NODE3("");
-        }
+participle_L2_phrase
+    : /* empty */              { $$ = NULL; } /* ()      */
+    | aux27                    { $$ = $1; }   /* a+      */
+    | aux29 aux28              { NODE2(""); } /* a(ca)+  */
+    | CONJ_PTCP_L2 aux29 aux28 { NODE3(""); } /* ca(ca)+ */
     ;
 
-participle_u_phrase1
-    : participle_u_phrase0 {
-            $$ = $1;
-        }
-    | participle_u_phrase1 participle_u_phrase0 {
-            NODE2("");
-        }
+aux27
+    : aux29       { $$ = $1; }
+    | aux27 aux29 { NODE2(""); }
     ;
 
-participle_u_phrase2
-    : CONJPTCPU participle_u_phrase0 {
-            NODE2("");
-        }
-    | participle_u_phrase2 CONJPTCPU participle_u_phrase0 {
-            NODE3("");
-        }
+aux28
+    : CONJ_PTCP_L2 aux29       { NODE2(""); }
+    | aux28 CONJ_PTCP_L2 aux29 { NODE3(""); }
     ;
 
-participle_u_phrase0
-    : PTCPU_1 {
-            NODE1(`"[participle phrase, level=2]"');
-        }
+aux29
+    : PTCP_L2_V1 { NODE1(`"[participle phrase, level=2]"'); }
     ;
 
 %%

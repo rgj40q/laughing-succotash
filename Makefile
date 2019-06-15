@@ -2,83 +2,87 @@ all: clean build test
 build:
 	lex parser.l
 	m4 parser.y.m4 > parser.y
-	yacc -dv parser.y
+	yacc -d parser.y
 	cc -o parser lex.yy.c y.tab.c
 clean:
 	rm -f lex.yy.c y.tab.c y.tab.h y.output parser parser.y *.core
 test: .IGNORE
 	echo tot | ./parser
-	echo le mis mut le vis | ./parser
-	echo le mis mut le viss | ./parser
-	echo le mis mut le vis le vis | ./parser
-	echo le mis mut le qvis | ./parser
-	echo le mis mut le visqvis | ./parser
-	echo le vis bit et tot maet le mis mut le vis nul li tisi fili | ./parser
-	echo le vis bit et tod maet le mis mut le vis nul li tisi fili | ./parser
+	echo ius mit tus | ./parser
+	echo ius mit tus | ./parser
+	echo ius mit tuss | ./parser
+	echo ius mit tus tus | ./parser
+	echo ius mit tusu | ./parser
+	echo ius mit tusi | ./parser
+	echo ius mit le visqus | ./parser
+	echo ius mit un visqus | ./parser
+	echo ius mit visqus | ./parser
+	echo tus but et tot maet ius mit tus nil le cusu fulu | ./parser
+	echo tus but et tod maet ius mit tus nil le cusu fulu | ./parser
 	dd if=/dev/urandom bs=100 count=1 2>&- | ./parser
-	echo le tis miwit | ./parser
+	echo onus miwut | ./parser
 	# expected 0
-	echo le tis ducavesiwit | ./parser
+	echo onus ducavesiwut | ./parser
 	# expected 1234
-	echo le tis dudududududududududududududududududududududuwit | ./parser
+	echo onus dudududududududududududududududududududududuwut | ./parser
 	# expected 1111111111111111111111
-	echo le tis zuluwit | ./parser
+	echo onus zuluwut | ./parser
 	# expected -5
-	echo le tis zubateriwit | ./parser
+	echo onus zubateriwut | ./parser
 	# expected -678
-	echo le tis fuhamiwit | ./parser
+	echo onus fuhamiwut | ./parser
 	# expected 9/0
-	echo le tis ducavehabalusiwit | ./parser
+	echo onus ducavehabalusiwut | ./parser
 	# expected 123/654
-	echo le tis zutehariwit | ./parser
+	echo onus zutehariwut | ./parser
 	# expected -7/8
-	echo le tis zufucamihateteduwit | ./parser
+	echo onus zufucamihateteduwut | ./parser
 	# expected -920/771
-	echo le tis sipiluhabawit | ./parser
+	echo onus sipiluhabawut | ./parser
 	# expected 4_5/6
-	echo le tis cadumipiritebahalusivewit | ./parser
+	echo onus cadumipiritebahalusivewut | ./parser
 	# expected 210_876/543
-	echo le tis zusipiluhabawit | ./parser
+	echo onus zusipiluhabawut | ./parser
 	# expected -4_5/6
-	echo le tis zucadumipiritebahalusivewit | ./parser
+	echo onus zucadumipiritebahalusivewut | ./parser
 	# expected -210_876/543
-	echo le tis minaduxit | ./parser
+	echo onus minaduwut | ./parser
 	# expected 0.1
-	echo le tis duvecanafuteluwit | ./parser
+	echo onus duvecanafuteluwut | ./parser
 	# expected 132.975
-	echo le tis zuminaduwit | ./parser
+	echo onus zuminaduwut | ./parser
 	# expected -0.1
-	echo le tis zuduvecanafuteluwit | ./parser
+	echo onus zuduvecanafuteluwut | ./parser
 	# expected -132.975
-	echo le tis minadugevewit | ./parser
+	echo onus minadugevewut | ./parser
 	# expected 0.1e3
-	echo le tis duvecanafutelugelusivewit | ./parser
+	echo onus duvecanafutelugelusivewut | ./parser
 	# expected 132.975e543
-	echo le tis minadugezuvewit | ./parser
+	echo onus minadugezuvewut | ./parser
 	# expected 0.1e-3
-	echo le tis duvecanafutelugezulusivewit | ./parser
+	echo onus duvecanafutelugezulusivewut | ./parser
 	# expected 132.975e-543
-	echo le tis zuminadugevewit | ./parser
+	echo onus zuminadugevewut | ./parser
 	# expected -0.1e3
-	echo le tis zuduvecanafutelugelusivewit | ./parser
+	echo onus zuduvecanafutelugelusivewut | ./parser
 	# expected -132.975e543
-	echo le tis zuminadugezuvewit | ./parser
+	echo onus zuminadugezuvewut | ./parser
 	# expected -0.1e-3
-	echo le tis zuduvecanafutelugezulusivewit | ./parser
+	echo onus zuduvecanafutelugezulusivewut | ./parser
 	# expected -132.975e-543
-	echo le tis lugefuwit | ./parser
+	echo onus lugefuwut | ./parser
 	# expected 5e9
-	echo le tis lulululugefufufufuwit | ./parser
+	echo onus lulululugefufufufuwut | ./parser
 	# expected 5555e9999
-	echo le tis zulugefuwit | ./parser
+	echo onus zulugefuwut | ./parser
 	# expected -5e9
-	echo le tis zululululugefufufufuwit | ./parser
+	echo onus zululululugefufufufuwut | ./parser
 	# expected -5555e9999
-	echo le tis lugezufuwit | ./parser
+	echo onus lugezufuwut | ./parser
 	# expected 5e-9
-	echo le tis lulululugezufufufufuwit | ./parser
+	echo onus lulululugezufufufufuwut | ./parser
 	# expected 5555e-9999
-	echo le tis zulugezufuwit | ./parser
+	echo onus zulugezufuwut | ./parser
 	# expected -5e-9
-	echo le tis zululululugezufufufufuwit | ./parser
+	echo onus zululululugezufufufufuwut | ./parser
 	# expected -5555e-9999

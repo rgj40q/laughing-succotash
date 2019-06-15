@@ -31,237 +31,222 @@ char * strjoin(char *, char *);
     yylval = mknode0(strjoin(yytext, ": article, level=0"));
     return ART;
 }
-(li|uni)[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": article, level=1"));
-    return ARTI;
-}
-(lu|unu)[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": article, level=2"));
-    return ARTU;
-}
 [a-z]+ot[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": verb, valence=0"));
-    return V_0;
+    return V_V0;
 }
-[a-z]*[a-vx-z]it[[:space:]] {
+[a-z]*[a-vx-z]ut[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": verb, valence=1"));
-    return V_1;
+    return V_V1;
 }
-[a-z]+[au]t[[:space:]] {
+[a-z]+[ia]t[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": verb, valence=2"));
-    return V_2;
+    return V_V2;
 }
-[a-z]*[a-vx-z]is[[:space:]] {
+[a-z]*[a-vx-z]us[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": noun, valence=1, level=0"));
-    return N_1;
+    return N_V1;
 }
-[a-z]+[au]s[[:space:]] {
+[a-z]+[ia]s[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": noun, valence=2, level=0"));
-    return N_2;
+    return N_V2;
 }
-[a-z]*[a-vx-z]isi[[:space:]] {
+[a-z]*[a-vx-z]usu[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": noun, valence=1, level=1"));
-    return NI_1;
+    return N_L1_V1;
 }
-[a-z]*[a-vx-z]ise[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": noun, valence=1, level=1"));
-    return NI_1;
-}
-[a-z]+[au]si[[:space:]] {
+[a-z]+[ia]su[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": noun, valence=2, level=1"));
-    return NI_2;
+    return N_L1_V2;
 }
-[a-z]*[a-vx-z]isu[[:space:]] {
+[a-z]*[a-vx-z]usi[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": noun, valence=1, level=2"));
-    return NU_1;
+    return N_L2_V1;
 }
 [a-z]+or[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": infinitive, valence=0, level=0"));
-    return INF_0;
+    return INF_V0;
 }
-[a-z]*[a-vx-z]ir[[:space:]] {
+[a-z]*[a-vx-z]ur[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": infinitive, valence=1, level=0"));
-    return INF_1;
+    return INF_V1;
 }
-[a-z]+[au]r[[:space:]] {
+[a-z]+[ia]r[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": infinitive, valence=2, level=0"));
-    return INF_2;
-}
-[a-z]+ori[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": infinitive, valence=0, level=1"));
-    return INFI_0;
-}
-[a-z]*[a-vx-z]iri[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": infinitive, valence=1, level=1"));
-    return INFI_1;
-}
-[a-z]+[au]ri[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": infinitive, valence=2, level=1"));
-    return INFI_2;
+    return INF_V2;
 }
 [a-z]+oru[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": infinitive, valence=0, level=2"));
-    return INFU_0;
+    yylval = mknode0(strjoin(yytext, ": infinitive, valence=0, level=1"));
+    return INF_L1_V0;
 }
-[a-z]*[a-vx-z]il[[:space:]] {
+[a-z]*[a-vx-z]uru[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": infinitive, valence=1, level=1"));
+    return INF_L1_V1;
+}
+[a-z]+[ia]ru[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": infinitive, valence=2, level=1"));
+    return INF_L1_V2;
+}
+[a-z]+ori[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": infinitive, valence=0, level=2"));
+    return INF_L2_V0;
+}
+[a-z]*[a-vx-z]ul[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": adjective, valence=1, level=0"));
-    return ADJ_1;
+    return ADJ_V1;
 }
-[a-z]+[au]l[[:space:]] {
+[a-z]+[ia]l[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": adjective, valence=2, level=0"));
-    return ADJ_2;
+    return ADJ_V2;
 }
-[a-z]*[a-vx-z]ili[[:space:]] {
+[a-z]*[a-vx-z]ulu[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": adjective, valence=1, level=1"));
-    return ADJI_1;
+    return ADJ_L1_V1;
 }
-[a-z]+[au]li[[:space:]] {
+[a-z]+[ia]lu[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": adjective, valence=2, level=1"));
-    return ADJI_2;
+    return ADJ_L1_V2;
 }
-[a-z]*[a-vx-z]ilu[[:space:]] {
+[a-z]*[a-vx-z]uli[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": adjective, valence=1, level=2"));
-    return ADJU_1;
+    return ADJ_L2_V1;
 }
-[a-z]*[a-vx-z]im[[:space:]] {
+[a-z]*[a-vx-z]um[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": adverb, valence=1, level=0"));
-    return ADV_1;
+    return ADV_V1;
 }
-[a-z]+[au]m[[:space:]] {
+[a-z]+[ia]m[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": adverb, valence=2, level=0"));
-    return ADV_2;
+    return ADV_V2;
 }
-[a-z]*[a-vx-z]imi[[:space:]] {
+[a-z]*[a-vx-z]umu[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": adverb, valence=1, level=1"));
-    return ADVI_1;
+    return ADV_L1_V1;
 }
-[a-z]+[au]mi[[:space:]] {
+[a-z]+[ia]mu[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": adverb, valence=2, level=1"));
-    return ADVI_2;
+    return ADV_L1_V2;
 }
-[a-z]*[a-vx-z]imu[[:space:]] {
+[a-z]*[a-vx-z]umi[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": adverb, valence=1, level=2"));
-    return ADVU_1;
+    return ADV_L2_V1;
 }
-[a-z]*[a-vx-z]in[[:space:]] {
+[a-z]*[a-vx-z]un[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": participle, valence=1, level=0"));
-    return PTCP_1;
+    return PTCP_V1;
 }
-[a-z]+[au]n[[:space:]] {
+[a-z]+[ia]n[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": participle, valence=2, level=0"));
-    return PTCP_2;
+    return PTCP_V2;
 }
-[a-z]*[a-vx-z]ini[[:space:]] {
+[a-z]*[a-vx-z]unu[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": participle, valence=1, level=1"));
-    return PTCP_1;
+    return PTCP_L1_V1;
 }
-[a-z]+[au]ni[[:space:]] {
+[a-z]+[ia]nu[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": participle, valence=2, level=1"));
-    return PTCP_2;
+    return PTCP_L1_V2;
 }
-[a-z]*[a-vx-z]inu[[:space:]] {
+[a-z]*[a-vx-z]uni[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": participle, valence=1, level=2"));
-    return PTCP_1;
+    return PTCP_L2_V1;
 }
 [a-z]*et[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for sentence"));
-    return CONJSENT;
+    return CONJ_SENT;
 }
 [a-z]*es[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-0 argument"));
-    return CONJARG;
-}
-[a-z]*esi[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": conjunction for level-1 argument"));
-    return CONJARGI;
+    return CONJ_ARG;
 }
 [a-z]*esu[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": conjunction for level-1 argument"));
+    return CONJ_ARG_L1;
+}
+[a-z]*esi[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-2 argument"));
-    return CONJARGU;
+    return CONJ_ARG_L2;
 }
 [a-z]*el[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-0 adjective"));
-    return CONJADJ;
-}
-[a-z]*eli[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": conjunction for level-1 adjective"));
-    return CONJADJI;
+    return CONJ_ADJ;
 }
 [a-z]*elu[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": conjunction for level-1 adjective"));
+    return CONJ_ADJ_L1;
+}
+[a-z]*eli[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-2 adjective"));
-    return CONJADJU;
+    return CONJ_ADJ_L2;
 }
 [a-z]*em[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-0 adverb"));
-    return CONJADV;
-}
-[a-z]*emi[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": conjunction for level-1 adverb"));
-    return CONJADVI;
+    return CONJ_ADV;
 }
 [a-z]*emu[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": conjunction for level-1 adverb"));
+    return CONJ_ADV_L1;
+}
+[a-z]*emi[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-2 adverb"));
-    return CONJADVU;
+    return CONJ_ADV_L2;
 }
 [a-z]*en[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-0 participle"));
-    return CONJPTCP;
-}
-[a-z]*eni[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": conjunction for level-1 participle"));
-    return CONJPTCPI;
+    return CONJ_PTCP;
 }
 [a-z]*enu[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": conjunction for level-2 participle"));
-    return CONJPTCPU;
+    yylval = mknode0(strjoin(yytext, ": conjunction for level-1 participle"));
+    return CONJ_PTCP_L1;
 }
-(mi|du|ca|ve|si|lu|ba|te|ri|fu|na|ge|pi|zu|ha)+wi(t|s|si|su|r|ri|ru|l|li|lu|m|mi|mu|n|ni|nu)[[:space:]] {
+[a-z]*eni[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": conjunction for level-2 participle"));
+    return CONJ_PTCP_L2;
+}
+(mi|du|ca|ve|si|lu|ba|te|ri|fu|na|ge|pi|zu|ha)+wu(t|s|su|si|r|ru|l|lu|li|m|mu|mi|n|nu|ni)[[:space:]] {
     return check_numeral();
 }
 [[:space:]]+ /* do nothing */
@@ -307,9 +292,9 @@ err_num() {
 
 int
 match_morphemes(char *s) {
-    char morphemes[] = "miducavesilubaterifunagepizuhawi";
+    char morphemes[] = "miducavesilubaterifunagepizuhawu";
     int i;
-    for (i = 0; i < 16; i++) {
+    for (i = 0; i < strlen(morphemes)/2; i++) {
         if (s[0] == morphemes[i * 2] && s[1] == morphemes[i * 2 + 1]) {
             return i;
         }
@@ -320,9 +305,9 @@ match_morphemes(char *s) {
 
 int
 match_endings(char *s) {
-    char endings[] = "t s sisur rirul lilum mimu";
+    char endings[] = "t s susir rul lulim mumin nuni";
     int i;
-    for (i = 0; i < 13; i++) {
+    for (i = 0; i < strlen(endings)/2; i++) {
         if (s[0] == endings[i * 2] && s[1] == endings[i * 2 + 1]) {
             return i;
         }
@@ -437,64 +422,51 @@ lexp:   strcat(newtoken, "e");
         newtoken[strlen(newtoken) - 1] = '\0';
     }
     switch(v) {
-        case 0:     /* t_, V_1 */
+        case 0:     /* t_ */
             yylval = mknode0(strjoin(newtoken, ": verb, valence=1"));
-            return V_1;
-        case 1:     /* s_, N_1 */
+            return V_V1;
+        case 1:     /* s_ */
             yylval = mknode0(strjoin(newtoken, ": noun, valence=1, level=0"));
-            return N_1;
-        case 2:     /* si, NI_1 */
+            return N_V1;
+        case 2:     /* su */
             yylval = mknode0(strjoin(newtoken, ": noun, valence=1, level=1"));
-            return NI_1;
-        case 3:     /* su, NU_1 */
+            return N_L1_V1;
+        case 3:     /* si */
             yylval = mknode0(strjoin(newtoken, ": noun, valence=1, level=2"));
-            return NU_1;
-        case 4:     /* r_, INF_1 */
-            yylval = mknode0(strjoin(newtoken,
-                ": infinitive, valence=1, level=0"));
-            return INF_1;
-        case 5:    /* ri, INFI_1 */
-            yylval = mknode0(strjoin(newtoken,
-                ": infinitive, valence=1, level=1"));
-            return INFI_1;
-        case 6:    /* ru, impossible *INFU_1 */
-            err_num();
-        case 7:    /* l_, ADJ_1 */
-            yylval = mknode0(strjoin(newtoken,
-                ": adjective, valence=1, level=0"));
-            return ADJ_1;
-        case 8:    /* li, ADJI_1 */
-            yylval = mknode0(strjoin(newtoken,
-                ": adjective, valence=1, level=1"));
-            return ADJI_1;
-        case 9:    /* lu, ADJU_1 */
-            yylval = mknode0(strjoin(newtoken,
-                ": adjective, valence=1, level=2"));
-            return ADJU_1;
-        case 10:    /* m_, ADV_1 */
-            yylval = mknode0(strjoin(newtoken,
-                ": adverb, valence=1, level=0"));
-            return ADJ_1;
-        case 11:    /* mi, ADVI_1 */
-            yylval = mknode0(strjoin(newtoken,
-                ": adverb, valence=1, level=1"));
-            return ADJI_1;
-        case 12:    /* mu, ADVU_1 */
-            yylval = mknode0(strjoin(newtoken,
-                ": adverb, valence=1, level=2"));
-            return ADJU_1;
-        case 13:    /* n_, PTCP_1 */
-            yylval = mknode0(strjoin(newtoken,
-                ": participle, valence=1, level=0"));
-            return PTCP_1;
-        case 14:    /* ni, PTCPI_1 */
-            yylval = mknode0(strjoin(newtoken,
-                ": participle, valence=1, level=1"));
-            return PTCPI_1;
-        case 15:    /* nu, PTCPU_1 */
-            yylval = mknode0(strjoin(newtoken,
-                ": participle, valence=1, level=2"));
-            return PTCPU_1;
+            return N_L2_V1;
+        case 4:     /* r_ */
+            yylval = mknode0(strjoin(newtoken, ": infinitive, valence=1, level=0"));
+            return INF_V1;
+        case 5:    /* ru */
+            yylval = mknode0(strjoin(newtoken, ": infinitive, valence=1, level=1"));
+            return INF_L1_V1;
+        case 6:    /* l_ */
+            yylval = mknode0(strjoin(newtoken, ": adjective, valence=1, level=0"));
+            return ADJ_V1;
+        case 7:    /* lu */
+            yylval = mknode0(strjoin(newtoken, ": adjective, valence=1, level=1"));
+            return ADJ_L1_V1;
+        case 8:    /* li */
+            yylval = mknode0(strjoin(newtoken, ": adjective, valence=1, level=2"));
+            return ADJ_L2_V1;
+        case 9:    /* m_ */
+            yylval = mknode0(strjoin(newtoken, ": adverb, valence=1, level=0"));
+            return ADV_V1;
+        case 10:    /* mu */
+            yylval = mknode0(strjoin(newtoken, ": adverb, valence=1, level=1"));
+            return ADV_L1_V1;
+        case 11:    /* mi */
+            yylval = mknode0(strjoin(newtoken, ": adverb, valence=1, level=2"));
+            return ADV_L2_V1;
+        case 12:    /* n_ */
+            yylval = mknode0(strjoin(newtoken, ": participle, valence=1, level=0"));
+            return PTCP_V1;
+        case 13:    /* nu */
+            yylval = mknode0(strjoin(newtoken, ": participle, valence=1, level=1"));
+            return PTCP_L1_V1;
+        case 14:    /* ni */
+            yylval = mknode0(strjoin(newtoken, ": participle, valence=1, level=2"));
+            return PTCP_L2_V1;
     }
     err_num();
     return -1;
