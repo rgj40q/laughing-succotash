@@ -28,7 +28,7 @@ char * strjoin(char *, char *);
 
 (le|un)[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": article, level=0"));
+    yylval = mknode0(strjoin(yytext, ": article"));
     return ART;
 }
 [a-z]+ot[[:space:]] {

@@ -1,4 +1,3 @@
-divert(-1)
 define(`NODE0', `$$ = mknode0($1)')
 define(`NODE1', `$$ = mknode1($1, $`'1)')
 define(`NODE2', `$$ = mknode($1, $`'1, $`'2)')
@@ -8,8 +7,6 @@ define(`NODE5', `$$ = mknode5($1, $`'1, $`'2, $`'3, $`'4, $`'5)')
 define(`NODE6', `$$ = mknode6($1, $`'1, $`'2, $`'3, $`'4, $`'5, $`'6)')
 define(`NODE7', `$$ = mknode7($1, $`'1, $`'2, $`'3, $`'4, $`'5, $`'6, $`'7)')
 define(`NODE8', `$$ = mknode8($1, $`'1, $`'2, $`'3, $`'4, $`'5, $`'6, $`'7, $`'8)')
-divert(0)dnl
-dnl
 %{
 
 #include <stdio.h>
@@ -268,10 +265,10 @@ aux13
 
 aux14
     : ADV_V1 adverb_L1_phrase {
-            NODE1(`"[adverb phrase, level=0]"');
+            NODE2(`"[adverb phrase, level=0]"');
         }
     | ADV_V2 adverb_L1_phrase argument_L1 {
-            NODE2(`"[adverb phrase, level=0]"');
+            NODE3(`"[adverb phrase, level=0]"');
         }
     ;
 
@@ -294,10 +291,10 @@ aux16
 
 aux17
     : ADV_L1_V1 adverb_L2_phrase {
-            NODE1(`"[adverb phrase, level=1]"');
+            NODE2(`"[adverb phrase, level=1]"');
         }
     | ADV_L1_V2 adverb_L2_phrase argument_L2 {
-            NODE2(`"[adverb phrase, level=1]"');
+            NODE3(`"[adverb phrase, level=1]"');
         }
     ;
 
@@ -343,7 +340,7 @@ aux23
     : PTCP_V1 participle_L1_phrase {
             NODE2(`"[participle phrase, level=0]"');
         }
-    | PTCP_V2 participle_L1_phrase argument_L2 {
+    | PTCP_V2 participle_L1_phrase argument_L1 {
             NODE3(`"[participle phrase, level=0]"');
         }
     ;
@@ -477,7 +474,7 @@ printtree(YYSTYPE tree) {
     /* token "" is dummy, so print neither token nor parens around it */
     if (strcmp(tree->token, "")) {
         for (i = 0; i < printtree_level; i++) {
-            printf("  ");
+            printf("    ");
         }
         printf("%s\n", tree->token);
         if (NULL != tree->left || NULL != tree->right) {
