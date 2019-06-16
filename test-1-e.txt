@@ -2,161 +2,166 @@
     [sentence]
         [argument, level=0]
             [noun phrase, level=0]
-                patrus: noun, valence=1, level=0
+                patris: noun, intransitive, level=0
                 [adjective phrase, level=0]
-                    nostrul: adjective, valence=1, level=0
+                    nostril: adjective, intransitive, level=0
                 [adjective phrase, level=0]
-                    essil: adjective, valence=2, level=0
+                    inul: adjective, transitive, level=0
                     [argument, level=1]
                         [noun phrase, level=1]
-                            inisu: noun, valence=2, level=1
-                            [argument, level=2]
-                                [noun phrase, level=2]
-                                    celusi: noun, valence=1, level=2
-        tut: verb, valence=1
+                            celist: noun, intransitive, level=1
+        tuit: verb, intransitive
     et: conjunction for sentence
     [sentence]
         [adverb phrase, level=0]
-            vamosum: adverb, valence=1, level=0
+            vamosin: adverb, intransitive, level=0
         [argument, level=0]
             [noun phrase, level=0]
-                onus: noun, valence=1, level=0
-        sanctificat: verb, valence=2
+                onis: noun, intransitive, level=0
+        sanctificut: verb, transitive
         [argument, level=0]
             [noun phrase, level=0]
-                nominus: noun, valence=1, level=0
+                nominis: noun, intransitive, level=0
                 [adjective phrase, level=0]
-                    tul: adjective, valence=1, level=0
+                    tuil: adjective, intransitive, level=0
     et: conjunction for sentence
     [sentence]
         [adverb phrase, level=0]
-            vamosum: adverb, valence=1, level=0
+            vamosin: adverb, intransitive, level=0
         [argument, level=0]
             [noun phrase, level=0]
-                regnus: noun, valence=1, level=0
+                regnis: noun, intransitive, level=0
                 [adjective phrase, level=0]
-                    tul: adjective, valence=1, level=0
-        venut: verb, valence=1
+                    tuil: adjective, intransitive, level=0
+        venit: verb, intransitive
     et: conjunction for sentence
     [sentence]
         [adverb phrase, level=0]
-            vamosum: adverb, valence=1, level=0
+            vamosin: adverb, intransitive, level=0
         [argument, level=0]
             [noun phrase, level=0]
-                onus: noun, valence=1, level=0
-        facit: verb, valence=2
+                onis: noun, intransitive, level=0
+        facut: verb, transitive
         [argument, level=0]
             [noun phrase, level=0]
-                voluntatus: noun, valence=1, level=0
+                voluntatis: noun, intransitive, level=0
                 [adjective phrase, level=0]
-                    tul: adjective, valence=1, level=0
-        comem: conjunction for level-0 adverb
+                    tuil: adjective, intransitive, level=0
+        en: conjunction for level-0 adverb
         [adverb phrase, level=0]
-            inim: adverb, valence=2, level=0
+            inun: adverb, transitive, level=0
             [argument, level=1]
                 le: article
                 [noun phrase, level=1]
-                    celusu: noun, valence=1, level=1
-        etiamem: conjunction for level-0 adverb
+                    celist: noun, intransitive, level=1
+                    [participle phrase, level=1]
+                        comift: participle, intransitive, level=1
+        en: conjunction for level-0 adverb
         [adverb phrase, level=0]
-            superim: adverb, valence=2, level=0
+            superun: adverb, transitive, level=0
             [argument, level=1]
                 le: article
                 [noun phrase, level=1]
-                    terrusu: noun, valence=1, level=1
+                    terrist: noun, intransitive, level=1
+                    [participle phrase, level=1]
+                        etiamift: participle, intransitive, level=1
     et: conjunction for sentence
     [sentence]
         [adverb phrase, level=0]
-            vamosum: adverb, valence=1, level=0
+            vamosin: adverb, intransitive, level=0
         [argument, level=0]
             [noun phrase, level=0]
-                tus: noun, valence=1, level=0
-        dait: verb, valence=2
+                tuis: noun, intransitive, level=0
+        daut: verb, transitive
         [adverb phrase, level=0]
-            aim: adverb, valence=2, level=0
+            aun: adverb, transitive, level=0
             [argument, level=1]
                 [noun phrase, level=1]
-                    nosusu: noun, valence=1, level=1
+                    nosist: noun, intransitive, level=1
         [adverb phrase, level=0]
-            hodium: adverb, valence=1, level=0
+            hodiin: adverb, intransitive, level=0
         [argument, level=0]
             [noun phrase, level=0]
-                panus: noun, valence=1, level=0
+                panis: noun, intransitive, level=0
                 [adjective phrase, level=0]
-                    nostrul: adjective, valence=1, level=0
+                    nostril: adjective, intransitive, level=0
                 [adjective phrase, level=0]
-                    quotidianul: adjective, valence=1, level=0
+                    quotidianil: adjective, intransitive, level=0
     et: conjunction for sentence
     [sentence]
         [adverb phrase, level=0]
-            vamosum: adverb, valence=1, level=0
+            vamosin: adverb, intransitive, level=0
         [argument, level=0]
             [noun phrase, level=0]
-                tus: noun, valence=1, level=0
-        pardonit: verb, valence=2
+                tuis: noun, intransitive, level=0
+        pardonut: verb, transitive
         [adverb phrase, level=0]
-            aim: adverb, valence=2, level=0
+            aun: adverb, transitive, level=0
             [argument, level=1]
                 [noun phrase, level=1]
-                    nosusu: noun, valence=1, level=1
+                    nosist: noun, intransitive, level=1
         [argument, level=0]
             [noun phrase, level=0]
-                debitus: noun, valence=1, level=0
+                debitis: noun, intransitive, level=0
                 [adjective phrase, level=0]
-                    nostrul: adjective, valence=1, level=0
-    comet: conjunction for sentence
+                    nostril: adjective, intransitive, level=0
+    et: conjunction for sentence
     [sentence]
         [adverb phrase, level=0]
-            etiamum: adverb, valence=1, level=0
+            comin: adverb, intransitive, level=0
+            [adverb phrase, level=1]
+                etiamint: adverb, intransitive, level=1
         [argument, level=0]
             [noun phrase, level=0]
-                nosus: noun, valence=1, level=0
-        pardonit: verb, valence=2
+                nosis: noun, intransitive, level=0
+        pardonut: verb, transitive
         [argument, level=0]
             [noun phrase, level=0]
-                onus: noun, valence=1, level=0
+                onis: noun, intransitive, level=0
         [adverb phrase, level=0]
-            aim: adverb, valence=2, level=0
+            aun: adverb, transitive, level=0
             [argument, level=1]
                 [noun phrase, level=1]
-                    debitorusu: noun, valence=1, level=1
+                    debitorist: noun, intransitive, level=1
                     [adjective phrase, level=1]
-                        nostrulu: adjective, valence=1, level=1
+                        nostrilt: adjective, intransitive, level=1
     et: conjunction for sentence
     [sentence]
         [adverb phrase, level=0]
-            vamosum: adverb, valence=1, level=0
+            vamosin: adverb, intransitive, level=0
         [argument, level=0]
             [noun phrase, level=0]
-                tus: noun, valence=1, level=0
+                tuis: noun, intransitive, level=0
         [adverb phrase, level=0]
-            nonum: adverb, valence=1, level=0
-        inducit: verb, valence=2
+            nonin: adverb, intransitive, level=0
+        inducut: verb, transitive
         [argument, level=0]
             [noun phrase, level=0]
-                nosus: noun, valence=1, level=0
+                nosis: noun, intransitive, level=0
         [adverb phrase, level=0]
-            inim: adverb, valence=2, level=0
+            inun: adverb, transitive, level=0
             [argument, level=1]
                 [noun phrase, level=1]
-                    tentationusu: noun, valence=1, level=1
-    sedet: conjunction for sentence
+                    tentationist: noun, intransitive, level=1
+    et: conjunction for sentence
     [sentence]
         [adverb phrase, level=0]
-            vamosum: adverb, valence=1, level=0
-        [argument, level=0]
-            [noun phrase, level=0]
-                tus: noun, valence=1, level=0
-        liberit: verb, valence=2
-        [argument, level=0]
-            [noun phrase, level=0]
-                nosus: noun, valence=1, level=0
+            sedin: adverb, intransitive, level=0
         [adverb phrase, level=0]
-            dim: adverb, valence=2, level=0
+            vamosin: adverb, intransitive, level=0
+        [argument, level=0]
+            [noun phrase, level=0]
+                tuis: noun, intransitive, level=0
+        liberut: verb, transitive
+        [argument, level=0]
+            [noun phrase, level=0]
+                nosis: noun, intransitive, level=0
+        [adverb phrase, level=0]
+            deun: adverb, transitive, level=0
             [argument, level=1]
                 le: article
                 [noun phrase, level=1]
-                    malusu: noun, valence=1, level=1
+                    malist: noun, intransitive, level=1
     et: conjunction for sentence
     [sentence]
-        amenot: verb, valence=0
+        amenot: verb, impersonal
