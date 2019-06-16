@@ -1,14 +1,14 @@
 #!/bin/sh
 
-cd tests
-for k in *-i.txt; do
-    i="${k%-i.txt}"
-    ../parser < $i-i.txt > $i-o.txt
-    ocs=$(openssl dgst "$i-o.txt" | cut -d '=' -f 2)
-    ecs=$(openssl dgst "$i-e.txt" | cut -d '=' -f 2)
-    if [ "X$ocs" = "X$ecs" ]; then
-        echo "test $i ok"
+for i in test-*-i.txt; do
+    j="${i%-i.txt}"
+    k="${j#test-}"
+    ./parser < "test-$k-i.txt" > "test-$k-o.txt"
+    och=$(openssl dgst "test-$k-o.txt" | cut -d '=' -f 2)
+    ech=$(openssl dgst "test-$k-e.txt" | cut -d '=' -f 2)
+    if [ "X$och" = "X$ech" ]; then
+        echo "test $k ok"
     else
-        echo "test $i fail"
+        echo "test $k fail"
     fi
 done
