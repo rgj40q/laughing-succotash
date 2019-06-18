@@ -1,2 +1,2 @@
 # laughing-succotash
-parser for artificial language ***Cotevav***
+parser for artificial language "cotevav"
