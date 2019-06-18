@@ -13,6 +13,7 @@ define(`NODE8', `$$ = mknode8($1, $`'1, $`'2, $`'3, $`'4, $`'5, $`'6, $`'7, $`'8
 #include <unistd.h>
 
 #define YYSTYPE struct node *
+#define YYDEBUG 1
 
 struct node {
     YYSTYPE left;
@@ -47,8 +48,8 @@ int printtree_level = 0;
 %token CONJ_SENT CONJ_ARG CONJ_ARG_L1 CONJ_ARG_L2 CONJ_ADJ CONJ_ADJ_L1 CONJ_ADJ_L2
 %token CONJ_ADV CONJ_ADV_L1 CONJ_ADV_L2
 %token CONJ_PTCP CONJ_PTCP_L1 CONJ_PTCP_L2
-%token INF_V0 INF_V1 INF_V2 INF_L1_V0 INF_L1_V1 INF_L1_V2 INF_L2_V0
-%token N_V1 N_V2 N_L1_V1 N_L1_V2 N_L2_V1
+%token INF_V0 INF_V1 INF_V2
+%token N_V1 N_V2
 %token ADJ_V1 ADJ_V2 ADJ_L1_V1 ADJ_L1_V2 ADJ_L2_V1
 %token ADV_V1 ADV_V2 ADV_L1_V1 ADV_L1_V2 ADV_L2_V1
 %token PTCP_V1 PTCP_V2 PTCP_L1_V1 PTCP_L1_V2 PTCP_L2_V1
@@ -128,16 +129,16 @@ noun_phrase
     ;
 
 noun_L1_phrase
-    : N_L1_V1 participle_L1_phrase adjective_L1_phrase {
+    : N_V1 participle_L1_phrase adjective_L1_phrase {
             NODE3(`"[noun phrase, level=1]"');
         }
-    | N_L1_V2 participle_L1_phrase argument_L2 adjective_L1_phrase {
+    | N_V2 participle_L1_phrase argument_L2 adjective_L1_phrase {
             NODE4(`"[noun phrase, level=1]"');
         }
     ;
 
 noun_L2_phrase
-    : N_L2_V1 participle_L2_phrase adjective_L2_phrase { NODE3(`"[noun phrase, level=2]"'); }
+    : N_V1 participle_L2_phrase adjective_L2_phrase { NODE3(`"[noun phrase, level=2]"'); }
     ;
 
 infinitive_phrase
@@ -153,19 +154,19 @@ infinitive_phrase
     ;
 
 infinitive_L1_phrase
-    : INF_L1_V0 participle_L1_phrase adjective_L1_phrase {
+    : INF_V0 participle_L1_phrase adjective_L1_phrase {
             NODE3(`"[infinitive phrase, level=1]"');
         }
-    | INF_L1_V1 participle_L1_phrase argument_L2 adjective_L1_phrase {
+    | INF_V1 participle_L1_phrase argument_L2 adjective_L1_phrase {
             NODE4(`"[infinitive phrase, level=1]"');
         }
-    | INF_L1_V2 participle_L1_phrase argument_L2 argument_L2 adjective_L1_phrase {
+    | INF_V2 participle_L1_phrase argument_L2 argument_L2 adjective_L1_phrase {
             NODE5(`"[infinitive phrase, level=1]"');
         }
     ;
 
 infinitive_L2_phrase
-    : INF_L2_V0 participle_L2_phrase adjective_L2_phrase {
+    : INF_V0 participle_L2_phrase adjective_L2_phrase {
             NODE3(`"[infinitive phrase, level=2]"');
         }
     ;

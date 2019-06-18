@@ -56,21 +56,6 @@ char * strjoin(char *, char *);
     yylval = mknode0(strjoin(yytext, ": noun, transitive, level=0"));
     return N_V2;
 }
-[a-z]*[a-vx-z]ist[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": noun, intransitive, level=1"));
-    return N_L1_V1;
-}
-[a-z]+[ua]st[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": noun, transitive, level=1"));
-    return N_L1_V2;
-}
-[a-z]*[a-vx-z]isc[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": noun, intransitive, level=2"));
-    return N_L2_V1;
-}
 [a-z]+or[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": infinitive, impersonal, level=0"));
@@ -85,26 +70,6 @@ char * strjoin(char *, char *);
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": infinitive, transitive, level=0"));
     return INF_V2;
-}
-[a-z]+ort[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": infinitive, impersonal, level=1"));
-    return INF_L1_V0;
-}
-[a-z]*[a-vx-z]irt[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": infinitive, intransitive, level=1"));
-    return INF_L1_V1;
-}
-[a-z]+[ua]rt[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": infinitive, transitive, level=1"));
-    return INF_L1_V2;
-}
-[a-z]+orc[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": infinitive, impersonal, level=2"));
-    return INF_L2_V0;
 }
 [a-z]*[a-vx-z]il[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
