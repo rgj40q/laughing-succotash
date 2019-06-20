@@ -48,100 +48,85 @@ char * strjoin(char *, char *);
 }
 [a-z]*[a-vx-z]is[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": noun, intransitive, level=0"));
+    yylval = mknode0(strjoin(yytext, ": noun, intransitive"));
     return N_V1;
 }
 [a-z]+[ua]s[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": noun, transitive, level=0"));
+    yylval = mknode0(strjoin(yytext, ": noun, transitive"));
     return N_V2;
 }
 [a-z]+or[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": infinitive, impersonal, level=0"));
+    yylval = mknode0(strjoin(yytext, ": infinitive, impersonal"));
     return INF_V0;
 }
 [a-z]*[a-vx-z]ir[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": infinitive, intransitive, level=0"));
+    yylval = mknode0(strjoin(yytext, ": infinitive, intransitive"));
     return INF_V1;
 }
 [a-z]+[ua]r[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": infinitive, transitive, level=0"));
+    yylval = mknode0(strjoin(yytext, ": infinitive, transitive"));
     return INF_V2;
 }
 [a-z]*[a-vx-z]il[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": adjective, intransitive, level=0"));
+    yylval = mknode0(strjoin(yytext, ": adjective, intransitive"));
     return ADJ_V1;
 }
 [a-z]+[ua]l[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": adjective, transitive, level=0"));
+    yylval = mknode0(strjoin(yytext, ": adjective, transitive"));
     return ADJ_V2;
 }
-[a-z]*[a-vx-z]ilt[[:space:]] {
+[a-z]*[a-vx-z]ih[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": adjective, intransitive, level=1"));
     return ADJ_L1_V1;
 }
-[a-z]+[ua]lt[[:space:]] {
+[a-z]+[ua]h[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": adjective, transitive, level=1"));
     return ADJ_L1_V2;
 }
-[a-z]*[a-vx-z]ilc[[:space:]] {
+[a-z]*[a-vx-z]ic[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": adjective, intransitive, level=2"));
     return ADJ_L2_V1;
 }
 [a-z]*[a-vx-z]in[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": adverb, intransitive, level=0"));
+    yylval = mknode0(strjoin(yytext, ": adverb, intransitive"));
     return ADV_V1;
 }
 [a-z]+[ua]n[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": adverb, transitive, level=0"));
+    yylval = mknode0(strjoin(yytext, ": adverb, transitive"));
     return ADV_V2;
 }
-[a-z]*[a-vx-z]int[[:space:]] {
+[a-z]*[a-vx-z]im[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": adverb, intransitive, level=1"));
-    return ADV_L1_V1;
-}
-[a-z]+[ua]nt[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": adverb, transitive, level=1"));
-    return ADV_L1_V2;
-}
-[a-z]*[a-vx-z]inc[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": adverb, intransitive, level=2"));
-    return ADV_L2_V1;
-}
-[a-z]*[a-vx-z]if[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": participle, intransitive, level=0"));
+    yylval = mknode0(strjoin(yytext, ": participle, intransitive"));
     return PTCP_V1;
 }
-[a-z]+[ua]f[[:space:]] {
+[a-z]+[ua]m[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": participle, transitive, level=0"));
+    yylval = mknode0(strjoin(yytext, ": participle, transitive"));
     return PTCP_V2;
 }
-[a-z]*[a-vx-z]ift[[:space:]] {
+[a-z]*[a-vx-z]if[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": participle, intransitive, level=1"));
     return PTCP_L1_V1;
 }
-[a-z]+[ua]ft[[:space:]] {
+[a-z]+[ua]f[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": participle, transitive, level=1"));
     return PTCP_L1_V2;
 }
-[a-z]*[a-vx-z]ifc[[:space:]] {
+[a-z]*[a-vx-z]ip[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": participle, intransitive, level=2"));
     return PTCP_L2_V1;
@@ -153,60 +138,50 @@ et[[:space:]] {
 }
 es[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": conjunction for level-0 argument"));
+    yylval = mknode0(strjoin(yytext, ": conjunction for argument"));
     return CONJ_ARG;
 }
-est[[:space:]] {
+esi[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-1 argument"));
     return CONJ_ARG_L1;
 }
-esc[[:space:]] {
+esu[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-2 argument"));
     return CONJ_ARG_L2;
 }
 el[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": conjunction for level-0 adjective"));
+    yylval = mknode0(strjoin(yytext, ": conjunction for adjective"));
     return CONJ_ADJ;
 }
-elt[[:space:]] {
+eh[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-1 adjective"));
     return CONJ_ADJ_L1;
 }
-elc[[:space:]] {
+ec[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-2 adjective"));
     return CONJ_ADJ_L2;
 }
 en[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": conjunction for level-0 adverb"));
+    yylval = mknode0(strjoin(yytext, ": conjunction for adverb"));
     return CONJ_ADV;
 }
-ent[[:space:]] {
+em[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": conjunction for level-1 adverb"));
-    return CONJ_ADV_L1;
-}
-enc[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": conjunction for level-2 adverb"));
-    return CONJ_ADV_L2;
-}
-ef[[:space:]] {
-    yytext[strlen(yytext) - 1] = '\0';
-    yylval = mknode0(strjoin(yytext, ": conjunction for level-0 participle"));
+    yylval = mknode0(strjoin(yytext, ": conjunction for participle"));
     return CONJ_PTCP;
 }
-eft[[:space:]] {
+ef[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-1 participle"));
     return CONJ_PTCP_L1;
 }
-efc[[:space:]] {
+ep[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-2 participle"));
     return CONJ_PTCP_L2;

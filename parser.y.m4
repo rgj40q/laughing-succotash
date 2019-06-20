@@ -46,12 +46,12 @@ int printtree_level = 0;
 %token V_V0 V_V1 V_V2
 %token ART
 %token CONJ_SENT CONJ_ARG CONJ_ARG_L1 CONJ_ARG_L2 CONJ_ADJ CONJ_ADJ_L1 CONJ_ADJ_L2
-%token CONJ_ADV CONJ_ADV_L1 CONJ_ADV_L2
+%token CONJ_ADV
 %token CONJ_PTCP CONJ_PTCP_L1 CONJ_PTCP_L2
 %token INF_V0 INF_V1 INF_V2
 %token N_V1 N_V2
 %token ADJ_V1 ADJ_V2 ADJ_L1_V1 ADJ_L1_V2 ADJ_L2_V1
-%token ADV_V1 ADV_V2 ADV_L1_V1 ADV_L1_V2 ADV_L2_V1
+%token ADV_V1 ADV_V2
 %token PTCP_V1 PTCP_V2 PTCP_L1_V1 PTCP_L1_V2 PTCP_L2_V1
 
 %%
@@ -72,13 +72,22 @@ aux30
     ;
 
 sentence
-    : adverb_phrase V_V0 adverb_phrase {
+    : adverb_phrase V_V0 adverb_phrase { /* V */
             NODE3("[sentence]");
         }
-    | adverb_phrase argument adverb_phrase V_V1 adverb_phrase {
+    | adverb_phrase argument adverb_phrase V_V1 adverb_phrase { /* SV */
             NODE5("[sentence]");
         }
-    | adverb_phrase argument adverb_phrase V_V2 adverb_phrase argument adverb_phrase {
+    | adverb_phrase V_V1 adverb_phrase argument adverb_phrase { /* VS */
+            NODE5("[sentence]");
+        }
+    | adverb_phrase argument adverb_phrase V_V2 adverb_phrase argument adverb_phrase { /* SVO */
+            NODE7("[sentence]");
+        }
+    | adverb_phrase argument adverb_phrase argument adverb_phrase V_V2 adverb_phrase { /* SOV */
+            NODE7("[sentence]");
+        }
+    | adverb_phrase V_V2 adverb_phrase argument adverb_phrase argument adverb_phrase { /* VSO */
             NODE7("[sentence]");
         }
     ;
@@ -89,10 +98,10 @@ argument
     ;
 
 aux0
-    : ART noun_phrase       { NODE2(`"[argument, level=0]"'); } /* `quoted' because m4 splits strings with a space */
-    | ART infinitive_phrase { NODE2(`"[argument, level=0]"'); }
-    | noun_phrase           { NODE1(`"[argument, level=0]"'); }
-    | infinitive_phrase     { NODE1(`"[argument, level=0]"'); }
+    : ART noun_phrase       { NODE2("[argument]"); }
+    | ART infinitive_phrase { NODE2("[argument]"); }
+    | noun_phrase           { NODE1("[argument]"); }
+    | infinitive_phrase     { NODE1("[argument]"); }
     ;
 
 argument_L1
@@ -101,7 +110,7 @@ argument_L1
     ;
 
 aux1
-    : ART noun_L1_phrase       { NODE2(`"[argument, level=1]"'); }
+    : ART noun_L1_phrase       { NODE2(`"[argument, level=1]"'); } /* `quoted' because m4 splits strings with a space */
     | ART infinitive_L1_phrase { NODE2(`"[argument, level=1]"'); }
     | noun_L1_phrase           { NODE1(`"[argument, level=1]"'); }
     | infinitive_L1_phrase     { NODE1(`"[argument, level=1]"'); }
@@ -121,10 +130,10 @@ aux2
 
 noun_phrase
     : N_V1 participle_phrase adjective_phrase {
-            NODE3(`"[noun phrase, level=0]"');
+            NODE3(`"[noun phrase]"');
         }
     | N_V2 participle_phrase argument_L1 adjective_phrase {
-            NODE4(`"[noun phrase, level=0]"');
+            NODE4(`"[noun phrase]"');
         }
     ;
 
@@ -143,13 +152,13 @@ noun_L2_phrase
 
 infinitive_phrase
     : INF_V0 participle_phrase adjective_phrase {
-            NODE3(`"[infinitive phrase, level=0]"');
+            NODE3(`"[infinitive phrase]"');
         }
     | INF_V1 participle_phrase argument_L1 adjective_phrase {
-            NODE4(`"[infinitive phrase, level=0]"');
+            NODE4(`"[infinitive phrase]"');
         }
     | INF_V2 participle_phrase argument_L1 argument_L1 adjective_phrase {
-            NODE5(`"[infinitive phrase, level=0]"');
+            NODE5(`"[infinitive phrase]"');
         }
     ;
 
@@ -190,10 +199,10 @@ aux4
 
 aux5 
     : ADJ_V1 participle_phrase {
-            NODE2(`"[adjective phrase, level=0]"');
+            NODE2(`"[adjective phrase]"');
         }
     | ADJ_V2 participle_phrase argument_L1 {
-            NODE3(`"[adjective phrase, level=0]"');
+            NODE3(`"[adjective phrase]"');
         }
     ;
 
@@ -251,7 +260,6 @@ adverb_phrase
     | aux12                { $$ = $1; }   /* a+      */
     | aux14 aux13          { NODE2(""); } /* a(ca)+  */
     | CONJ_ADV aux14 aux13 { NODE3(""); } /* ca(ca)+ */
-            
     ;
 
 aux12
@@ -265,59 +273,12 @@ aux13
     ;
 
 aux14
-    : ADV_V1 adverb_L1_phrase {
-            NODE2(`"[adverb phrase, level=0]"');
+    : ADV_V1 participle_phrase {
+            NODE2(`"[adverb phrase]"');
         }
-    | ADV_V2 adverb_L1_phrase argument_L1 {
-            NODE3(`"[adverb phrase, level=0]"');
+    | ADV_V2 participle_phrase argument_L1 {
+            NODE3(`"[adverb phrase]"');
         }
-    ;
-
-adverb_L1_phrase
-    : /* empty */             { $$ = NULL; } /* ()      */
-    | aux15                   { $$ = $1; }   /* a+      */
-    | aux17 aux16             { NODE2(""); } /* a(ca)+  */
-    | CONJ_ADV_L1 aux17 aux16 { NODE3(""); } /* ca(ca)+ */
-    ;
-
-aux15
-    : aux17       { $$ = $1; }
-    | aux15 aux17 { NODE2(""); }
-    ;
-
-aux16
-    : CONJ_ADV_L1 aux17       { NODE2(""); }
-    | aux16 CONJ_ADV_L1 aux17 { NODE3(""); }
-    ;
-
-aux17
-    : ADV_L1_V1 adverb_L2_phrase {
-            NODE2(`"[adverb phrase, level=1]"');
-        }
-    | ADV_L1_V2 adverb_L2_phrase argument_L2 {
-            NODE3(`"[adverb phrase, level=1]"');
-        }
-    ;
-
-adverb_L2_phrase
-    : /* empty */             { $$ = NULL; } /* ()      */
-    | aux18                   { $$ = $1; }   /* a+      */
-    | aux20 aux19             { NODE2(""); } /* a(ca)+  */
-    | CONJ_ADV_L2 aux20 aux19 { NODE3(""); } /* ca(ca)+ */
-    ;
-
-aux18
-    : aux20       { $$ = $1; }
-    | aux18 aux20 { NODE2(""); }
-    ;
-
-aux19
-    : CONJ_ADV_L2 aux20       { NODE2(""); }
-    | aux19 CONJ_ADV_L2 aux20 { NODE3(""); }
-    ;
-
-aux20
-    : ADV_L2_V1 { NODE1(`"[adjective phrase, level=2]"'); }
     ;
 
 participle_phrase
@@ -339,10 +300,10 @@ aux22
 
 aux23
     : PTCP_V1 participle_L1_phrase {
-            NODE2(`"[participle phrase, level=0]"');
+            NODE2(`"[participle phrase]"');
         }
     | PTCP_V2 participle_L1_phrase argument_L1 {
-            NODE3(`"[participle phrase, level=0]"');
+            NODE3(`"[participle phrase]"');
         }
     ;
 

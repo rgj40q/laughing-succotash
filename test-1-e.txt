@@ -1,167 +1,166 @@
 [text]
     [sentence]
-        [argument, level=0]
-            [noun phrase, level=0]
-                patris: noun, intransitive, level=0
-                [adjective phrase, level=0]
-                    nostril: adjective, intransitive, level=0
-                [adjective phrase, level=0]
-                    inul: adjective, transitive, level=0
+        [argument]
+            [noun phrase]
+                patris: noun, intransitive
+                [adjective phrase]
+                    nostril: adjective, intransitive
+                [adjective phrase]
+                    inul: adjective, transitive
                     [argument, level=1]
                         [noun phrase, level=1]
-                            celis: noun, intransitive, level=0
+                            celis: noun, intransitive
         tuit: verb, intransitive
     et: conjunction for sentence
     [sentence]
-        [adverb phrase, level=0]
-            vamosin: adverb, intransitive, level=0
-        [argument, level=0]
-            [noun phrase, level=0]
-                onis: noun, intransitive, level=0
+        [adverb phrase]
+            vamosin: adverb, intransitive
+        [argument]
+            [noun phrase]
+                onis: noun, intransitive
         sanctificut: verb, transitive
-        [argument, level=0]
-            [noun phrase, level=0]
-                nominis: noun, intransitive, level=0
-                [adjective phrase, level=0]
-                    tuil: adjective, intransitive, level=0
+        [argument]
+            [noun phrase]
+                nominis: noun, intransitive
+                [adjective phrase]
+                    tuil: adjective, intransitive
     et: conjunction for sentence
     [sentence]
-        [adverb phrase, level=0]
-            vamosin: adverb, intransitive, level=0
-        [argument, level=0]
-            [noun phrase, level=0]
-                regnis: noun, intransitive, level=0
-                [adjective phrase, level=0]
-                    tuil: adjective, intransitive, level=0
+        [adverb phrase]
+            vamosin: adverb, intransitive
+        [argument]
+            [noun phrase]
+                regnis: noun, intransitive
+                [adjective phrase]
+                    tuil: adjective, intransitive
         venit: verb, intransitive
     et: conjunction for sentence
     [sentence]
-        [adverb phrase, level=0]
-            vamosin: adverb, intransitive, level=0
-        [argument, level=0]
-            [noun phrase, level=0]
-                onis: noun, intransitive, level=0
+        [adverb phrase]
+            vamosin: adverb, intransitive
+        [argument]
+            [noun phrase]
+                onis: noun, intransitive
         facut: verb, transitive
-        [argument, level=0]
-            [noun phrase, level=0]
-                voluntatis: noun, intransitive, level=0
-                [adjective phrase, level=0]
-                    tuil: adjective, intransitive, level=0
-        en: conjunction for level-0 adverb
-        [adverb phrase, level=0]
-            inun: adverb, transitive, level=0
+        [argument]
+            [noun phrase]
+                voluntatis: noun, intransitive
+                [adjective phrase]
+                    tuil: adjective, intransitive
+        [adverb phrase]
+            inun: adverb, transitive
+            [participle phrase]
+                comim: participle, intransitive
             [argument, level=1]
                 le: article
                 [noun phrase, level=1]
-                    celis: noun, intransitive, level=0
-                    [participle phrase, level=1]
-                        comift: participle, intransitive, level=1
-        en: conjunction for level-0 adverb
-        [adverb phrase, level=0]
-            superun: adverb, transitive, level=0
+                    celis: noun, intransitive
+        en: conjunction for adverb
+        [adverb phrase]
+            superun: adverb, transitive
+            [participle phrase]
+                etiamim: participle, intransitive
             [argument, level=1]
                 le: article
                 [noun phrase, level=1]
-                    terris: noun, intransitive, level=0
-                    [participle phrase, level=1]
-                        etiamift: participle, intransitive, level=1
+                    terris: noun, intransitive
     et: conjunction for sentence
     [sentence]
-        [adverb phrase, level=0]
-            vamosin: adverb, intransitive, level=0
-        [argument, level=0]
-            [noun phrase, level=0]
-                tuis: noun, intransitive, level=0
+        [adverb phrase]
+            vamosin: adverb, intransitive
+        [argument]
+            [noun phrase]
+                tuis: noun, intransitive
         daut: verb, transitive
-        [adverb phrase, level=0]
-            aun: adverb, transitive, level=0
+        [adverb phrase]
+            aun: adverb, transitive
             [argument, level=1]
                 [noun phrase, level=1]
-                    nosis: noun, intransitive, level=0
-        [adverb phrase, level=0]
-            hodiin: adverb, intransitive, level=0
-        [argument, level=0]
-            [noun phrase, level=0]
-                panis: noun, intransitive, level=0
-                [adjective phrase, level=0]
-                    nostril: adjective, intransitive, level=0
-                [adjective phrase, level=0]
-                    quotidianil: adjective, intransitive, level=0
+                    nosis: noun, intransitive
+        [adverb phrase]
+            hodiin: adverb, intransitive
+        [argument]
+            [noun phrase]
+                panis: noun, intransitive
+                [adjective phrase]
+                    nostril: adjective, intransitive
+                [adjective phrase]
+                    quotidianil: adjective, intransitive
     et: conjunction for sentence
     [sentence]
-        [adverb phrase, level=0]
-            vamosin: adverb, intransitive, level=0
-        [argument, level=0]
-            [noun phrase, level=0]
-                tuis: noun, intransitive, level=0
+        [adverb phrase]
+            vamosin: adverb, intransitive
+        [argument]
+            [noun phrase]
+                tuis: noun, intransitive
         pardonut: verb, transitive
-        [adverb phrase, level=0]
-            aun: adverb, transitive, level=0
+        [adverb phrase]
+            aun: adverb, transitive
             [argument, level=1]
                 [noun phrase, level=1]
-                    nosis: noun, intransitive, level=0
-        [argument, level=0]
-            [noun phrase, level=0]
-                debitis: noun, intransitive, level=0
-                [adjective phrase, level=0]
-                    nostril: adjective, intransitive, level=0
+                    nosis: noun, intransitive
+        [argument]
+            [noun phrase]
+                debitis: noun, intransitive
+                [adjective phrase]
+                    nostril: adjective, intransitive
     et: conjunction for sentence
     [sentence]
-        [adverb phrase, level=0]
-            comin: adverb, intransitive, level=0
-            [adverb phrase, level=1]
-                etiamint: adverb, intransitive, level=1
-        [argument, level=0]
-            [noun phrase, level=0]
-                nosis: noun, intransitive, level=0
+        [adverb phrase]
+            comin: adverb, intransitive
+            [participle phrase]
+                etiamim: participle, intransitive
+        [argument]
+            [noun phrase]
+                nosis: noun, intransitive
         pardonut: verb, transitive
-        [argument, level=0]
-            [noun phrase, level=0]
-                onis: noun, intransitive, level=0
-        [adverb phrase, level=0]
-            aun: adverb, transitive, level=0
+        [argument]
+            [noun phrase]
+                onis: noun, intransitive
+        [adverb phrase]
+            aun: adverb, transitive
             [argument, level=1]
                 [noun phrase, level=1]
-                    debitoris: noun, intransitive, level=0
+                    debitoris: noun, intransitive
                     [adjective phrase, level=1]
-                        nostrilt: adjective, intransitive, level=1
+                        nostrih: adjective, intransitive, level=1
     et: conjunction for sentence
     [sentence]
-        [adverb phrase, level=0]
-            vamosin: adverb, intransitive, level=0
-        [argument, level=0]
-            [noun phrase, level=0]
-                tuis: noun, intransitive, level=0
-        [adverb phrase, level=0]
-            nonin: adverb, intransitive, level=0
+        [adverb phrase]
+            vamosin: adverb, intransitive
+        [argument]
+            [noun phrase]
+                tuis: noun, intransitive
+        [adverb phrase]
+            nonin: adverb, intransitive
         inducut: verb, transitive
-        [argument, level=0]
-            [noun phrase, level=0]
-                nosis: noun, intransitive, level=0
-        [adverb phrase, level=0]
-            inun: adverb, transitive, level=0
+        [argument]
+            [noun phrase]
+                nosis: noun, intransitive
+        [adverb phrase]
+            inun: adverb, transitive
             [argument, level=1]
                 [noun phrase, level=1]
-                    tentationis: noun, intransitive, level=0
+                    tentationis: noun, intransitive
     et: conjunction for sentence
     [sentence]
-        [adverb phrase, level=0]
-            sedin: adverb, intransitive, level=0
-        [adverb phrase, level=0]
-            vamosin: adverb, intransitive, level=0
-        [argument, level=0]
-            [noun phrase, level=0]
-                tuis: noun, intransitive, level=0
+        [adverb phrase]
+            sedin: adverb, intransitive
+        [adverb phrase]
+            vamosin: adverb, intransitive
+        [argument]
+            [noun phrase]
+                tuis: noun, intransitive
         liberut: verb, transitive
-        [argument, level=0]
-            [noun phrase, level=0]
-                nosis: noun, intransitive, level=0
-        [adverb phrase, level=0]
-            deun: adverb, transitive, level=0
+        [argument]
+            [noun phrase]
+                nosis: noun, intransitive
+        [adverb phrase]
+            deun: adverb, transitive
             [argument, level=1]
                 le: article
                 [noun phrase, level=1]
-                    malis: noun, intransitive, level=0
+                    malis: noun, intransitive
     et: conjunction for sentence
     [sentence]
         amenot: verb, impersonal
