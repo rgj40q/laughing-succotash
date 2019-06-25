@@ -136,17 +136,17 @@ et[[:space:]] {
     yylval = mknode0(strjoin(yytext, ": conjunction for sentence"));
     return CONJ_SENT;
 }
-es[[:space:]] {
+e[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for argument"));
     return CONJ_ARG;
 }
-esi[[:space:]] {
+ei[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-1 argument"));
     return CONJ_ARG_L1;
 }
-esu[[:space:]] {
+eu[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": conjunction for level-2 argument"));
     return CONJ_ARG_L2;
