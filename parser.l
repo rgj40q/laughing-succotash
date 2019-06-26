@@ -31,6 +31,181 @@ char * strjoin(char *, char *);
     yylval = mknode0(strjoin(yytext, ": article"));
     return ART;
 }
+zero[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 0"));
+    return NUM_0;
+}
+une[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 1"));
+    return NUM_1;
+}
+duo[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 2"));
+    return NUM_2;
+}
+tres[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 3"));
+    return NUM_3;
+}
+quatro[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 4"));
+    return NUM_4;
+}
+cinque[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 5"));
+    return NUM_5;
+}
+sex[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 6"));
+    return NUM_6;
+}
+septe[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 7"));
+    return NUM_7;
+}
+octo[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 8"));
+    return NUM_8;
+}
+nove[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 9"));
+    return NUM_9;
+}
+dece[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 10"));
+    return NUM_10;
+}
+vinti[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 20"));
+    return NUM_20;
+}
+trenta[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 30"));
+    return NUM_30;
+}
+quaranta[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 40"));
+    return NUM_40;
+}
+cinquanta[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 50"));
+    return NUM_50;
+}
+sexanta[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 60"));
+    return NUM_60;
+}
+septanta[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 70"));
+    return NUM_70;
+}
+octanta[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 80"));
+    return NUM_80;
+}
+novanta[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 90"));
+    return NUM_90;
+}
+cento[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 100"));
+    return NUM_100;
+}
+mille[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 1e3"));
+    return NUM_1E3;
+}
+million[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 1e6"));
+    return NUM_1E6;
+}
+milliardo[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 1e9"));
+    return NUM_1E9;
+}
+billion[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 1e12"));
+    return NUM_1E12;
+}
+billiardo[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 1e15"));
+    return NUM_1E15;
+}
+trillion[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 1e18"));
+    return NUM_1E18;
+}
+trilliardo[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 1e21"));
+    return NUM_1E21;
+}
+quatrillion[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 1e24"));
+    return NUM_1E24;
+}
+quatrilliardo[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 1e27"));
+    return NUM_1E27;
+}
+quintillion[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 1e30"));
+    return NUM_1E30;
+}
+quintilliardo[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, 1e33"));
+    return NUM_1E33;
+}
+di[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, divided by"));
+    return NUM_DIV;
+}
+plus[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, and"));
+    return NUM_PLUS;
+}
+comma[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, comma"));
+    return NUM_POINT;
+}
+is[[:space:]] {
+    yytext[strlen(yytext) - 1] = '\0';
+    yylval = mknode0(strjoin(yytext, ": \tnumeral, terminator"));
+    return NUM_TERM;
+}
 [a-z]+ot[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": verb, impersonal"));
