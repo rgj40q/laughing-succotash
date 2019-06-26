@@ -256,10 +256,10 @@ comma[[:space:]] {
     yylval = mknode0(strjoin(yytext, ": \tnumeral, comma"));
     return NUM_POINT;
 }
-es[[:space:]] {
+lo[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';
     yylval = mknode0(strjoin(yytext, ": \tnumeral, terminator"));
-    return NUM_TERM;
+    return NUM_ART;
 }
 [a-z]*o(t|va|ra|rea|ta)[[:space:]] {
     yytext[strlen(yytext) - 1] = '\0';

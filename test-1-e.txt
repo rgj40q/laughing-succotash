@@ -142,7 +142,7 @@
             [noun phrase]
                 nose: noun, intransitive
         [adverb phrase]
-            dein: adverb, transitive
+            din: adverb, transitive
             [argument, level=1]
                 le: article
                 [noun phrase, level=1]

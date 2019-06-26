@@ -53,7 +53,7 @@ int printtree_level = 0;
 %token NUM_0 NUM_1 NUM_2 NUM_3 NUM_4 NUM_5 NUM_6 NUM_7 NUM_8 NUM_9 NUM_10
 %token NUM_20 NUM_30 NUM_40 NUM_50 NUM_60 NUM_70 NUM_80 NUM_90 NUM_100
 %token NUM_1E3 NUM_1E6 NUM_1E9 NUM_1E12 NUM_1E15 NUM_1E18 NUM_1E21 NUM_1E24
-%token NUM_1E27 NUM_1E30 NUM_1E33 NUM_DIV NUM_PLUS NUM_POINT NUM_TERM
+%token NUM_1E27 NUM_1E30 NUM_1E33 NUM_DIV NUM_PLUS NUM_POINT NUM_ART
 
 %%
 
@@ -363,13 +363,13 @@ aux29
     ;
 
 numeral
-    : natural NUM_TERM  { NODE2(""); }
+    : NUM_ART natural   { NODE2(""); }
     | decimal           { NODE1(""); }
     | fractional        { NODE1(""); }
     ;
 
 decimal
-    : natural NUM_POINT digits NUM_TERM { NODE4(""); }
+    : NUM_ART natural NUM_POINT digits { NODE4(""); }
     ;
 
 digits
@@ -378,8 +378,8 @@ digits
     ;
 
 fractional
-    : natural NUM_DIV natural NUM_TERM                   { NODE4(""); }
-    | natural NUM_PLUS natural NUM_DIV natural NUM_TERM  { NODE6(""); }
+    : NUM_ART natural NUM_DIV natural                   { NODE4(""); }
+    | NUM_ART natural NUM_PLUS natural NUM_DIV natural  { NODE6(""); }
     ;
 
 natural
