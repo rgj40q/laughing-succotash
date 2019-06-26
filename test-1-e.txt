@@ -2,165 +2,151 @@
     [sentence]
         [argument]
             [noun phrase]
-                patris: noun, intransitive
+                patre: noun, intransitive
                 [adjective phrase]
-                    nostril: adjective, intransitive
+                    nostrel: adjective, intransitive
                 [adjective phrase]
-                    inul: adjective, transitive
+                    inil: adjective, transitive
                     [argument, level=1]
                         [noun phrase, level=1]
-                            celis: noun, intransitive
-        tuit: verb, intransitive
+                            celes: noun, intransitive
+        tuet: verb, intransitive
     et: conjunction for sentence
     [sentence]
-        [adverb phrase]
-            vamosin: adverb, intransitive
         [argument]
             [noun phrase]
-                onis: noun, intransitive
-        sanctificut: verb, transitive
+                one: noun, intransitive
+        sanctificita: verb, transitive
         [argument]
             [noun phrase]
-                nominis: noun, intransitive
+                nomine: noun, intransitive
                 [adjective phrase]
-                    tuil: adjective, intransitive
+                    tuel: adjective, intransitive
     et: conjunction for sentence
     [sentence]
-        [adverb phrase]
-            vamosin: adverb, intransitive
         [argument]
             [noun phrase]
-                regnis: noun, intransitive
+                regne: noun, intransitive
                 [adjective phrase]
-                    tuil: adjective, intransitive
-        venit: verb, intransitive
+                    tuel: adjective, intransitive
+        veneta: verb, intransitive
     et: conjunction for sentence
     [sentence]
-        [adverb phrase]
-            vamosin: adverb, intransitive
         [argument]
             [noun phrase]
-                onis: noun, intransitive
-        facut: verb, transitive
+                one: noun, intransitive
+        facita: verb, transitive
         [argument]
             [noun phrase]
-                voluntatis: noun, intransitive
+                voluntate: noun, intransitive
                 [adjective phrase]
-                    tuil: adjective, intransitive
+                    tuel: adjective, intransitive
         [adverb phrase]
-            inun: adverb, transitive
+            inin: adverb, transitive
             [participle phrase]
-                comim: participle, intransitive
+                comem: participle, intransitive
             [argument, level=1]
                 le: article
                 [noun phrase, level=1]
-                    celis: noun, intransitive
+                    cele: noun, intransitive
         en: conjunction for adverb
         [adverb phrase]
-            superun: adverb, transitive
+            superin: adverb, transitive
             [participle phrase]
-                etiamim: participle, intransitive
+                etiamem: participle, intransitive
             [argument, level=1]
                 le: article
                 [noun phrase, level=1]
-                    terris: noun, intransitive
+                    terre: noun, intransitive
     et: conjunction for sentence
     [sentence]
-        [adverb phrase]
-            vamosin: adverb, intransitive
         [argument]
             [noun phrase]
-                tuis: noun, intransitive
-        daut: verb, transitive
+                tue: noun, intransitive
+        daita: verb, transitive
         [adverb phrase]
-            aun: adverb, transitive
+            ain: adverb, transitive
             [argument, level=1]
                 [noun phrase, level=1]
-                    nosis: noun, intransitive
+                    nose: noun, intransitive
         [adverb phrase]
-            hodiin: adverb, intransitive
+            hodien: adverb, intransitive
         [argument]
             [noun phrase]
-                panis: noun, intransitive
+                pane: noun, intransitive
                 [adjective phrase]
-                    nostril: adjective, intransitive
+                    nostrel: adjective, intransitive
                 [adjective phrase]
-                    quotidianil: adjective, intransitive
+                    quotidianel: adjective, intransitive
     et: conjunction for sentence
     [sentence]
-        [adverb phrase]
-            vamosin: adverb, intransitive
         [argument]
             [noun phrase]
-                tuis: noun, intransitive
-        pardonut: verb, transitive
+                tue: noun, intransitive
+        pardonita: verb, transitive
         [adverb phrase]
-            aun: adverb, transitive
+            ain: adverb, transitive
             [argument, level=1]
                 [noun phrase, level=1]
-                    nosis: noun, intransitive
+                    nose: noun, intransitive
         [argument]
             [noun phrase]
-                debitis: noun, intransitive
+                debites: noun, intransitive
                 [adjective phrase]
-                    nostril: adjective, intransitive
+                    nostrel: adjective, intransitive
     et: conjunction for sentence
     [sentence]
         [adverb phrase]
-            comin: adverb, intransitive
+            comen: adverb, intransitive
             [participle phrase]
-                etiamim: participle, intransitive
+                etiamem: participle, intransitive
         [argument]
             [noun phrase]
-                nosis: noun, intransitive
-        pardonut: verb, transitive
+                nose: noun, intransitive
+        pardonit: verb, transitive
         [argument]
             [noun phrase]
-                onis: noun, intransitive
+                lose: noun, intransitive
         [adverb phrase]
-            aun: adverb, transitive
+            ain: adverb, transitive
             [argument, level=1]
                 [noun phrase, level=1]
-                    debitoris: noun, intransitive
+                    debitores: noun, intransitive
                     [adjective phrase, level=1]
-                        nostrih: adjective, intransitive, level=1
+                        nostreh: adjective, intransitive, level=1
     et: conjunction for sentence
     [sentence]
-        [adverb phrase]
-            vamosin: adverb, intransitive
         [argument]
             [noun phrase]
-                tuis: noun, intransitive
+                tue: noun, intransitive
         [adverb phrase]
-            nonin: adverb, intransitive
-        inducut: verb, transitive
+            nonen: adverb, intransitive
+        inducita: verb, transitive
         [argument]
             [noun phrase]
-                nosis: noun, intransitive
+                nose: noun, intransitive
         [adverb phrase]
-            inun: adverb, transitive
+            inin: adverb, transitive
             [argument, level=1]
                 [noun phrase, level=1]
-                    tentationis: noun, intransitive
+                    tentatione: noun, intransitive
     et: conjunction for sentence
     [sentence]
         [adverb phrase]
-            sedin: adverb, intransitive
-        [adverb phrase]
-            vamosin: adverb, intransitive
+            seden: adverb, intransitive
         [argument]
             [noun phrase]
-                tuis: noun, intransitive
-        liberut: verb, transitive
+                tue: noun, intransitive
+        liberita: verb, transitive
         [argument]
             [noun phrase]
-                nosis: noun, intransitive
+                nose: noun, intransitive
         [adverb phrase]
-            deun: adverb, transitive
+            dein: adverb, transitive
             [argument, level=1]
                 le: article
                 [noun phrase, level=1]
-                    malis: noun, intransitive
+                    male: noun, intransitive
     et: conjunction for sentence
     [sentence]
         amenot: verb, impersonal
