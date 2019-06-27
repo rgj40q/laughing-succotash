@@ -42,14 +42,14 @@ int printtree_level = 0;
 %start START
 %token V_V0 V_V1 V_V2
 %token ART
-%token CONJ_ARG CONJ_ARG_L1 CONJ_ARG_L2 CONJ_ADJ CONJ_ADJ_L1 CONJ_ADJ_L2
-%token CONJ_SENT CONJ_ADV
-%token CONJ_PTCP CONJ_PTCP_L1 CONJ_PTCP_L2
-%token INF_V0 INF_V1 INF_V2
-%token N_V1 N_V2
-%token ADJ_V1 ADJ_V2 ADJ_L1_V1 ADJ_L1_V2 ADJ_L2_V1
-%token ADV_V1 ADV_V2
-%token PTCP_V1 PTCP_V2 PTCP_L1_V1 PTCP_L1_V2 PTCP_L2_V1
+%token CONJ_ARG CONJ_ARG_L1 CONJ_ARG_L2 CONJ_APP CONJ_APP_L1 CONJ_APP_L2
+%token CONJ_SENT CONJ_ADVA
+%token CONJ_ADVB CONJ_ADVB_L1 CONJ_ADVB_L2
+%token INF_V1 INF_V2
+%token N_V0 N_V1 N_V2
+%token APP_V1 APP_V2 APP_L1_V1 APP_L1_V2 APP_L2_V1
+%token ADVA_V1 ADVA_V2
+%token ADVB_V1 ADVB_V2 ADVB_L1_V1 ADVB_L1_V2 ADVB_L2_V1
 %token NUM_0 NUM_1 NUM_2 NUM_3 NUM_4 NUM_5 NUM_6 NUM_7 NUM_8 NUM_9 NUM_10
 %token NUM_20 NUM_30 NUM_40 NUM_50 NUM_60 NUM_70 NUM_80 NUM_90 NUM_100
 %token NUM_1E3 NUM_1E6 NUM_1E9 NUM_1E12 NUM_1E15 NUM_1E18 NUM_1E21 NUM_1E24
@@ -73,22 +73,22 @@ aux
     ;
 
 sentence
-    : adverb_phrase V_V0 adverb_phrase { /* V */
+    : adverbA_phrase V_V0 adverbA_phrase { /* V */
             NODE3("[sentence]");
         }
-    | adverb_phrase argument adverb_phrase V_V1 adverb_phrase { /* SV */
+    | adverbA_phrase argument adverbA_phrase V_V1 adverbA_phrase { /* SV */
             NODE5("[sentence]");
         }
-    | adverb_phrase V_V1 adverb_phrase argument adverb_phrase { /* VS */
+    | adverbA_phrase V_V1 adverbA_phrase argument adverbA_phrase { /* VS */
             NODE5("[sentence]");
         }
-    | adverb_phrase argument adverb_phrase V_V2 adverb_phrase argument adverb_phrase { /* SVO */
+    | adverbA_phrase argument adverbA_phrase V_V2 adverbA_phrase argument adverbA_phrase { /* SVO */
             NODE7("[sentence]");
         }
-    | adverb_phrase argument adverb_phrase argument adverb_phrase V_V2 adverb_phrase { /* SOV */
+    | adverbA_phrase argument adverbA_phrase argument adverbA_phrase V_V2 adverbA_phrase { /* SOV */
             NODE7("[sentence]");
         }
-    | adverb_phrase V_V2 adverb_phrase argument adverb_phrase argument adverb_phrase { /* VSO */
+    | adverbA_phrase V_V2 adverbA_phrase argument adverbA_phrase argument adverbA_phrase { /* VSO */
             NODE7("[sentence]");
         }
     ;
@@ -106,15 +106,15 @@ aux0
     ;
 
 argument_L1
-    : aux1                         { $$ = $1; }   /* a      */
+    : aux1                         { NODE1(""); }   /* a      */
     | argument_L1 CONJ_ARG_L1 aux1 { NODE3(""); } /* a(ca)+ */
     ;
 
 aux1
-    : ART noun_L1_phrase       { NODE2(`"[argument, level=1]"'); } /* `quoted' because m4 splits strings with a space */
-    | ART infinitive_L1_phrase { NODE2(`"[argument, level=1]"'); }
-    | noun_L1_phrase           { NODE1(`"[argument, level=1]"'); }
-    | infinitive_L1_phrase     { NODE1(`"[argument, level=1]"'); }
+    : ART noun_L1_phrase       { NODE2("[subargument]"); }
+    | ART infinitive_L1_phrase { NODE2("[subargument]"); }
+    | noun_L1_phrase           { NODE1("[subargument]"); }
+    | infinitive_L1_phrase     { NODE1("[subargument]"); }
     ;
 
 argument_L2
@@ -123,76 +123,86 @@ argument_L2
     ;
 
 aux2
-    : ART noun_L2_phrase       { NODE2(`"[argument, level=2]"'); }
-    | ART infinitive_L2_phrase { NODE2(`"[argument, level=2]"'); }
-    | noun_L2_phrase           { NODE1(`"[argument, level=2]"'); }
-    | infinitive_L2_phrase     { NODE1(`"[argument, level=2]"'); }
+    : ART noun_L2_phrase       { NODE2("[subsubargument]"); }
+    | ART infinitive_L2_phrase { NODE2("[subsubargument]"); }
+    | noun_L2_phrase           { NODE1("[subsubargument]"); }
+    | infinitive_L2_phrase     { NODE1("[subsubargument]"); }
     ;
 
 noun_phrase
-    : N_V1 participle_phrase adjective_phrase {
+    : N_V0 adverbB_phrase apposition_phrase {
+            NODE3(`"[noun phrase]"'); /* `quoted' because m4 splits strings with a space */
+        }
+    | N_V1 adverbB_phrase apposition_phrase {
             NODE3(`"[noun phrase]"');
         }
-    | numeral participle_phrase adjective_phrase {
+    | numeral adverbB_phrase apposition_phrase {
             NODE3(`"[noun phrase]"');
         }
-    | N_V2 participle_phrase argument_L1 adjective_phrase {
-            NODE4(`"[noun phrase]"');
+    | N_V2 adverbB_phrase apposition_phrase {
+            NODE3(`"[noun phrase]"');
         }
     ;
 
 noun_L1_phrase
-    : N_V1 participle_L1_phrase adjective_L1_phrase {
-            NODE3(`"[noun phrase, level=1]"');
+    : N_V0 adverbB_L1_phrase apposition_L1_phrase {
+            NODE3(`"[noun subphrase"');
         }
-    | numeral participle_L1_phrase adjective_L1_phrase {
-            NODE3(`"[noun phrase, level=1]"');
+    | N_V1 adverbB_L1_phrase apposition_L1_phrase {
+            NODE3(`"[noun subphrase]"');
         }
-    | N_V2 participle_L1_phrase argument_L2 adjective_L1_phrase {
-            NODE4(`"[noun phrase, level=1]"');
+    | numeral adverbB_L1_phrase apposition_L1_phrase {
+            NODE3(`"[noun subphrase]"');
+        }
+    | N_V2 adverbB_L1_phrase apposition_L1_phrase {
+            NODE3(`"[noun subphrase]"');
         }
     ;
 
 noun_L2_phrase
-    : N_V1 participle_L2_phrase adjective_L2_phrase     { NODE3(`"[noun phrase, level=2]"'); }
-    | numeral participle_L2_phrase adjective_L2_phrase  { NODE3(`"[noun phrase, level=2]"'); }
+    : N_V0 adverbB_L2_phrase apposition_L2_phrase {
+            NODE3(`"[noun subsubphrase]"');
+        }
+    | N_V1 adverbB_L2_phrase apposition_L2_phrase {
+            NODE3(`"[noun subsubphrase]"');
+        }
+    | numeral adverbB_L2_phrase apposition_L2_phrase {
+            NODE3(`"[noun subsubphrase]"');
+        }
+    | N_V2 adverbB_L2_phrase apposition_L2_phrase {
+            NODE3(`"[noun subsubphrase]"');
+        }
     ;
 
 infinitive_phrase
-    : INF_V0 participle_phrase adjective_phrase {
+    : INF_V1 adverbB_phrase {
+            NODE2(`"[infinitive phrase]"');
+        }
+    | INF_V2 adverbB_phrase argument_L1 {
             NODE3(`"[infinitive phrase]"');
-        }
-    | INF_V1 participle_phrase argument_L1 adjective_phrase {
-            NODE4(`"[infinitive phrase]"');
-        }
-    | INF_V2 participle_phrase argument_L1 argument_L1 adjective_phrase {
-            NODE5(`"[infinitive phrase]"');
         }
     ;
 
 infinitive_L1_phrase
-    : INF_V0 participle_L1_phrase adjective_L1_phrase {
-            NODE3(`"[infinitive phrase, level=1]"');
+    : INF_V1 adverbB_L1_phrase {
+            NODE2(`"[infinitive subphrase]"');
         }
-    | INF_V1 participle_L1_phrase argument_L2 adjective_L1_phrase {
-            NODE4(`"[infinitive phrase, level=1]"');
-        }
-    | INF_V2 participle_L1_phrase argument_L2 argument_L2 adjective_L1_phrase {
-            NODE5(`"[infinitive phrase, level=1]"');
+    | INF_V2 adverbB_L1_phrase argument_L2 {
+            NODE3(`"[infinitive subphrase]"');
         }
     ;
 
 infinitive_L2_phrase
-    : INF_V0 participle_L2_phrase adjective_L2_phrase {
-            NODE3(`"[infinitive phrase, level=2]"');
+    : INF_V1 adverbB_L2_phrase {
+            NODE2(`"[infinitive subsubphrase]"');
         }
     ;
 
-adjective_phrase
-    : /* empty */        { $$ = NULL; } /* ()      */
+apposition_phrase
+    : /* empty */        { NODE0(""); } /* ()      */
     | aux3               { NODE1(""); } /* a+      */
     | aux5 aux4          { NODE2(""); } /* a(ca)+  */
-    | CONJ_ADJ aux5 aux4 { NODE3(""); } /* ca(ca)+ */
+    | CONJ_APP aux5 aux4 { NODE3(""); } /* ca(ca)+ */
     ;
 
 aux3
@@ -201,24 +211,24 @@ aux3
     ;
 
 aux4 
-    : CONJ_ADJ aux5      { NODE2(""); }
-    | aux4 CONJ_ADJ aux5 { NODE3(""); }
+    : CONJ_APP aux5      { NODE2(""); }
+    | aux4 CONJ_APP aux5 { NODE3(""); }
     ;
 
 aux5 
-    : ADJ_V1 participle_phrase {
-            NODE2(`"[adjective phrase]"');
+    : APP_V1 adverbB_phrase {
+            NODE2(`"[apposition phrase]"');
         }
-    | ADJ_V2 participle_phrase argument_L1 {
-            NODE3(`"[adjective phrase]"');
+    | APP_V2 adverbB_phrase argument_L1 {
+            NODE3(`"[apposition phrase]"');
         }
     ;
 
-adjective_L1_phrase
-    : /* empty */           { $$ = NULL; } /* ()      */
+apposition_L1_phrase
+    : /* empty */           { NODE0(""); } /* ()      */
     | aux6                  { NODE1(""); } /* a+      */
     | aux8 aux7             { NODE2(""); } /* a(ca)+  */
-    | CONJ_ADJ_L1 aux8 aux7 { NODE3(""); } /* ca(ca)+ */
+    | CONJ_APP_L1 aux8 aux7 { NODE3(""); } /* ca(ca)+ */
     ;
 
 aux6 
@@ -227,24 +237,24 @@ aux6
     ;
 
 aux7 
-    : CONJ_ADJ_L1 aux8      { NODE2(""); }
-    | aux7 CONJ_ADJ_L1 aux8 { NODE3(""); }
+    : CONJ_APP_L1 aux8      { NODE2(""); }
+    | aux7 CONJ_APP_L1 aux8 { NODE3(""); }
     ;
 
 aux8
-    : ADJ_L1_V1 participle_L1_phrase {
-            NODE2(`"[adjective phrase, level=1]"');
+    : APP_L1_V1 adverbB_L1_phrase {
+            NODE2(`"[apposition subphrase]"');
         }
-    | ADJ_L1_V2 participle_L1_phrase argument_L2 {
-            NODE3(`"[adjective phrase, level=1]"');
+    | APP_L1_V2 adverbB_L1_phrase argument_L2 {
+            NODE3(`"[apposition subphrase]"');
         }
     ;
 
-adjective_L2_phrase
-    : /* empty */             { $$ = NULL; } /* ()      */
+apposition_L2_phrase
+    : /* empty */             { NODE0(""); } /* ()      */
     | aux9                    { NODE1(""); } /* a+      */
     | aux11 aux10             { NODE2(""); } /* a(ca)+  */
-    | CONJ_ADJ_L2 aux11 aux10 { NODE3(""); } /* ca(ca)+ */
+    | CONJ_APP_L2 aux11 aux10 { NODE3(""); } /* ca(ca)+ */
     ;
 
 aux9
@@ -253,21 +263,21 @@ aux9
     ;
 
 aux10
-    : CONJ_ADJ_L2 aux11       { NODE2(""); }
-    | aux10 CONJ_ADJ_L2 aux11 { NODE3(""); }
+    : CONJ_APP_L2 aux11       { NODE2(""); }
+    | aux10 CONJ_APP_L2 aux11 { NODE3(""); }
     ;
 
 aux11
-    : ADJ_L2_V1 participle_L2_phrase {
-            NODE2(`"[adjective phrase, level=2]"');
+    : APP_L2_V1 adverbB_L2_phrase {
+            NODE2(`"[apposition subsubphrase]"');
         }
     ;
 
-adverb_phrase
-    : /* empty */          { $$ = NULL; } /* ()      */
-    | aux12                { NODE1(""); } /* a+      */
-    | aux14 aux13          { NODE2(""); } /* a(ca)+  */
-    | CONJ_ADV aux14 aux13 { NODE3(""); } /* ca(ca)+ */
+adverbA_phrase
+    : /* empty */           { NODE0(""); } /* ()      */
+    | aux12                 { NODE1(""); } /* a+      */
+    | aux14 aux13           { NODE2(""); } /* a(ca)+  */
+    | CONJ_ADVA aux14 aux13 { NODE3(""); } /* ca(ca)+ */
     ;
 
 aux12
@@ -276,24 +286,24 @@ aux12
     ;
 
 aux13
-    : CONJ_ADV aux14       { NODE2(""); }
-    | aux13 CONJ_ADV aux14 { NODE3(""); }
+    : CONJ_ADVA aux14       { NODE2(""); }
+    | aux13 CONJ_ADVA aux14 { NODE3(""); }
     ;
 
 aux14
-    : ADV_V1 participle_phrase {
-            NODE2(`"[adverb phrase]"');
+    : ADVA_V1 adverbB_phrase {
+            NODE2(`"[adverbA phrase]"');
         }
-    | ADV_V2 participle_phrase argument_L1 {
-            NODE3(`"[adverb phrase]"');
+    | ADVA_V2 adverbB_phrase argument_L1 {
+            NODE3(`"[adverbA phrase]"');
         }
     ;
 
-participle_phrase
-    : /* empty */           { $$ = NULL; } /* ()      */
-    | aux21                 { NODE1(""); }   /* a+      */
+adverbB_phrase
+    : /* empty */           { NODE0(""); } /* ()      */
+    | aux21                 { NODE1(""); } /* a+      */
     | aux23 aux22           { NODE2(""); } /* a(ca)+  */
-    | CONJ_PTCP aux23 aux22 { NODE3(""); } /* ca(ca)+ */
+    | CONJ_ADVB aux23 aux22 { NODE3(""); } /* ca(ca)+ */
     ;
 
 aux21
@@ -302,24 +312,24 @@ aux21
     ;
 
 aux22
-    : CONJ_PTCP aux23       { NODE2(""); }
-    | aux22 CONJ_PTCP aux23 { NODE3(""); }
+    : CONJ_ADVB aux23       { NODE2(""); }
+    | aux22 CONJ_ADVB aux23 { NODE3(""); }
     ;
 
 aux23
-    : PTCP_V1 participle_L1_phrase {
-            NODE2(`"[participle phrase]"');
+    : ADVB_V1 adverbB_L1_phrase {
+            NODE2(`"[adverbB phrase]"');
         }
-    | PTCP_V2 participle_L1_phrase argument_L1 {
-            NODE3(`"[participle phrase]"');
+    | ADVB_V2 adverbB_L1_phrase argument_L1 {
+            NODE3(`"[adverbB phrase]"');
         }
     ;
 
-participle_L1_phrase
-    : /* empty */              { $$ = NULL; } /* ()      */
+adverbB_L1_phrase
+    : /* empty */              { NODE0(""); } /* ()      */
     | aux24                    { NODE1(""); } /* a+      */
     | aux26 aux25              { NODE2(""); } /* a(ca)+  */
-    | CONJ_PTCP_L1 aux26 aux25 { NODE3(""); } /* ca(ca)+ */
+    | CONJ_ADVB_L1 aux26 aux25 { NODE3(""); } /* ca(ca)+ */
     ;
 
 aux24
@@ -328,24 +338,24 @@ aux24
     ;
 
 aux25
-    : CONJ_PTCP_L1 aux26       { NODE2(""); }
-    | aux25 CONJ_PTCP_L1 aux26 { NODE3(""); }
+    : CONJ_ADVB_L1 aux26       { NODE2(""); }
+    | aux25 CONJ_ADVB_L1 aux26 { NODE3(""); }
     ;
 
 aux26
-    : PTCP_L1_V1 participle_L2_phrase {
-            NODE2(`"[participle phrase, level=1]"');
+    : ADVB_L1_V1 adverbB_L2_phrase {
+            NODE2(`"[adverbB subphrase]"');
         }
-    | PTCP_L1_V2 participle_L2_phrase argument_L2 {
-            NODE3(`"[participle phrase, level=1]"');
+    | ADVB_L1_V2 adverbB_L2_phrase argument_L2 {
+            NODE3(`"[adverbB subphrase]"');
         }
     ;
 
-participle_L2_phrase
-    : /* empty */              { $$ = NULL; } /* ()      */
+adverbB_L2_phrase
+    : /* empty */              { NODE0(""); } /* ()      */
     | aux27                    { NODE1(""); } /* a+      */
     | aux29 aux28              { NODE2(""); } /* a(ca)+  */
-    | CONJ_PTCP_L2 aux29 aux28 { NODE3(""); } /* ca(ca)+ */
+    | CONJ_ADVB_L2 aux29 aux28 { NODE3(""); } /* ca(ca)+ */
     ;
 
 aux27
@@ -354,12 +364,12 @@ aux27
     ;
 
 aux28
-    : CONJ_PTCP_L2 aux29       { NODE2(""); }
-    | aux28 CONJ_PTCP_L2 aux29 { NODE3(""); }
+    : CONJ_ADVB_L2 aux29       { NODE2(""); }
+    | aux28 CONJ_ADVB_L2 aux29 { NODE3(""); }
     ;
 
 aux29
-    : PTCP_L2_V1 { NODE1(`"[participle phrase, level=2]"'); }
+    : ADVB_L2_V1 { NODE1(`"[adverbB subsubphrase]"'); }
     ;
 
 numeral
@@ -615,14 +625,14 @@ mknode7(char *token, YYSTYPE node1, YYSTYPE node2, YYSTYPE node3,
 
 void
 printtree(YYSTYPE tree) {
-    int i;
     if (NULL == tree) {
         return;
     }
     if (NULL == tree->token) {
         return;
     }
-    /* token "" is dummy, so print neither token nor parens around it */
+    int i;
+    /* token "" is dummy, so don't print it and don't shift level */
     if (strcmp(tree->token, "")) {
         for (i = 0; i < printtree_level; i++) {
             printf("    ");
