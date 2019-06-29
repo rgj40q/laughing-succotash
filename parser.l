@@ -214,203 +214,203 @@ comma {
     yylval = mknode0(strjoin(yytext, ": \tnumeral, comma"));
     return NUM_POINT;
 }
-[a-z]*ot {
+[a-z]+ot {
     yylval = mknode0(strjoin(yytext, ": verb, impersonal, present"));
     return V_V0;
 }
-[a-z]*ova {
+[a-z]+ova {
     yylval = mknode0(strjoin(yytext, ": verb, impersonal, past"));
     return V_V0;
 }
-[a-z]*ora {
+[a-z]+ora {
     yylval = mknode0(strjoin(yytext, ": verb, impersonal, future"));
     return V_V0;
 }
-[a-z]*orea {
+[a-z]+orea {
     yylval = mknode0(strjoin(yytext, ": verb, impersonal, conditional"));
     return V_V0;
 }
-[a-z]*oza {
+[a-z]+oza {
     yylval = mknode0(strjoin(yytext, ": verb, impersonal, imperative"));
     return V_V0;
 }
-[a-z]*et {
+[a-z]+et {
     yylval = mknode0(strjoin(yytext, ": verb, intransitive, present"));
     return V_V1;
 }
-[a-z]*eva {
+[a-z]+eva {
     yylval = mknode0(strjoin(yytext, ": verb, intransitive, past"));
     return V_V1;
 }
-[a-z]*era {
+[a-z]+era {
     yylval = mknode0(strjoin(yytext, ": verb, intransitive, future"));
     return V_V1;
 }
-[a-z]*erea {
+[a-z]+erea {
     yylval = mknode0(strjoin(yytext, ": verb, intransitive, conditional"));
     return V_V1;
 }
-[a-z]*eza {
+[a-z]+eza {
     yylval = mknode0(strjoin(yytext, ": verb, intransitive, imperative"));
     return V_V1;
 }
-[a-z]*it {
+[a-z]+it {
     yylval = mknode0(strjoin(yytext, ": verb, transitive, present"));
     return V_V2;
 }
-[a-z]*iva {
+[a-z]+iva {
     yylval = mknode0(strjoin(yytext, ": verb, transitive, past"));
     return V_V2;
 }
-[a-z]*ira {
+[a-z]+ira {
     yylval = mknode0(strjoin(yytext, ": verb, transitive, future"));
     return V_V2;
 }
-[a-z]*irea {
+[a-z]+irea {
     yylval = mknode0(strjoin(yytext, ": verb, transitive, conditional"));
     return V_V2;
 }
-[a-z]*iza {
+[a-z]+iza {
     yylval = mknode0(strjoin(yytext, ": verb, transitive, imperative"));
     return V_V2;
 }
-[a-z]*iat {
+[a-z]+iat {
     yylval = mknode0(strjoin(yytext, ": verb, transitive, present, passive"));
     return V_V2;
 }
-[a-z]*iava {
+[a-z]+iava {
     yylval = mknode0(strjoin(yytext, ": verb, transitive, past, passive"));
     return V_V2;
 }
-[a-z]*iara {
+[a-z]+iara {
     yylval = mknode0(strjoin(yytext, ": verb, transitive, future, passive"));
     return V_V2;
 }
-[a-z]*iarea {
+[a-z]+iarea {
     yylval = mknode0(strjoin(yytext, ": verb, transitive, conditional, passive"));
     return V_V2;
 }
-[a-z]*iaza {
+[a-z]+iaza {
     yylval = mknode0(strjoin(yytext, ": verb, transitive, imperative, passive"));
     return V_V2;
 }
-[a-z]*onda {
+[a-z]+onda {
     yylval = mknode0(strjoin(yytext, ": gerund, impersonal, singular"));
     return N_V0;
 }
-[a-z]*ondas {
+[a-z]+ondas {
     yylval = mknode0(strjoin(yytext, ": gerund, impersonal, plural"));
     return N_V0;
 }
-[a-z]*e {
+[a-z]+e {
     yylval = mknode0(strjoin(yytext, ": noun, singular"));
     return N_V1;
 }
-[a-z]*es {
+[a-z]+es {
     yylval = mknode0(strjoin(yytext, ": noun, plural"));
     return N_V1;
 }
-[a-z]*enda {
+[a-z]+enda {
     yylval = mknode0(strjoin(yytext, ": gerund, singular"));
     return N_V1;
 }
-[a-z]*endas {
+[a-z]+endas {
     yylval = mknode0(strjoin(yytext, ": gerund, plural"));
     return N_V1;
 }
-[a-z]*(i|ia) {
+[a-z]+(i|ia) {
     yylval = mknode0(strjoin(yytext, ": noun, singular"));
     return N_V2;
 }
-[a-z]*(is|ias) {
+[a-z]+(is|ias) {
     yylval = mknode0(strjoin(yytext, ": noun, plural"));
     return N_V2;
 }
-[a-z]*(inda|ianda) {
+[a-z]+(inda|ianda) {
     yylval = mknode0(strjoin(yytext, ": gerund, singular"));
     return N_V2;
 }
-[a-z]*(indas|iandas) {
+[a-z]+(indas|iandas) {
     yylval = mknode0(strjoin(yytext, ": gerund, plural"));
     return N_V2;
 }
-[a-z]*er {
+[a-z]+er {
     yylval = mknode0(strjoin(yytext, ": infinitive, intransitive"));
     return INF_V1;
 }
-[a-z]*ir {
+[a-z]+ir {
     yylval = mknode0(strjoin(yytext, ": infinitive, transitive"));
     return INF_V2;
 }
-[a-z]*iar {
+[a-z]+iar {
     yylval = mknode0(strjoin(yytext, ": infinitive, transitive, passive"));
     return INF_V2;
 }
-[a-z]*el {
+[a-z]+el {
     yylval = mknode0(strjoin(yytext, ": appositive, intransitive"));
     return APP_V1;
 }
-[a-z]*il {
+[a-z]+il {
     yylval = mknode0(strjoin(yytext, ": appositive, transitive"));
     return APP_V2;
 }
-[a-z]*ial {
+[a-z]+ial {
     yylval = mknode0(strjoin(yytext, ": appositive, transitive, passive"));
     return APP_V2;
 }
-[a-z]*eh {
+[a-z]+eh {
     yylval = mknode0(strjoin(yytext, ": subappositive, intransitive"));
     return APP_L1_V1;
 }
-[a-z]*ih {
+[a-z]+ih {
     yylval = mknode0(strjoin(yytext, ": subappositive, transitive"));
     return APP_L1_V2;
 }
-[a-z]*iah {
+[a-z]+iah {
     yylval = mknode0(strjoin(yytext, ": subappositive, transitive, passive"));
     return APP_L1_V2;
 }
-[a-z]*ec {
+[a-z]+ec {
     yylval = mknode0(strjoin(yytext, ": subsubappositive, intransitive"));
     return APP_L2_V1;
 }
-[a-z]*en {
+[a-z]+en {
     yylval = mknode0(strjoin(yytext, ": adverb A, intransitive"));
     return ADVA_V1;
 }
-[a-z]*in {
+[a-z]+in {
     yylval = mknode0(strjoin(yytext, ": adverb A, transitive"));
     return ADVA_V2;
 }
-[a-z]*ian {
+[a-z]+ian {
     yylval = mknode0(strjoin(yytext, ": adverb A, transitive, passive"));
     return ADVA_V2;
 }
-[a-z]*em {
+[a-z]+em {
     yylval = mknode0(strjoin(yytext, ": adverb B, intransitive"));
     return ADVB_V1;
 }
-[a-z]*im {
+[a-z]+im {
     yylval = mknode0(strjoin(yytext, ": adverb B, transitive"));
     return ADVB_V2;
 }
-[a-z]*iam {
+[a-z]+iam {
     yylval = mknode0(strjoin(yytext, ": adverb B, transitive, passive"));
     return ADVB_V2;
 }
-[a-z]*ef {
+[a-z]+ef {
     yylval = mknode0(strjoin(yytext, ": subadverb B, intransitive"));
     return ADVB_L1_V1;
 }
-[a-z]*if {
+[a-z]+if {
     yylval = mknode0(strjoin(yytext, ": subadverb B, transitive"));
     return ADVB_L1_V2;
 }
-[a-z]*iaf {
+[a-z]+iaf {
     yylval = mknode0(strjoin(yytext, ": subadverb B, transitive, passive"));
     return ADVB_L1_V2;
 }
-[a-z]*ep {
+[a-z]+ep {
     yylval = mknode0(strjoin(yytext, ": subsubadverb B, intransitive"));
     return ADVB_L2_V1;
 }
