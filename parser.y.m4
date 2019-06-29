@@ -94,7 +94,7 @@ sentence
     ;
 
 argument
-    : aux0                   { NODE1(""); }   /* a      */
+    : aux0                   { NODE1(""); } /* a      */
     | argument CONJ_ARG aux0 { NODE3(""); } /* a(ca)+ */
     ;
 
@@ -106,7 +106,7 @@ aux0
     ;
 
 argument_L1
-    : aux1                         { NODE1(""); }   /* a      */
+    : aux1                         { NODE1(""); } /* a      */
     | argument_L1 CONJ_ARG_L1 aux1 { NODE3(""); } /* a(ca)+ */
     ;
 
@@ -118,7 +118,7 @@ aux1
     ;
 
 argument_L2
-    : aux2                         { NODE1(""); }   /* a      */
+    : aux2                         { NODE1(""); } /* a      */
     | argument_L2 CONJ_ARG_L2 aux2 { NODE3(""); } /* a(ca)+ */
     ;
 
@@ -130,46 +130,46 @@ aux2
     ;
 
 noun_phrase
-    : N_V0 adverbB_phrase apposition_phrase {
+    : N_V0 adverbB_phrase appositive_phrase {
             NODE3(`"[noun phrase]"'); /* `quoted' because m4 splits strings with a space */
         }
-    | N_V1 adverbB_phrase apposition_phrase {
+    | N_V1 adverbB_phrase appositive_phrase {
             NODE3(`"[noun phrase]"');
         }
-    | numeral adverbB_phrase apposition_phrase {
+    | numeral adverbB_phrase appositive_phrase {
             NODE3(`"[noun phrase]"');
         }
-    | N_V2 adverbB_phrase apposition_phrase {
+    | N_V2 adverbB_phrase appositive_phrase {
             NODE3(`"[noun phrase]"');
         }
     ;
 
 noun_L1_phrase
-    : N_V0 adverbB_L1_phrase apposition_L1_phrase {
+    : N_V0 adverbB_L1_phrase appositive_L1_phrase {
             NODE3(`"[noun subphrase"');
         }
-    | N_V1 adverbB_L1_phrase apposition_L1_phrase {
+    | N_V1 adverbB_L1_phrase appositive_L1_phrase {
             NODE3(`"[noun subphrase]"');
         }
-    | numeral adverbB_L1_phrase apposition_L1_phrase {
+    | numeral adverbB_L1_phrase appositive_L1_phrase {
             NODE3(`"[noun subphrase]"');
         }
-    | N_V2 adverbB_L1_phrase apposition_L1_phrase {
+    | N_V2 adverbB_L1_phrase appositive_L1_phrase {
             NODE3(`"[noun subphrase]"');
         }
     ;
 
 noun_L2_phrase
-    : N_V0 adverbB_L2_phrase apposition_L2_phrase {
+    : N_V0 adverbB_L2_phrase appositive_L2_phrase {
             NODE3(`"[noun subsubphrase]"');
         }
-    | N_V1 adverbB_L2_phrase apposition_L2_phrase {
+    | N_V1 adverbB_L2_phrase appositive_L2_phrase {
             NODE3(`"[noun subsubphrase]"');
         }
-    | numeral adverbB_L2_phrase apposition_L2_phrase {
+    | numeral adverbB_L2_phrase appositive_L2_phrase {
             NODE3(`"[noun subsubphrase]"');
         }
-    | N_V2 adverbB_L2_phrase apposition_L2_phrase {
+    | N_V2 adverbB_L2_phrase appositive_L2_phrase {
             NODE3(`"[noun subsubphrase]"');
         }
     ;
@@ -198,7 +198,7 @@ infinitive_L2_phrase
         }
     ;
 
-apposition_phrase
+appositive_phrase
     : /* empty */        { NODE0(""); } /* ()      */
     | aux3               { NODE1(""); } /* a+      */
     | aux5 aux4          { NODE2(""); } /* a(ca)+  */
@@ -217,14 +217,14 @@ aux4
 
 aux5 
     : APP_V1 adverbB_phrase {
-            NODE2(`"[apposition phrase]"');
+            NODE2(`"[appositive phrase]"');
         }
     | APP_V2 adverbB_phrase argument_L1 {
-            NODE3(`"[apposition phrase]"');
+            NODE3(`"[appositive phrase]"');
         }
     ;
 
-apposition_L1_phrase
+appositive_L1_phrase
     : /* empty */           { NODE0(""); } /* ()      */
     | aux6                  { NODE1(""); } /* a+      */
     | aux8 aux7             { NODE2(""); } /* a(ca)+  */
@@ -243,14 +243,14 @@ aux7
 
 aux8
     : APP_L1_V1 adverbB_L1_phrase {
-            NODE2(`"[apposition subphrase]"');
+            NODE2(`"[appositive subphrase]"');
         }
     | APP_L1_V2 adverbB_L1_phrase argument_L2 {
-            NODE3(`"[apposition subphrase]"');
+            NODE3(`"[appositive subphrase]"');
         }
     ;
 
-apposition_L2_phrase
+appositive_L2_phrase
     : /* empty */             { NODE0(""); } /* ()      */
     | aux9                    { NODE1(""); } /* a+      */
     | aux11 aux10             { NODE2(""); } /* a(ca)+  */
@@ -269,7 +269,7 @@ aux10
 
 aux11
     : APP_L2_V1 adverbB_L2_phrase {
-            NODE2(`"[apposition subsubphrase]"');
+            NODE2(`"[appositive subsubphrase]"');
         }
     ;
 

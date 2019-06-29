@@ -3,10 +3,10 @@
         [argument]
             [noun phrase]
                 patre: noun, singular
-                [apposition phrase]
-                    nostrel: apposition, intransitive
-                [apposition phrase]
-                    inil: apposition, transitive
+                [appositive phrase]
+                    nostrel: appositive, intransitive
+                [appositive phrase]
+                    inil: appositive, transitive
                     [subargument]
                         [noun subphrase]
                             celes: noun, plural
@@ -16,8 +16,8 @@
         [argument]
             [noun phrase]
                 nomine: noun, singular
-                [apposition phrase]
-                    dil: apposition, transitive
+                [appositive phrase]
+                    dil: appositive, transitive
                     [subargument]
                         [noun subphrase]
                             tue: noun, singular
@@ -30,8 +30,8 @@
         [argument]
             [noun phrase]
                 regne: noun, singular
-                [apposition phrase]
-                    dil: apposition, transitive
+                [appositive phrase]
+                    dil: appositive, transitive
                     [subargument]
                         [noun subphrase]
                             tue: noun, singular
@@ -41,8 +41,8 @@
         [argument]
             [noun phrase]
                 voluntate: noun, singular
-                [apposition phrase]
-                    dil: apposition, transitive
+                [appositive phrase]
+                    dil: appositive, transitive
                     [subargument]
                         [noun subphrase]
                             tue: noun, singular
@@ -83,10 +83,10 @@
         [argument]
             [noun phrase]
                 pane: noun, singular
-                [apposition phrase]
-                    nostrel: apposition, intransitive
-                [apposition phrase]
-                    quotidianel: apposition, intransitive
+                [appositive phrase]
+                    nostrel: appositive, intransitive
+                [appositive phrase]
+                    quotidianel: appositive, intransitive
     et: conjunction for sentence
     [sentence]
         [argument]
@@ -101,8 +101,8 @@
         [argument]
             [noun phrase]
                 debites: noun, plural
-                [apposition phrase]
-                    nostrel: apposition, intransitive
+                [appositive phrase]
+                    nostrel: appositive, intransitive
     et: conjunction for sentence
     [sentence]
         [adverbA phrase]
@@ -121,8 +121,8 @@
             [subargument]
                 [noun subphrase]
                     debitores: noun, plural
-                    [apposition subphrase]
-                        nostreh: subapposition, intransitive
+                    [appositive subphrase]
+                        nostreh: subappositive, intransitive
     et: conjunction for sentence
     [sentence]
         [argument]
