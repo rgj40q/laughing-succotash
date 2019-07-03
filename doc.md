@@ -15,47 +15,47 @@ A word belongs to one of the parts of speech. There are two types: open class an
 ## §2.2
 
 The open class parts of speech expect a word stem to be of one of four types: impersonal, intransitive, transitive, and transitive passive. The transitiveness is determined by the stem ending, no exceptions. All borrowed stems including proper names should be assimilated as one of types above. In most cases it just means to add 'e' to the last consonant, or to replace the last vowel with 'e'. A stem should not consist of sole ending. The endings are:
-* -o      impersonal
+* *-o*, impersonal
     * *ventot* 'It is windy.'
-* -e      intransitive
-    * *platte* 'dish'
-* -i      transitive
-    * *cerci* 'one who looks for'
-* -ia     transitive passive
-    * *cercia* 'one that is looked for'
+* *-e*, intransitive
+    * *dormet* 'sleeps'
+* *-i*, transitive
+    * *cercit* 'looks for'
+* *-ia*, transitive passive
+    * *cerciat* 'is looked for'
 
 ## §2.3
 
 VERB is the only finite part of speech in a sentence. Verb has the following moods: indicative (present, past, and future), conditional, and imperative. The endings are:
-* -t      present
+* *-t*, present
     * *ventot* 'It is windy.'
     * *ille dormet* 'He sleeps.'
     * *one plattet* 'It is a dish.'
     * *elle init francie* 'She is in France.'
     * *me cercit le pome* 'I look for the apple.'
     * *le pome cerciat me* 'The apple is looked for by me.'
-* -va     past
+* *-va*, past
     * *ventova* 'It was windy.'
     * *ille dormeva* 'He sleeped.'
     * *one platteva* 'It was a dish.'
     * *elle iniva francie* 'She was in France.'
     * *me cerciva le pome* 'I looked for the apple.'
     * *le pome cerciava me* 'The apple was looked for by me.'
-* -ra     future
+* *-ra*, future
     * *ventora* 'It will be windy.'
     * *ille dormera* 'He will sleep.'
     * *one plattera* 'It will be a dish.'
     * *elle inira francie* 'She will be in France.'
     * *me cercira le pome* 'I will look for the apple.'
     * *le pome cerciara me* 'The apple will be looked for by me.'
-* -rea    conditional
+* *-rea*, conditional
     * *ventorea* 'It would be windy.'
     * *ille dormerea* 'He would sleep.'
     * *one platterea* 'It would be a dish.'
     * *elle inirea francie* 'She would be in France.'
     * *me cercirea le pome* 'I would look for the apple.'
     * *le pome cerciarea me* 'The apple would be looked for by me.'
-* -za     imperative
+* *-za*, imperative
     * *ventoza* 'Let it be windy!'
     * *te dormeza* '\[You\] sleep!'
     * *one platteza* 'May it be a dish!'
@@ -75,14 +75,14 @@ INFINITIVE is derived from verb with meaning 'the act or process of <verb>ing'. 
 ## §2.5
 
 Like infinitive, GERUND is derived from verb with meaning 'the act or process of <verb>ing'. Unlike infinitive, both the subject and object are dropped, if any, and impersonal gerunds are allowed. The endings are:
-* -nda    singular
+* *-nda*, singular
     * *ventonda* 'wind'
     * *dormenda* 'the act of sleeping'
     * *plattenda* 'the act of being a dish'
     * *ininda* 'the act of being in something'
     * *cercinda* 'the act of looking for'
     * *cercianda* 'the act of being looked for'
-* -ndas   plural
+* *-ndas*, plural
     * *ventondas* 'winds'
     * *dormendas* 'the acts of sleeping'
     * *plattendas* 'the acts of being a dish'
@@ -93,13 +93,13 @@ Like infinitive, GERUND is derived from verb with meaning 'the act or process of
 ## §2.6
 
 NOUN is derived from verb with meaning 'the one who <verb>s'. Both the subject and object are dropped, if any. Impersonal nouns are forbidden. The endings are:
-* -∅      singular
+* *-∅*, singular
     * *dorme* 'one who sleeps'
     * *platte* 'dish'
     * *ini* 'one inside'
     * *cerci* 'one who looks for'
     * *cercia* 'one that is looked for'
-* -s      plural
+* *-s*, plural
     * *dormes* 'those who sleep'
     * *plattes* 'dishes'
     * *inis* 'those inside'
@@ -123,44 +123,44 @@ Pronouns are equal to intransitive nouns, and are productive in the same way. Th
 
 ADVERB TYPE A is derived from verb with meaning 'in a way/manner of <verb>ing, <verb>ingly'. It modifies verbs only. It has pretty free position in a sentence. Impersonal adverbs are forbidden. The ending is -n.
 * *me __dormen__ promenet* 'I wander sleepily.' 
-* *ille perdiva un die __cercin__ <color=#880000>le pome</color>* 'He lost a day in searches for the apple.'
-* *__inin__ [color=#880000]francie[/color] elle vivet* 'She lives in France.'
+* *ille perdiva un die __cercin__ <span style="color:#880000">le pome</span>* 'He lost a day in searches for the apple.'
+* *__inin__ <span style="color:#880000">francie</span> elle vivet* 'She lives in France.'
 
 ## §2.8
 
 Like adverb type A, ADVERB TYPE B is derived from verb with meaning 'in a way/manner of <verb>ing, <verb>ingly'. Unlike adverb type A, it modifies infinitives, gerunds, nouns, adverbs, and appositives, and its position is strictly after the main word. There are two additional flavours of it: subadverb type B, and subsubadverb type B, which are used on lower levels of sentence. The levels will be discussed later. The endings are:
-* -m      adverb type B
+* *-m*, adverb type B
     * *un homine __verem__ odoret comin roses* 'A true man smells like roses.'
-    * *le vivenda __inim__ [color=#880000]francie[/color] laborioset* 'The life in France is hard-working.'
-* -f      subadverb type B
-    * *le homine essir bone multem [color=#880000]__assef__[/color]* 'The man is so very good.'
-    * *elle volit tentir [color=#880000]le vivenda __inif__[/color] [color=#FF0000]francie[/color]* 'She wants to try the life in France.'
-* -p      subsubadverb type B
-    * *le homine essir bone rarem [color=#880000]multef[/color] [color=#FF0000]__assatisep__[/color]* 'The man is pretty much exceptionally good.'
+    * *le vivenda __inim__ <span style="color:#880000">francie</span> laborioset* 'The life in France is hard-working.'
+* *-f*, subadverb type B
+    * *le homine essir bone multem <span style="color:#880000">__assef__</span>* 'The man is so very good.'
+    * *elle volit tentir <span style="color:#880000">le vivenda __inif__</span> <span style="color:#FF0000">francie</span>* 'She wants to try the life in France.'
+* *-p*, subsubadverb type B
+    * *le homine essir bone rarem <span style="color:#880000">multef</span> <span style="color:#FF0000">__assatisep__</span>* 'The man is pretty much exceptionally good.'
 
 ## §2.9
 
 APPOSITIVE is a secondary noun, which describes the same thing as a main noun. It is derived from verb with meaning 'also/while being the one who <verb>s'. It is often translated as adjective in English. There are two additional flavours of it: subappositive and subsubappositive, which are used on lower levels of sentence.
-* -l      appositive
+* *-l*, appositive
     * *me incontrit un homine __bonel__* 'I meet a good man.'
-    * *me incontrit un homine __exil__ [color=#880000]francie[/color]* 'I meet a man from France.'
-* -h      subappositive
-    * *me volit incontrir [color=#880000]un homine __boneh__[/color]* 'I'd like to meet a good man.'
-    * *me volit incontrir [color=#880000]un homine __exih__[/color] [color=#FF0000]francie[/color]* 'I'd like to meet a man from France.'
-* -c      subsubappositive
-    * *me volit incontrir [color=#880000]un amice dih[/color] [color=#FF0000]un homine __bonec__[/color]* 'I'd like to meet a friend of a good man.'
+    * *me incontrit un homine __exil__ <span style="color:#880000">francie</span>* 'I meet a man from France.'
+* *-h*, subappositive
+    * *me volit incontrir <span style="color:#880000">un homine __boneh__</span>* 'I'd like to meet a good man.'
+    * *me volit incontrir <span style="color:#880000">un homine __exih__</span> <span style="color:#FF0000">francie</span>* 'I'd like to meet a man from France.'
+* *-c*, subsubappositive
+    * *me volit incontrir <span style="color:#880000">un amice dih</span> <span style="color:#FF0000:>un homine __bonec__</span>* 'I'd like to meet a friend of a good man.'
 
 ## §2.10
 
-ARTICLES are 'le' and 'un'.
-* le      definite
-    * *le patri*     the father
-    * *le matri*     the mother
-    * *le patris*    the fathers
-    * *le matris*    the mothers
-* un      indefinite
-    * *un patri*     a father
-    * *un matri*     a mother
+ARTICLES are *le* and *un*.
+* *le*, definite
+    * *le patri* 'the father'
+    * *le matri* 'the mother'
+    * *le patris* 'the fathers'
+    * *le matris* 'the mothers'
+* *un*, indefinite
+    * *un patri* 'a father'
+    * *un matri* 'a mother'
 
 ## §2.11
 
@@ -179,95 +179,97 @@ CONJUNCTIONS are classified by the phrases they enumerate. There are just two co
         subappositive phrase        eh      oh      -       -       -
         subsubappositive phrase     ec      oc      -       -       -
 
+For exmaple:
 * *ventot __e__ ille dormet* 'It is windy. He sleeps.'
 * *un catte __er__ un cane dormet* 'A cat and a dog sleep.'
-* *le catte dormet surin [color=#880000]le chaise __eri__ le sofe[/color]* 'The cat sleeps on the chair and on the sofa.'
-* *me volit incontrir [color=#880000]un homine exih[/color] [color=#FF0000]francie __oru__ germanie[/color]* 'I'd like to meet a man from France or Germany.'
+* *le catte dormet surin <span style="color:#880000">le chaise __eri__ le sofe</span>* 'The cat sleeps on the chair and on the sofa.'
+* *me volit incontrir <span style="color:#880000">un homine exih</span> <span style="color:#FF0000">francie __oru__ germanie</span>* 'I'd like to meet a man from France or Germany.'
 * *le catte dormet surin le chaise __en__ subin le sofe* 'The cat sleeps on the chair and under the sofa.
 * *me incontrit un homine bonel __el__ sagel* 'I meet a kind and wise man.'
 
-* *an*              whether
-* *annon*           or not
-* *atque*           and, and also, and even
-* *aut*             or
-* *comocunque*      however, in whatever manner
-* *donec*           1. while, as long as; 2. until, up to the time that
-* *dum*             1. while, as long as; 2. until; 3. provided that, if only
-* *dunque*          therefore
-* *e*               and
-* *et*              1. and; 2. also
-* *etsi*            1. even if; 2. and yet; 3. though, although
-* *igitur*          then, therefore, thereupon
-* *itaque*          and so, therefore
-* *ma*              but
-* *mais*            but
-* *malgrado*        in spite of
-* *nam*             for
-* *ne*              lest
-* *nec*             neither, nor, also not
-* *neque*           = nec
-* *ni*              1. that not; 2. neither, nor, also not
-* *nisi*            if not, unless
-* *o*               or;
-* *perque*          1. why (= for what reason); 2. because
-* *pois*            for;
-* *porque*          1. why (= for what reason); 2. because
-* *postquam*        after, as soon as
-* *proque*          1. why (= for what reason); 2. because
-* *quam*            as, than
-* *quando*          when
-* *quandocunque*    whenever
-* *que*             1. that; 2. than
-* *quia*            because
-* *quo*             so that, in
-* *quod*            that, because, why
-* *sed*             but
-* *si*              if (1. supposing that; 2. whether)
-* *sinon*           otherwise, else; except, save, if not, unless
-* *sive*            or if, or
-* *ubi*             where; when, as
-* *ubicunque*       wherever
-* *utrum*           whether
-* *vel*             or, or rather
+Full list of conjunctions:
+        an              whether
+        annon           or not
+        atque           and, and also, and even
+        aut             or
+        comocunque      however, in whatever manner
+        donec           1. while, as long as; 2. until, up to the time that
+        dum             1. while, as long as; 2. until; 3. provided that, if only
+        dunque          therefore
+        e               and
+        et              1. and; 2. also
+        etsi            1. even if; 2. and yet; 3. though, although
+        igitur          then, therefore, thereupon
+        itaque          and so, therefore
+        ma              but
+        mais            but
+        malgrado        in spite of
+        nam             for
+        ne              lest
+        nec             neither, nor, also not
+        neque           = nec
+        ni              1. that not; 2. neither, nor, also not
+        nisi            if not, unless
+        o               or;
+        perque          1. why (= for what reason); 2. because
+        pois            for;
+        porque          1. why (= for what reason); 2. because
+        postquam        after, as soon as
+        proque          1. why (= for what reason); 2. because
+        quam            as, than
+        quando          when
+        quandocunque    whenever
+        que             1. that; 2. than
+        quia            because
+        quo             so that, in
+        quod            that, because, why
+        sed             but
+        si              if (1. supposing that; 2. whether)
+        sinon           otherwise, else; except, save, if not, unless
+        sive            or if, or
+        ubi             where; when, as
+        ubicunque       wherever
+        utrum           whether
+        vel             or, or rather
 
 ## §2.12
 
 NUMERALS are:
-* zero            0
-* uni             1
-* duo             2
-* tres            3
-* quatro          4
-* cinque          5
-* sex             6
-* septe           7
-* octo            8
-* nove            9
-* dece            10
-* vinti           20
-* trenta          30
-* quaranta        40
-* cinquanta       50
-* sexanta         60
-* septanta        70
-* octanta         80
-* novanta         90
-* cento           100
-* mille           1000
-* million         1E6
-* milliardo       1E9
-* billion         1E12
-* billiardo       1E15
-* trillion        1E18
-* trilliardo      1E21
-* quatrillion     1E24
-* quatrilliardo   1E27
-* quintillion     1E30
-* quintilliardo   1E33
-* di              divided by (e.g. '2/3')
-* plus            and (e.g. '5 2/3')
-* comma           decimal point (e.g. '3,14')
-* lu              introductory article for numerals
+        zero            0
+        uni             1
+        duo             2
+        tres            3
+        quatro          4
+        cinque          5
+        sex             6
+        septe           7
+        octo            8
+        nove            9
+        dece            10
+        vinti           20
+        trenta          30
+        quaranta        40
+        cinquanta       50
+        sexanta         60
+        septanta        70
+        octanta         80
+        novanta         90
+        cento           100
+        mille           1000
+        million         1E6
+        milliardo       1E9
+        billion         1E12
+        billiardo       1E15
+        trillion        1E18
+        trilliardo      1E21
+        quatrillion     1E24
+        quatrilliardo   1E27
+        quintillion     1E30
+        quintilliardo   1E33
+        di              divided by      e.g. 2/3
+        plus            and             e.g. 5 2/3
+        comma           decimal point   e.g. 3,14
+        lu              introductory article for numerals
 
 # §3 SYNTAX
 
@@ -410,67 +412,67 @@ Like infinitive subsubphrase, there is only one single ADVERB TYPE B SUBSUBPHRAS
 ## §3.9
 
 NUMERAL behaves very much like in european languages except that is should start with article 'lu'.
-* lu zero                     number 0
-* lu uni                      number 1
-* lu duo                      number 2
-* lu tres                     number 3
-* lu quatro                   number 4
-* lu vinti cinque             number 25
-* // to do: longer numerals, quintilliards...
-* lu sex di nove              number 6/9
-* lu cinque plus duo di septe number 5 2/7
-* lu sex comma tres cinque    number 6.35
+        lu zero                     number 0
+        lu uni                      number 1
+        lu duo                      number 2
+        lu tres                     number 3
+        lu quatro                   number 4
+        lu vinti cinque             number 25
+        // to do: longer numerals, quintilliards...
+        lu sex di nove              number 6/9
+        lu cinque plus duo di septe number 5 2/7
+        lu sex comma tres cinque    number 6.35
 
 Syntactically a numeral is a noun, and in order to use it in sentence a few auxilliary words exist:
-* uplil       N times multiplied
-* enin        in a group of N
-* mentin      as a matter number N
-* dim         N of X, e.g. million [of] apples
-* esimil      X number N, e.g. apple number two
+        uplil       N times multiplied
+        enin        in a group of N
+        mentin      as a matter number N
+        dim         N of X, e.g. million [of] apples
+        esimil      X number N, e.g. apple number two
 
 Cardinal:
-* lu uni dim cose             one thing
-* lu duo dim coses            two things
-* lu tres dim coses           three things
-* lu quatro dim coses         four things
-* lu vinti cinque dim coses   twenty five things
+        lu uni dim cose             one thing
+        lu duo dim coses            two things
+        lu tres dim coses           three things
+        lu quatro dim coses         four things
+        lu vinti cinque dim coses   twenty five things
 
 Decimal:
-* lu sex comma tres cinque dim dollares     6.35 dollars
+        lu sex comma tres cinque dim dollares     6.35 dollars
 
 Ordinal:
-* cose esimil lu uni          the first thing
-* cose esimil lu duo          the second thing
-* cose esimil lu tres         the third thing
+        cose esimil lu uni          the first thing
+        cose esimil lu duo          the second thing
+        cose esimil lu tres         the third thing
 
 Fractional:
-* lu uni di uni dim cose                  whole thing
-* lu uni di duo dim cose                  half of a thing
-* lu uni di tres dim cose                 one third of a thing
-* lu uni di quatro dim cose               quarter of a thing
-* lu uni di vinti cinque dim cose         one twenty-fifth of a thing
-* lu sex di nove dim cose                 six ninths of a thing
-* lu cinque plu duo di septe dim coses    five and two seventh things
+        lu uni di uni dim cose                  whole thing
+        lu uni di duo dim cose                  half of a thing
+        lu uni di tres dim cose                 one third of a thing
+        lu uni di quatro dim cose               quarter of a thing
+        lu uni di vinti cinque dim cose         one twenty-fifth of a thing
+        lu sex di nove dim cose                 six ninths of a thing
+        lu cinque plu duo di septe dim coses    five and two seventh things
 
 Multiplicative:
-* platte uplil lu uni                 single dish
-* platte uplil lu duo                 double dish
-* platte uplil lu tres                triple dish
-* platte uplil lu quatro              quadruple dish
-* platte uplil lu vinti cinque        twenty-fivefold dish
+        platte uplil lu uni                 single dish
+        platte uplil lu duo                 double dish
+        platte uplil lu tres                triple dish
+        platte uplil lu quatro              quadruple dish
+        platte uplil lu vinti cinque        twenty-fivefold dish
 
 Collective:
-* illes arrivet enin lu uni             They arrive in one by one.
-* illes arrivet enin lu duo             They arrive in pairs.
-* illes arrivet enin lu tres            They arrive in triads.
-* illes arrivet enin lu quatro          They arrive in groups of 4.
-* illes arrivet enin lu vinti cinque    They arrive in groups of 25.
+        illes arrivet enin lu uni             They arrive in one by one.
+        illes arrivet enin lu duo             They arrive in pairs.
+        illes arrivet enin lu tres            They arrive in triads.
+        illes arrivet enin lu quatro          They arrive in groups of 4.
+        illes arrivet enin lu vinti cinque    They arrive in groups of 25.
 
 Adverbial:
-* mentin lu uni               first(-ly)
-* mentin lu duo               second
-* mentin lu tres              third
-* mentin lu vinti cinque      twenty fifth
+        mentin lu uni               first(-ly)
+        mentin lu duo               second
+        mentin lu tres              third
+        mentin lu vinti cinque      twenty fifth
 
 # §4 EXAMPLES
 
