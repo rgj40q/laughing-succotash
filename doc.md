@@ -14,15 +14,15 @@ A word belongs to one of the parts of speech. There are two types: open class an
 
 ## §2.2
 
-The open class parts of speech expect a word stem to be of one of four types: impersonal, intransitive, transitive, and transitive passive. The transitiveness is determined by the stem ending, no exceptions. All borrowed stems including proper names should be assimilated as one of types above. In most cases it just means to add 'e' to the last consonant, or to replace the last vowel with 'e'. A stem should not consist of sole ending. The endings are:
+The open class parts of speech expect a word stem to be of one of four types: impersonal, intransitive, transitive, or transitive passive. The transitiveness is determined by the stem ending, no exceptions. All borrowed stems including proper names should be assimilated as one of types above. In most cases it just means to add *e* after the final consonant, or to replace the final vowel with *e*. A stem should not consist of sole ending. The endings are:
 * *-o*, impersonal
-    * *ventot* 'It is windy.'
+    * *vento-* 'wind'
 * *-e*, intransitive
-    * *dormet* 'sleeps'
+    * *platte-* 'dish'
 * *-i*, transitive
-    * *cercit* 'looks for'
+    * *cerci-* 'look for'
 * *-ia*, transitive passive
-    * *cerciat* 'is looked for'
+    * *cercia-* 'be looked for'
 
 ## §2.3
 
@@ -65,16 +65,16 @@ VERB is the only finite part of speech in a sentence. Verb has the following moo
 
 ## §2.4
 
-INFINITIVE is derived from verb with meaning 'the act or process of <verb>ing'. The subject is dropped. Transitive infinitive should take a direct object. Impersonal infinitives are forbidden. The ending is -r.
+INFINITIVE is derived from verb with meaning 'the act or process of \[verb\]ing'. The subject is dropped. Transitive infinitive should take a direct object. Impersonal infinitives are forbidden. The ending is -r.
 * *dormer* 'to sleep'
-* *platter* 'to be a dish.'
+* *platter* 'to be a dish'
 * *inir francie* 'to be in France'
 * *cercir le pome* 'to look for the apple'
 * *cerciar me* 'to be looked for by me'
 
 ## §2.5
 
-Like infinitive, GERUND is derived from verb with meaning 'the act or process of <verb>ing'. Unlike infinitive, both the subject and object are dropped, if any, and impersonal gerunds are allowed. The endings are:
+Like infinitive, GERUND is derived from verb with meaning 'the act or process of \[verb\]ing'. Unlike infinitive, both the subject and object are dropped, if any, and impersonal gerunds are allowed. The endings are:
 * *-nda*, singular
     * *ventonda* 'wind'
     * *dormenda* 'the act of sleeping'
@@ -92,7 +92,7 @@ Like infinitive, GERUND is derived from verb with meaning 'the act or process of
 
 ## §2.6
 
-NOUN is derived from verb with meaning 'the one who <verb>s'. Both the subject and object are dropped, if any. Impersonal nouns are forbidden. The endings are:
+NOUN is derived from verb with meaning 'the one who \[verb\]s'. Both the subject and object are dropped, if any. Impersonal nouns are forbidden. The endings are:
 * *-∅*, singular
     * *dorme* 'one who sleeps'
     * *platte* 'dish'
@@ -107,6 +107,7 @@ NOUN is derived from verb with meaning 'the one who <verb>s'. Both the subject a
     * *cercias* 'those that are looked for'
 
 Pronouns are equal to intransitive nouns, and are productive in the same way. They are:
+
                         subj./obj.  reflex.     possess.
         I               me          me          mie
         you (sg.)       te          te          tue
@@ -121,34 +122,34 @@ Pronouns are equal to intransitive nouns, and are productive in the same way. Th
 
 ## §2.7
 
-ADVERB TYPE A is derived from verb with meaning 'in a way/manner of <verb>ing, <verb>ingly'. It modifies verbs only. It has pretty free position in a sentence. Impersonal adverbs are forbidden. The ending is -n.
+ADVERB TYPE A is derived from verb with meaning 'in a way/manner of \[verb\]ing, \[verb\]ingly'. It modifies verbs only. It has pretty free position in a sentence. Impersonal adverbs are forbidden. The ending is -n. In examples the arrows in brackets '(↓)', '(↑)' show when the level change. They are not part of language, they are here for educational purposes.
 * *me __dormen__ promenet* 'I wander sleepily.' 
-* *ille perdiva un die __cercin__ <span style="color:#880000">le pome</span>* 'He lost a day in searches for the apple.'
-* *__inin__ <span style="color:#880000">francie</span> elle vivet* 'She lives in France.'
+* *ille perdiva un die __cercin__ (↓) le pome* 'He lost a day in searches for the apple.'
+* *__inin__ (↓) francie (↑) elle vivet* 'She lives in France.'
 
 ## §2.8
 
-Like adverb type A, ADVERB TYPE B is derived from verb with meaning 'in a way/manner of <verb>ing, <verb>ingly'. Unlike adverb type A, it modifies infinitives, gerunds, nouns, adverbs, and appositives, and its position is strictly after the main word. There are two additional flavours of it: subadverb type B, and subsubadverb type B, which are used on lower levels of sentence. The levels will be discussed later. The endings are:
+Like adverb type A, ADVERB TYPE B is derived from verb with meaning 'in a way/manner of \[verb\]ing, \[verb\]ingly'. Unlike adverb type A, it modifies infinitives, gerunds, nouns, adverbs, and appositives, and its position is strictly after the main word. There are two additional flavours of it: subadverb type B, and subsubadverb type B, which are used on lower levels of sentence. The levels will be discussed later. The endings are:
 * *-m*, adverb type B
     * *un homine __verem__ odoret comin roses* 'A true man smells like roses.'
-    * *le vivenda __inim__ <span style="color:#880000">francie</span> laborioset* 'The life in France is hard-working.'
+    * *le vivenda __inim__ (↓) francie (↑) laborioset* 'The life in France is hard-working.'
 * *-f*, subadverb type B
-    * *le homine essir bone multem <span style="color:#880000">__assef__</span>* 'The man is so very good.'
-    * *elle volit tentir <span style="color:#880000">le vivenda __inif__</span> <span style="color:#FF0000">francie</span>* 'She wants to try the life in France.'
+    * *le homine essir bone multem (↓) __assef__* 'The man is so very good.'
+    * *elle volit tentir (↓) le vivenda __inif__ (↓) francie* 'She wants to try the life in France.'
 * *-p*, subsubadverb type B
-    * *le homine essir bone rarem <span style="color:#880000">multef</span> <span style="color:#FF0000">__assatisep__</span>* 'The man is pretty much exceptionally good.'
+    * *le homine essit bone rarem (↓) multef (↓) __assatisep__* 'The man is pretty much exceptionally good.'
 
 ## §2.9
 
-APPOSITIVE is a secondary noun, which describes the same thing as a main noun. It is derived from verb with meaning 'also/while being the one who <verb>s'. It is often translated as adjective in English. There are two additional flavours of it: subappositive and subsubappositive, which are used on lower levels of sentence.
+APPOSITIVE is a secondary noun, which describes the same thing as a main noun. It is derived from verb with meaning 'also/while being the one who \[verb\]s'. It is often translated as adjective in English. There are two additional flavours of it: subappositive and subsubappositive, which are used on lower levels of sentence.
 * *-l*, appositive
     * *me incontrit un homine __bonel__* 'I meet a good man.'
-    * *me incontrit un homine __exil__ <span style="color:#880000">francie</span>* 'I meet a man from France.'
+    * *me incontrit un homine __exil__ (↓) francie* 'I meet a man from France.'
 * *-h*, subappositive
-    * *me volit incontrir <span style="color:#880000">un homine __boneh__</span>* 'I'd like to meet a good man.'
-    * *me volit incontrir <span style="color:#880000">un homine __exih__</span> <span style="color:#FF0000">francie</span>* 'I'd like to meet a man from France.'
+    * *me volit incontrir (↓) un homine __boneh__* 'I'd like to meet a good man.'
+    * *me volit incontrir (↓) un homine __exih__ (↓) francie* 'I'd like to meet a man from France.'
 * *-c*, subsubappositive
-    * *me volit incontrir <span style="color:#880000">un amice dih</span> <span style="color:#FF0000:>un homine __bonec__</span>* 'I'd like to meet a friend of a good man.'
+    * *me volit incontrir (↓) un amice dih (↓) un homine __bonec__* 'I'd like to meet a friend of a good man.'
 
 ## §2.10
 
@@ -182,12 +183,13 @@ CONJUNCTIONS are classified by the phrases they enumerate. There are just two co
 For exmaple:
 * *ventot __e__ ille dormet* 'It is windy. He sleeps.'
 * *un catte __er__ un cane dormet* 'A cat and a dog sleep.'
-* *le catte dormet surin <span style="color:#880000">le chaise __eri__ le sofe</span>* 'The cat sleeps on the chair and on the sofa.'
-* *me volit incontrir <span style="color:#880000">un homine exih</span> <span style="color:#FF0000">francie __oru__ germanie</span>* 'I'd like to meet a man from France or Germany.'
+* *le catte dormet surin (↓) le chaise __eri__ le sofe* 'The cat sleeps on the chair and on the sofa.'
+* *me volit incontrir (↓) un homine exih (↓) francie __oru__ germanie* 'I'd like to meet a man from France or Germany.'
 * *le catte dormet surin le chaise __en__ subin le sofe* 'The cat sleeps on the chair and under the sofa.
 * *me incontrit un homine bonel __el__ sagel* 'I meet a kind and wise man.'
 
 Full list of conjunctions:
+
         an              whether
         annon           or not
         atque           and, and also, and even
