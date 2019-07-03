@@ -5,6 +5,6 @@ build:
 	yacc -dv parser.y
 	cc -o parser lex.yy.c y.tab.c
 clean:
-	rm -f lex.yy.c y.tab.c y.tab.h parser parser.y test-*-o.txt y.output
+	rm -f lex.yy.c y.tab.c y.tab.h parser parser.y test-output.txt y.output
 test:
 	sh test.sh

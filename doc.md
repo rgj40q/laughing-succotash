@@ -94,7 +94,7 @@ Like infinitive, GERUND is derived from verb with meaning 'the act or process of
 
 ## §2.6
 
-NOUN is derived from verb with meaning 'the one who \[verb\]s'. Both the subject and object are dropped, if any. Impersonal nouns are forbidden. The endings are:
+NOUN is derived from verb with meaning 'the one that \[verb\]s'. Both the subject and object are dropped, if any. Impersonal nouns are forbidden. The endings are:
 * *-∅*, singular
     * *dorme* 'one who sleeps'
     * *platte* 'dish'
@@ -136,14 +136,14 @@ Like adverb type A, ADVERB TYPE B is derived from verb with meaning 'in a way/ma
     * *un homine __verem__ odoret comin roses* 'A true man smells like roses.'
     * *le vivenda __inim__ francie laborioset* 'The life in France is hard-working.'
 * *-f*, subadverb type B
-    * *le homine essir bone multem __assef__* 'The man is so very good.'
+    * *le homine essit bone multem __assef__* 'The man is so very good.'
     * *elle volit tentir le vivenda __inif__ francie* 'She wants to try the life in France.'
 * *-p*, subsubadverb type B
     * *le homine essit bone rarem multef __assatisep__* 'The man is pretty much exceptionally good.'
 
 ## §2.9
 
-APPOSITIVE is a secondary noun, which describes the same thing as a main noun. It is derived from verb with meaning 'also/while being the one who \[verb\]s'. It is often translated as adjective in English. There are two additional flavours of it: subappositive and subsubappositive, which are used on lower levels of sentence.
+APPOSITIVE is a secondary noun, which describes the same thing as a main noun. It is derived from verb with meaning 'while being the one that \[verb\]s'. It is often translated as adjective in English. There are two additional flavours of it: subappositive and subsubappositive, which are used on lower levels of sentence.
 * *-l*, appositive
     * *me incontrit un homine __bonel__* 'I meet a good man.'
     * *me incontrit un homine __exil__ francie* 'I meet a man from France.'
@@ -368,7 +368,7 @@ Main phrase is either a noun, or a gerund, or a numeral phrase. Syntactically ge
 
 Other prepositionals may be retained:
 * *me ain te dait libre* 'I give you a book.'
-* *dainda dim libre ain te perim me* 'my giving of a book to you', literally 'giving of book to you by me'
+* *dainda dim libre aim te perim me* 'my giving of a book to you', literally 'giving of book to you by me'
 
 ## §3.5
 
@@ -403,7 +403,7 @@ APPOSITIVE PHRASE may be single or multiple. If multiple, parts may be separated
 * *bonel bellel* 'beautiful good'
 * *bonel el bellel* 'good and beautiful'
 * *el bonel el bellel* 'both good and beautiful'
-* *bonel bellel ol malel el fedel* 'beautiful good or bad and ugly'
+* *bonel el bellel ol malel el fedel* 'beautiful and good or bad and ugly'
 
 Each single is of two types. The first consists of intransitive appositive, optionally followed by an adverb type B phrase.
 * *bellel* 'beautiful'
@@ -418,7 +418,7 @@ Similarly, APPOSITIVE SUBPHRASE may be separated with subappositive conjunction 
 * *boneh belleh* 'beautiful good'
 * *boneh eh belleh* 'good and beautiful'
 * *eh boneh eh belleh* 'both good and beautiful'
-* *boneh belleh oh maleh eh fedeh* 'beautiful good or bad and ugly'
+* *boneh eh belleh oh maleh eh fedeh* 'beautiful and good or bad and ugly'
 * *belleh* 'beautiful'
 * *belleh multef* 'very beautiful'
 * *exih (↓) francie* 'from France'
@@ -429,7 +429,7 @@ Like infinitive subsubphrase, there is only one single APPOSITIVE SUBSUBPHRASE, 
 * *bonec bellec* 'beautiful good'
 * *bonec ec bellec* 'good and beautiful'
 * *ec bonec ec bellec* 'both good and beautiful'
-* *bonec bellec oc malec ec fedec* 'beautiful good or bad and ugly'
+* *bonec ec bellec oc malec ec fedec* 'beautiful and good or bad and ugly'
 * *bellec* 'beautiful'
 * *bellec multep* 'very beautiful'
 

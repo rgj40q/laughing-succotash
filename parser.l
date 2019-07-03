@@ -34,15 +34,15 @@ char * strjoin(char *, char *);
     yylval = mknode0(strjoin(yytext, ": conjunction for sentence"));
     return CONJ_SENT;
 }
-(es|os) {
+(er|or) {
     yylval = mknode0(strjoin(yytext, ": conjunction for argument"));
     return CONJ_ARG;
 }
-(esi|osi) {
+(eri|ori) {
     yylval = mknode0(strjoin(yytext, ": conjunction for subargument"));
     return CONJ_ARG_L1;
 }
-(esu|osu) {
+(eru|oru) {
     yylval = mknode0(strjoin(yytext, ": conjunction for subsubargument"));
     return CONJ_ARG_L2;
 }
