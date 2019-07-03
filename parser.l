@@ -78,7 +78,7 @@ zero {
     yylval = mknode0(strjoin(yytext, ": \tnumeral, 0"));
     return NUM_0;
 }
-une {
+uni {
     yylval = mknode0(strjoin(yytext, ": \tnumeral, 1"));
     return NUM_1;
 }

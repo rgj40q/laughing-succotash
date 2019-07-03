@@ -2,7 +2,7 @@
     [sentence]
         [argument]
             [noun phrase]
-                patre: noun, singular
+                patri: noun, singular
                 [appositive phrase]
                     nostrel: appositive, intransitive
                 [appositive phrase]
@@ -10,68 +10,59 @@
                     [subargument]
                         [noun subphrase]
                             celes: noun, plural
-        tuet: verb, intransitive, present
-    et: conjunction for sentence
+        tet: verb, intransitive, present
+    e: conjunction for sentence
     [sentence]
         [argument]
             [noun phrase]
                 nomine: noun, singular
                 [appositive phrase]
-                    dil: appositive, transitive
-                    [subargument]
-                        [noun subphrase]
-                            tue: noun, singular
+                    tuel: appositive, intransitive
         sanctificiaza: verb, transitive, imperative, passive
         [argument]
             [noun phrase]
-                one: noun, singular
-    et: conjunction for sentence
+                une: noun, singular
+    e: conjunction for sentence
     [sentence]
         [argument]
             [noun phrase]
                 regne: noun, singular
                 [appositive phrase]
-                    dil: appositive, transitive
-                    [subargument]
-                        [noun subphrase]
-                            tue: noun, singular
+                    tuel: appositive, intransitive
         veneza: verb, intransitive, imperative
-    et: conjunction for sentence
+    e: conjunction for sentence
     [sentence]
         [argument]
             [noun phrase]
                 voluntate: noun, singular
                 [appositive phrase]
-                    dil: appositive, transitive
-                    [subargument]
-                        [noun subphrase]
-                            tue: noun, singular
+                    tuel: appositive, intransitive
         faciaza: verb, transitive, imperative, passive
         [argument]
             [noun phrase]
-                one: noun, singular
+                une: noun, singular
         [adverbA phrase]
             inin: adverb A, transitive
-            [adverbB phrase]
-                comem: adverb B, intransitive
             [subargument]
                 le: article
                 [noun subphrase]
                     cele: noun, singular
+                    [adverbB subphrase]
+                        comef: subadverb B, intransitive
         en: conjunction for adverb A
         [adverbA phrase]
             superin: adverb A, transitive
-            [adverbB phrase]
-                etiamem: adverb B, intransitive
             [subargument]
                 le: article
                 [noun subphrase]
                     terre: noun, singular
-    et: conjunction for sentence
+                    [adverbB subphrase]
+                        etiamef: subadverb B, intransitive
+    e: conjunction for sentence
     [sentence]
         [argument]
             [noun phrase]
-                tue: noun, singular
+                te: noun, singular
         daiza: verb, transitive, imperative
         [adverbA phrase]
             ain: adverb A, transitive
@@ -87,11 +78,11 @@
                     nostrel: appositive, intransitive
                 [appositive phrase]
                     quotidianel: appositive, intransitive
-    et: conjunction for sentence
+    e: conjunction for sentence
     [sentence]
         [argument]
             [noun phrase]
-                tue: noun, singular
+                te: noun, singular
         pardoniza: verb, transitive, imperative
         [adverbA phrase]
             ain: adverb A, transitive
@@ -103,7 +94,7 @@
                 debites: noun, plural
                 [appositive phrase]
                     nostrel: appositive, intransitive
-    et: conjunction for sentence
+    e: conjunction for sentence
     [sentence]
         [adverbA phrase]
             comen: adverb A, intransitive
@@ -112,10 +103,10 @@
         [argument]
             [noun phrase]
                 nose: noun, singular
-        pardonit: verb, transitive, present
         [argument]
             [noun phrase]
-                lose: noun, singular
+                ones: noun, plural
+        pardonit: verb, transitive, present
         [adverbA phrase]
             ain: adverb A, transitive
             [subargument]
@@ -123,11 +114,11 @@
                     debitores: noun, plural
                     [appositive subphrase]
                         nostreh: subappositive, intransitive
-    et: conjunction for sentence
+    e: conjunction for sentence
     [sentence]
         [argument]
             [noun phrase]
-                tue: noun, singular
+                te: noun, singular
         [adverbA phrase]
             nonen: adverb A, intransitive
         induciza: verb, transitive, imperative
@@ -139,13 +130,11 @@
             [subargument]
                 [noun subphrase]
                     tentatione: noun, singular
-    et: conjunction for sentence
+    sed: conjunction for sentence
     [sentence]
-        [adverbA phrase]
-            seden: adverb A, intransitive
         [argument]
             [noun phrase]
-                tue: noun, singular
+                te: noun, singular
         liberiza: verb, transitive, imperative
         [argument]
             [noun phrase]
@@ -156,6 +145,6 @@
                 le: article
                 [noun subphrase]
                     male: noun, singular
-    et: conjunction for sentence
+    e: conjunction for sentence
     [sentence]
         amenot: verb, impersonal, present
