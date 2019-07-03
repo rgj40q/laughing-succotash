@@ -16,7 +16,7 @@ A word belongs to one of the parts of speech. There are two types: open class an
 
 The open class parts of speech expect a word stem to be of one of four types: impersonal, intransitive, transitive, and transitive passive. The transitiveness is determined by the stem ending, no exceptions. All borrowed stems including proper names should be assimilated as one of types above. In most cases it just means to add 'e' to the last consonant, or to replace the last vowel with 'e'. A stem should not consist of sole ending. The endings are:
 * -o      impersonal
-    * *vento__t__* 'It is windy.'
+    * *ventot* 'It is windy.'
 * -e      intransitive
     * *platte* 'dish'
 * -i      transitive
@@ -107,7 +107,6 @@ NOUN is derived from verb with meaning 'the one who <verb>s'. Both the subject a
     * *cercias* 'those that are looked for'
 
 Pronouns are equal to intransitive nouns, and are productive in the same way. They are:
-
                         subj./obj.  reflex.     possess.
         I               me          me          mie
         you (sg.)       te          te          tue
@@ -124,7 +123,7 @@ Pronouns are equal to intransitive nouns, and are productive in the same way. Th
 
 ADVERB TYPE A is derived from verb with meaning 'in a way/manner of <verb>ing, <verb>ingly'. It modifies verbs only. It has pretty free position in a sentence. Impersonal adverbs are forbidden. The ending is -n.
 * *me __dormen__ promenet* 'I wander sleepily.' 
-* *ille perdiva un die __cercin__ [color=#880000]le pome[/color]* 'He lost a day in searches for the apple.'
+* *ille perdiva un die __cercin__ <color=#880000>le pome</color>* 'He lost a day in searches for the apple.'
 * *__inin__ [color=#880000]francie[/color] elle vivet* 'She lives in France.'
 
 ## §2.8
@@ -292,8 +291,10 @@ SENTENCE phrase order is limited to the point that subject precedes object. Othe
     * *me amit te* 'I love you.'
     * *me te amit* 'I love you.'
     * *amit me te* 'I love you.'
+    
 where V is verb, S is subject, or the first argument, and O is object, or the second argument. One may drop neither subject, nor object, which are all obligatory. One may use dummy noun 'une' instead to leave an argument unspecified.
 * *te une amiza e te une amiaza* 'Love and be loved!'
+
 The sentence may be extended with adverb type A phrases in any place before, after, and between arguments and verb, e.g.:
 * *maximen me te amit* 'I love you very much.'
 * *me maximen te amit* 'I love you very much.'
@@ -301,14 +302,17 @@ The sentence may be extended with adverb type A phrases in any place before, aft
 * *me te amit maximen* 'I love you very much.'
 * *amit me maximen te* 'I love you very much.'
 * etc.
-where A is adverb-type-A phrase.
+
+where A is adverb type A phrase.
 
 ## §3.3
 
 ARGUMENT is either single noun/infinitive/gerund phrase, or multiple with parts separated by argument conjunction 'er'. Each may begin with an article ('le' or 'un').
 * // to do: examples
+
 Similarly, SUBARGUMENTS are separated by subargument conjunction 'eri'.
 * // to do: examples
+
 Similarly, SUBSUBARGUMENTS are separated by subsubargument conjunction 'eru'.
 * // to do: examples
 
@@ -316,12 +320,16 @@ Similarly, SUBSUBARGUMENTS are separated by subsubargument conjunction 'eru'.
 
 NOUN PHRASE consists of a main phrase, then optional adverb type B phrase, and then optional appositive phrase. Main phrase is either a noun (one word), or a numeral (one or many words).
 * // to do: examples
+
 Similarly, NOUN SUBPHRASE consists of a main phrase, then optional adverb type B subphrase, and then optional appositive subphrase.
 * // to do: examples
+
 Similarly, NOUN SUBSUBPHRASE consists of a main phrase, then optional adverb type B subsubphrase, and then optional appositive subsubphrase.
 * // to do: examples
+
 Main phrase is either a noun, or a gerund, or a numeral phrase. Syntactically gerunds are equal to nouns. If one needs to specify arguments of the source verb in the gerund, there are prepositional adverbs 'perim' for subject and 'dim' for object:
 * // to do: examples
+
 Other prepositionals may be retained:
 * // to do: examples I give a book to you, my giving of a book to you
 
@@ -329,14 +337,19 @@ Other prepositionals may be retained:
 
 There are two types of INFINITIVE PHRASES. The first consists of an intransitive infinitive, optionally followed by an adverb type B phrase.
 * // to do: examples
+
 The second type consists of transitive infinitive, optionally followed by an adverb type B phrase, and then (obligatory) subargument phrase.
 * // to do: examples
+
 Note the level shift, this is being done to distinguish adverb phrase for the main word and adverb phrase for the dependent words.
 * // to do: examples
+
 Similarly, INFINITIVE SUBPHRASE is one of two types. The first consists of an intransitive infinitive, optionally followed by an adverb type B subphrase.
 * // to do: examples
+
 The second type consists of transitive infinitive, optionally followed by an adverb type B subphrase, and then (obligatory) subsubargument phrase.
 * // to do: examples
+
 Note however that INFINITIVE SUBSUBPHRASE may only consist of intransitive infinitive, optionally followed by an adverb type B subsubphrase. The limitation is there because a phrase may not extend anymore through arguments.
 * // to do: examples
 
@@ -344,12 +357,16 @@ Note however that INFINITIVE SUBSUBPHRASE may only consist of intransitive infin
 
 APPOSITIVE PHRASE may be single or multiple. If multiple, parts may be separated with appositive conjunction 'el', and if they are, there may be an appositive conjunction in the beginning.
 * // to do: examples
+
 Each single is of two types. The first consists of intransitive appositive, optionally followed by an adverb type B phrase.
 * // to do: examples
+
 The second consists of transitive appositive, then optional adverb type B phrase, then obligatory subargument (note the level shift). This may be translated as a phrase with preposition or as a participle phrase in English.
 * // to do: examples
+
 Similarly, APPOSITIVE SUBPHRASE may be separated with subappositive conjunction 'eh', and each single is of two types. The first consists of intransitive subappositive, optionally followed by an adverb type B subphrase. The second consists of transitive subappositive, then optional adverb type B subphrase, then obligatory subsubargument (note the level shift).
 * // to do: examples
+
 Like infinitive subsubphrase, there is only one single APPOSITIVE SUBSUBPHRASE, which consists of intransitive subsubappositive, optionally followed by an adverb type B subsubphrase. The limitation is there because a phrase may not extend anymore through arguments. Multiple has parts separated with subsubappositive conjunction 'ec'.
 * // to do: examples
 
@@ -357,10 +374,13 @@ Like infinitive subsubphrase, there is only one single APPOSITIVE SUBSUBPHRASE, 
 
 Like appositive, ADVERB A PHRASE may be single or multiple. Unlike appositive, it modifies the word itself, while appositive additionally describes the thing described by the word.
 * // to do: examples
+
 If multiple, parts may be separated with adverb A conjunction 'en', and if they are, there may be an adverb A conjunction in the beginning.
 * // to do: examples
+
 Each single is of two types. The first consists of intransitive adverb type A, optionally followed by an adverb type B phrase.
 * // to do: examples
+
 The second consists of transitive adverb type A, then optional adverb type B phrase, then obligatory subargument (note the level shift).
 * // to do: examples
 
@@ -368,16 +388,22 @@ The second consists of transitive adverb type A, then optional adverb type B phr
 
 Like adverb A, ADVERB B PHRASE may be single or multiple. If multiple, parts may be separated with adverb B conjunction 'em', and if they are, there may be an adverb B conjunction in the beginning.
 * // to do: examples
+
 Each single is of two types. The first consists of intransitive adverb type B, optionally followed by an adverb type B subphrase.
 * // to do: examples
+
 The second consists of transitive adverb type B, then optional adverb type B phrase, then obligatory subargument (note the level shift).
 * // to do: examples
+
 Similarly, ADVERB B SUBPHRASE may be single or multiple. If multiple, parts may be separated with subadverb B conjunction 'ef', and if they are, there may be an subadverb B conjunction in the beginning.
 * // to do: examples
+
 Each single is of two types. The first consists of intransitive subadverb type B, optionally followed by an adverb type B subsubphrase.
 * // to do: examples
+
 The second consists of transitive subadverb type A, then optional adverb type B subsubphrase, then obligatory subsubargument (note the level shift).
 * // to do: examples
+
 Like infinitive subsubphrase, there is only one single ADVERB TYPE B SUBSUBPHRASE, which consists of intransitive subsubadverb type B. Multiple has parts separated with subsubadverb type B conjunction 'ep'.
 * // to do: examples
 
