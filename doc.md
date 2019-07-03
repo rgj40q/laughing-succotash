@@ -15,14 +15,14 @@ A word belongs to one of the parts of speech. There are two types: open class an
 ## §2.2
 
 The open class parts of speech expect a word stem to be of one of four types: impersonal, intransitive, transitive, and transitive passive. The transitiveness is determined by the stem ending, no exceptions. All borrowed stems including proper names should be assimilated as one of types above. In most cases it just means to add 'e' to the last consonant, or to replace the last vowel with 'e'. A stem should not consist of sole ending. The endings are:
--o      impersonal
-    *vento__t__* 'It is windy.'
--e      intransitive
-    *platte* 'dish'
--i      transitive
-    *cerci* 'one who looks for'
--ia     transitive passive
-    *cercia* 'one that is looked for'
+* -o      impersonal
+    * *vento__t__* 'It is windy.'
+* -e      intransitive
+    * *platte* 'dish'
+* -i      transitive
+    * *cerci* 'one who looks for'
+* -ia     transitive passive
+    * *cercia* 'one that is looked for'
 
 ## §2.3
 
