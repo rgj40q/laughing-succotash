@@ -578,6 +578,11 @@ Adverbial:
         mentin lu tres              third
         mentin lu vinti cinque      twenty fifth
 
-# §4 EXAMPLES
+# §4 MISCELLANEOUS
 
-* // to do: usage notes, questions, translate examples from IALA
+* *me nonen sapit facir ce* 'I don't know what to do.'
+* *difficilet decidir vader ubief* 'It is difficult to decide where to go'
+* *anen nose ce credit nuncen* 'What are we to believe now?'
+* *nose nonen sapiva pisce qualel prendial nose primef* 'We did not know what fish to catch first'
+
+
