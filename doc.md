@@ -149,7 +149,7 @@ APPOSITIVE is a secondary noun, which describes the same thing as a main noun. I
     * *me volit incontrir (↓) un homine __boneh__* 'I'd like to meet a good man.'
     * *me volit incontrir (↓) un homine __exih__ (↓) francie* 'I'd like to meet a man from France.'
 * *-c*, subsubappositive
-    * *me volit incontrir (↓) un amice dih (↓) un homine __bonec__* 'I'd like to meet a friend of a good man.'
+    * *me volit incontrir (↓) un amici dih (↓) un homine __bonec__* 'I'd like to meet a friend of a good man.'
 
 ## §2.10
 
@@ -237,6 +237,7 @@ Full list of conjunctions:
 ## §2.12
 
 NUMERALS are:
+
         zero            0
         uni             1
         duo             2
@@ -277,7 +278,7 @@ NUMERALS are:
 
 ## §3.1
 
-A TEXT may consist of one or more sentences. Sentences are obligatorily separated by sentence conjunction 'et'.
+A TEXT may consist of one or more sentences. Sentences are obligatorily separated by sentence conjunction, e.g. *e*, *et*.
 * *ventot* 'It is windy.'
 * *ventot e ille dormet* 'It is windy. He sleeps.'
 A sentence conjunction may optionally go in the beginning of text.
@@ -307,17 +308,15 @@ The sentence may be extended with adverb type A phrases in any place before, aft
 * *amit me maximen te* 'I love you very much.'
 * etc.
 
-where A is adverb type A phrase.
-
 ## §3.3
 
-ARGUMENT is either single noun/infinitive/gerund phrase, or multiple with parts separated by argument conjunction 'er'. Each may begin with an article ('le' or 'un').
+ARGUMENT is either single noun/infinitive/gerund phrase, or multiple with parts separated by argument conjunction *er*, *or*. Each may begin with an article (*le* or *un*).
 * // to do: examples
 
-Similarly, SUBARGUMENTS are separated by subargument conjunction 'eri'.
+Similarly, SUBARGUMENTS are separated by subargument conjunction *eri*, *ori*.
 * // to do: examples
 
-Similarly, SUBSUBARGUMENTS are separated by subsubargument conjunction 'eru'.
+Similarly, SUBSUBARGUMENTS are separated by subsubargument conjunction *eru*, *oru*.
 * // to do: examples
 
 ## §3.4
@@ -359,7 +358,7 @@ Note however that INFINITIVE SUBSUBPHRASE may only consist of intransitive infin
 
 ## §3.6
 
-APPOSITIVE PHRASE may be single or multiple. If multiple, parts may be separated with appositive conjunction 'el', and if they are, there may be an appositive conjunction in the beginning.
+APPOSITIVE PHRASE may be single or multiple. If multiple, parts may be separated with appositive conjunction *el*, *ol*, and if they are, there may be an appositive conjunction in the beginning.
 * // to do: examples
 
 Each single is of two types. The first consists of intransitive appositive, optionally followed by an adverb type B phrase.
@@ -368,10 +367,10 @@ Each single is of two types. The first consists of intransitive appositive, opti
 The second consists of transitive appositive, then optional adverb type B phrase, then obligatory subargument (note the level shift). This may be translated as a phrase with preposition or as a participle phrase in English.
 * // to do: examples
 
-Similarly, APPOSITIVE SUBPHRASE may be separated with subappositive conjunction 'eh', and each single is of two types. The first consists of intransitive subappositive, optionally followed by an adverb type B subphrase. The second consists of transitive subappositive, then optional adverb type B subphrase, then obligatory subsubargument (note the level shift).
+Similarly, APPOSITIVE SUBPHRASE may be separated with subappositive conjunction *eh*, *oh*, and each single is of two types. The first consists of intransitive subappositive, optionally followed by an adverb type B subphrase. The second consists of transitive subappositive, then optional adverb type B subphrase, then obligatory subsubargument (note the level shift).
 * // to do: examples
 
-Like infinitive subsubphrase, there is only one single APPOSITIVE SUBSUBPHRASE, which consists of intransitive subsubappositive, optionally followed by an adverb type B subsubphrase. The limitation is there because a phrase may not extend anymore through arguments. Multiple has parts separated with subsubappositive conjunction 'ec'.
+Like infinitive subsubphrase, there is only one single APPOSITIVE SUBSUBPHRASE, which consists of intransitive subsubappositive, optionally followed by an adverb type B subsubphrase. The limitation is there because a phrase may not extend anymore through arguments. Multiple has parts separated with subsubappositive conjunction *ec*, *oc*.
 * // to do: examples
 
 ## §3.7
@@ -379,7 +378,7 @@ Like infinitive subsubphrase, there is only one single APPOSITIVE SUBSUBPHRASE, 
 Like appositive, ADVERB A PHRASE may be single or multiple. Unlike appositive, it modifies the word itself, while appositive additionally describes the thing described by the word.
 * // to do: examples
 
-If multiple, parts may be separated with adverb A conjunction 'en', and if they are, there may be an adverb A conjunction in the beginning.
+If multiple, parts may be separated with adverb A conjunction *en*, *on*, and if they are, there may be an adverb A conjunction in the beginning.
 * // to do: examples
 
 Each single is of two types. The first consists of intransitive adverb type A, optionally followed by an adverb type B phrase.
@@ -390,7 +389,7 @@ The second consists of transitive adverb type A, then optional adverb type B phr
 
 ## §3.8
 
-Like adverb A, ADVERB B PHRASE may be single or multiple. If multiple, parts may be separated with adverb B conjunction 'em', and if they are, there may be an adverb B conjunction in the beginning.
+Like adverb A, ADVERB B PHRASE may be single or multiple. If multiple, parts may be separated with adverb B conjunction *em*, *om*, and if they are, there may be an adverb B conjunction in the beginning.
 * // to do: examples
 
 Each single is of two types. The first consists of intransitive adverb type B, optionally followed by an adverb type B subphrase.
@@ -399,7 +398,7 @@ Each single is of two types. The first consists of intransitive adverb type B, o
 The second consists of transitive adverb type B, then optional adverb type B phrase, then obligatory subargument (note the level shift).
 * // to do: examples
 
-Similarly, ADVERB B SUBPHRASE may be single or multiple. If multiple, parts may be separated with subadverb B conjunction 'ef', and if they are, there may be an subadverb B conjunction in the beginning.
+Similarly, ADVERB B SUBPHRASE may be single or multiple. If multiple, parts may be separated with subadverb B conjunction *ef*, *of*, and if they are, there may be an subadverb B conjunction in the beginning.
 * // to do: examples
 
 Each single is of two types. The first consists of intransitive subadverb type B, optionally followed by an adverb type B subsubphrase.
@@ -408,12 +407,13 @@ Each single is of two types. The first consists of intransitive subadverb type B
 The second consists of transitive subadverb type A, then optional adverb type B subsubphrase, then obligatory subsubargument (note the level shift).
 * // to do: examples
 
-Like infinitive subsubphrase, there is only one single ADVERB TYPE B SUBSUBPHRASE, which consists of intransitive subsubadverb type B. Multiple has parts separated with subsubadverb type B conjunction 'ep'.
+Like infinitive subsubphrase, there is only one single ADVERB TYPE B SUBSUBPHRASE, which consists of intransitive subsubadverb type B. Multiple has parts separated with subsubadverb type B conjunction *ep*, *op*.
 * // to do: examples
 
 ## §3.9
 
 NUMERAL behaves very much like in european languages except that is should start with article 'lu'.
+
         lu zero                     number 0
         lu uni                      number 1
         lu duo                      number 2
@@ -426,6 +426,7 @@ NUMERAL behaves very much like in european languages except that is should start
         lu sex comma tres cinque    number 6.35
 
 Syntactically a numeral is a noun, and in order to use it in sentence a few auxilliary words exist:
+
         uplil       N times multiplied
         enin        in a group of N
         mentin      as a matter number N
@@ -433,6 +434,7 @@ Syntactically a numeral is a noun, and in order to use it in sentence a few auxi
         esimil      X number N, e.g. apple number two
 
 Cardinal:
+
         lu uni dim cose             one thing
         lu duo dim coses            two things
         lu tres dim coses           three things
@@ -440,14 +442,17 @@ Cardinal:
         lu vinti cinque dim coses   twenty five things
 
 Decimal:
+
         lu sex comma tres cinque dim dollares     6.35 dollars
 
 Ordinal:
+
         cose esimil lu uni          the first thing
         cose esimil lu duo          the second thing
         cose esimil lu tres         the third thing
 
 Fractional:
+
         lu uni di uni dim cose                  whole thing
         lu uni di duo dim cose                  half of a thing
         lu uni di tres dim cose                 one third of a thing
@@ -457,6 +462,7 @@ Fractional:
         lu cinque plu duo di septe dim coses    five and two seventh things
 
 Multiplicative:
+
         platte uplil lu uni                 single dish
         platte uplil lu duo                 double dish
         platte uplil lu tres                triple dish
@@ -464,6 +470,7 @@ Multiplicative:
         platte uplil lu vinti cinque        twenty-fivefold dish
 
 Collective:
+
         illes arrivet enin lu uni             They arrive in one by one.
         illes arrivet enin lu duo             They arrive in pairs.
         illes arrivet enin lu tres            They arrive in triads.
@@ -471,6 +478,7 @@ Collective:
         illes arrivet enin lu vinti cinque    They arrive in groups of 25.
 
 Adverbial:
+
         mentin lu uni               first(-ly)
         mentin lu duo               second
         mentin lu tres              third
