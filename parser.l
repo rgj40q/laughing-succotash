@@ -30,47 +30,47 @@ char * strjoin(char *, char *);
     yylval = mknode0(strjoin(yytext, ": article"));
     return ART;
 }
-et {
+(an|annon|atque|aut|comocunque|donec|dum|dunque|e|et|etsi|igitur|itaque|ma|mais|malgrado|nam|ne|nec|neque|ni|nisi|o|perque|pois|porque|postquam|quam|quando|quandocunque|que|quia|quo|quod|sed|si|sinon|sive|ubi|ubicunque|utrum|vel) {
     yylval = mknode0(strjoin(yytext, ": conjunction for sentence"));
     return CONJ_SENT;
 }
-e {
+(es|os) {
     yylval = mknode0(strjoin(yytext, ": conjunction for argument"));
     return CONJ_ARG;
 }
-ei {
+(esi|osi) {
     yylval = mknode0(strjoin(yytext, ": conjunction for subargument"));
     return CONJ_ARG_L1;
 }
-eu {
+(esu|osu) {
     yylval = mknode0(strjoin(yytext, ": conjunction for subsubargument"));
     return CONJ_ARG_L2;
 }
-el {
+(el|ol) {
     yylval = mknode0(strjoin(yytext, ": conjunction for appositive"));
     return CONJ_APP;
 }
-eh {
+(eh|oh) {
     yylval = mknode0(strjoin(yytext, ": conjunction for subappositive"));
     return CONJ_APP_L1;
 }
-ec {
+(ec|oc) {
     yylval = mknode0(strjoin(yytext, ": conjunction for subsubappositive"));
     return CONJ_APP_L2;
 }
-en {
+(en|on) {
     yylval = mknode0(strjoin(yytext, ": conjunction for adverb A"));
     return CONJ_ADVA;
 }
-em {
+(em|om) {
     yylval = mknode0(strjoin(yytext, ": conjunction for adverb B"));
     return CONJ_ADVB;
 }
-ef {
+(ef|of) {
     yylval = mknode0(strjoin(yytext, ": conjunction for subadverb B"));
     return CONJ_ADVB_L1;
 }
-ep {
+(ep|op) {
     yylval = mknode0(strjoin(yytext, ": conjunction for subsubadverb B"));
     return CONJ_ADVB_L2;
 }
