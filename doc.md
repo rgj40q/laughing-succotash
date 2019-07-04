@@ -578,11 +578,18 @@ Adverbial:
         mentin lu tres              third
         mentin lu vinti cinque      twenty fifth
 
-# §4 MISCELLANEOUS
+# §4 EXAMPLES
 
+* *vidinda essit credinda* 'Seeing is believing.'
+* *viagier istem dim un paise alim un altere essit fatigante* 'This traveling from one country to another is fatiguing.'
+* *le ier er vener perim le clientes infinitet* 'The coming and going of customers is endless.'
+* *le facis perim le formices essit interessante aim observinda* 'The doings of ants are interesting to watch.'
+* *illes ille condemniva sinin audir defense suec* 'They condemned him without listening to his defense.'
+* *perin rumpir le osse une potira rectificir forsanem gambe sueh* 'By breaking the bone one may perhaps be able to straighten his leg'
+* ...
 * *me nonen sapit facir ce* 'I don't know what to do.'
-* *difficilet decidir vader ubef* 'It is difficult to decide where to go'
+* *difficilet decidir vader ubef* 'It is difficult to decide where to go.'
 * *anen nose ce credit nuncen* 'What are we to believe now?'
-* *nose nonen sapiva prendir primem pisce qualeh* 'We did not know what fish to catch first'
+* *nose nonen sapiva prendir primem pisce qualeh* 'We did not know what fish to catch first.'
 
 // to do: more tricky examples
