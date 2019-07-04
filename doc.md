@@ -283,6 +283,7 @@ NUMERALS are:
 A TEXT may consist of one or more sentences. Sentences are obligatorily separated by sentence conjunction, e.g. *e*, *et*.
 * *ventot* 'It is windy.'
 * *ventot e ille dormet* 'It is windy. He sleeps.'
+
 A sentence conjunction may optionally go in the beginning of text.
 * *ma ventot e ille dormet* 'But it is windy. And he sleeps.'
 
@@ -362,13 +363,13 @@ Similarly, NOUN SUBSUBPHRASE consists of a main phrase, then optional adverb typ
 * *amici bonep bellec*
 * *lu zero exactep*
 
-Main phrase is either a noun, or a gerund, or a numeral phrase. Syntactically gerunds are equal to nouns. If one needs to specify arguments of the source verb in the gerund, there are prepositional adverbs 'peri-' for subject and 'di-' for object:
+Syntactically gerunds are equal to nouns. If one needs to specify arguments of the source verb in the gerund, there are prepositional adverbs 'peri-' for subject and 'di-' for object:
 * *me te amit* 'I love you.'
 * *aminda dim te perim me* 'my love to you', literally 'love of you by me'
 
-Other prepositionals may be retained:
-* *me ain te dait libre* 'I give you a book.'
-* *dainda dim libre aim te perim me* 'my giving of a book to you', literally 'giving of book to you by me'
+Other 'prepositional' phrases may be retained:
+* *me ain te dait un libre* 'I give you a book.'
+* *dainda dim un libre aim te perim me* 'my giving of a book to you', literally 'giving of a book to you by me'
 
 ## §3.5
 
