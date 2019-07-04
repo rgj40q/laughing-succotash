@@ -583,6 +583,6 @@ Adverbial:
 * *me nonen sapit facir ce* 'I don't know what to do.'
 * *difficilet decidir vader ubief* 'It is difficult to decide where to go'
 * *anen nose ce credit nuncen* 'What are we to believe now?'
-* *nose nonen sapiva pisce qualel prendial nose primef* 'We did not know what fish to catch first'
+* *nose nonen sapiva prendir primem pisce qualeh* 'We did not know what fish to catch first'
 
-
+// to do: more tricky examples
