@@ -581,7 +581,7 @@ Adverbial:
 # §4 MISCELLANEOUS
 
 * *me nonen sapit facir ce* 'I don't know what to do.'
-* *difficilet decidir vader ubief* 'It is difficult to decide where to go'
+* *difficilet decidir vader ubef* 'It is difficult to decide where to go'
 * *anen nose ce credit nuncen* 'What are we to believe now?'
 * *nose nonen sapiva prendir primem pisce qualeh* 'We did not know what fish to catch first'
 
