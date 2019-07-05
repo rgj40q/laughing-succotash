@@ -320,7 +320,7 @@ ARGUMENT is either single noun/infinitive/gerund phrase, or multiple with parts 
 * *patri er matri* 'father and mother'
 * *un patri er le matri* 'a father and the mother'
 * *le patri er matri* 'the father and mother'
-* *un homine er patri or un matri er le platte* 'a man, and father, or a mother, and a dish'
+* *un homine er patri or un matri er le platte* 'a man, and father, or a mother, and the dish'
 
 Similarly, SUBARGUMENTS are separated by subargument conjunction *eri*, *ori*.
 * *patri*
