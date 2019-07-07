@@ -315,7 +315,7 @@ The sentence may be extended with adverb type A phrase in any place before, afte
 
 ## §3.3
 
-ARGUMENT is either single noun/infinitive/gerund phrase, or multiple with parts separated by argument conjunction *er*, *or*. Each may begin with an article (*le* or *un*).
+ARGUMENT is either single noun/infinitive/gerund phrase, or multiple one with parts separated by argument conjunction *er*, *or*. Each single may begin with an article (*le* or *un*).
 * *patri* 'father'
 * *un patrir* 'to be father'
 * *le patrinda* 'the process of being a father'
@@ -407,6 +407,8 @@ APPOSITIVE PHRASE may be single or multiple. If multiple, parts may be separated
 * *bonel el bellel* 'good and beautiful'
 * *el bonel el bellel* 'both good and beautiful'
 * *bonel el bellel ol malel el fedel* 'beautiful and good or bad and ugly'
+
+Note that if one uses a conjunction at least once in the multiple phrase, then all its parts must be separated with conjunctions. One cannot mix single and multiple phrases in one.
 
 Each single is of two types. The first consists of intransitive appositive, optionally followed by an adverb type B phrase.
 * *bellel* 'beautiful'
