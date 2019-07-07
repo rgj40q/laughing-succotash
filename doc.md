@@ -6,7 +6,7 @@ Laughing Succotash, or *succotashe ridel*, is a conlang project made to look lik
 
 The LETTERS used are the conventional twenty-six letters of the Roman alphabet. There are no extra signs and symbols to indicate stress and pronunciation and no punctuation.
 
-// to do: pronunciation
+// to do: pronunciation, phonotactics
 
 # §2 MORPHOLOGY
 
@@ -235,6 +235,8 @@ Full list of conjunctions:
         ubicunque       wherever
         utrum           whether
         vel             or, or rather
+
+Note that pronominal nouns may not coincide with conjunctions. So for example instead of interlinguan 'que' one should use 'ce'.
 
 ## §2.12
 
@@ -586,7 +588,18 @@ Adverbial:
 * *le ier er vener perim le clientes infinitet* 'The coming and going of customers is endless.'
 * *le facis perim le formices essit interessante aim observinda* 'The doings of ants are interesting to watch.'
 * *illes ille condemniva sinin audir defense suec* 'They condemned him without listening to his defense.'
-* *perin rumpir le osse une potira rectificir forsanem gambe sueh* 'By breaking the bone one may perhaps be able to straighten his leg'
+* *perin rumpir le osse une potira rectificir forsanem gambe sueh* 'By breaking the bone one may perhaps be able to straighten his leg.'
+* *postquam une habit passir le suburbies e une potit avantier rapidem plusef* 'After having passed the suburbs one can get ahead faster.'
+* *me volit bonen humiliir antim ille usquim corrigir grammatice suec usquim nonef pagir debites suec me* 'I am willing to humiliate myself before him to (the point of) correcting his grammar but not to (the point of) paying his debts.'
+* *le sale aim attender debirea equipiar dim un machine aif scribinda une* 'The waiting room ought to be equipped with a typewriter.'
+* *te comenciiza studies tuel perim ardir libres omnec* 'Begin your studies by burning all books.'
+* *elle capacet din perdir le traine* 'She is capable of missing the train.'
+* *nose pensit ier alim le theatre* 'We are thinking of going to the theater.'
+* *nose aspirit realisir ideales nostreh* 'We strive to realize our ideals.'
+* *porte istel nonen facilet ain aperiar une* 'This door is not easy to open.'
+* *ille venera proin reparir le fenestre* 'He came (in order) to repair the window.'
+* *me mangiit une proin viver sed me vivet proin mangiinda quando nose habit globes dim patate* 'I eat to live but when we have potato dumplings I live to eat.'
+* *inin vane me habit tentir convincir ille* 'In vain have I tried to convince him.'
 * ...
 * *me nonen sapit facir ce* 'I don't know what to do.'
 * *difficilet decidir vader ubef* 'It is difficult to decide where to go.'
