@@ -415,6 +415,7 @@ comma {
     return ADVB_L2_V1;
 }
 [[:space:]]+ /* do nothing */
+[.,;:-!?]+ /* ignore punctuation */
 [^[:space:]]+ { wrong_word(); }
 
 %%
