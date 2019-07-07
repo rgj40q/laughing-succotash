@@ -1,6 +1,7 @@
 all: clean build test
 build:
 	lex parser.l
+	m4 parser.y.m4 > parser.y
 	yacc -dv parser.y
 	cc -o parser lex.yy.c y.tab.c
 clean:
