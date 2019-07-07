@@ -1,6 +1,6 @@
 # §0 INTRODUCTION
 
-*succotashe ridel*, is a conlang project made to look like Interlingua IALA, while having a working LALR parser. The parser does not translate at the moment, but it shows the full text structure as a tree.
+*succotashe ridel* is a conlang project made to look like Interlingua IALA, while having a working LALR parser. The parser does not translate at the moment, but it shows the full text structure as a tree.
 
 # §1 SPELLING AND PRONUNCIATION
 
