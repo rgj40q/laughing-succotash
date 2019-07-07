@@ -408,7 +408,7 @@ APPOSITIVE PHRASE may be single or multiple. If multiple, parts may be separated
 * *el bonel el bellel* 'both good and beautiful'
 * *bonel el bellel ol malel el fedel* 'beautiful and good or bad and ugly'
 
-Note that if one uses a conjunction at least once in the multiple phrase, then all its parts must be separated with conjunctions. One cannot mix single and multiple phrases in one.
+Note that if one uses a conjunction at least once in the multiple phrase, then all its parts must be separated with conjunctions. One cannot mix conjunctioned and conjunctionless phrases in one.
 
 Each single is of two types. The first consists of intransitive appositive, optionally followed by an adverb type B phrase.
 * *bellel* 'beautiful'
