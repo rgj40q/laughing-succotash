@@ -4,10 +4,6 @@ To build, type in the shell in the source code directory:
 
     make build
 
-or if on *BSD
-
-    make buildbsd
-
 Usage:
 
     echo some text to be parsed | ./parser
