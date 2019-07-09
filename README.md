@@ -1,4 +1,4 @@
-Requires a POSIX environment to build (e.g. Cygwin on Windows), specifically there should be utilities: cc, lex, yacc, and sh.
+Requires a POSIX environment to build (e.g. Cygwin on Windows), specifically there should be utilities: cc, lex (or flex), yacc (or bison), and sh.
 
 To build, type in the shell in the source code directory:
 
