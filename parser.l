@@ -3,7 +3,6 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <unistd.h>
-#include "y.tab.h"
 
 #define YYSTYPE struct node *
 
@@ -13,8 +12,10 @@ struct node {
     char *token;
 };
 
-extern YYSTYPE yylval;
+#include "y.tab.h"
+
 extern YYSTYPE mknode0(char *);
+extern YYSTYPE yylval;
 
 int yywrap();
 int yyerror (char *);
@@ -424,7 +425,8 @@ wrong_word() {
     fprintf(stderr, "error: wrong word: ");
     /* filter out nonprintable characters */
     unsigned char c;
-    for (int i = 0; i < strlen(yytext); i++) {
+    int i;
+    for (i = 0; i < strlen(yytext); i++) {
         c = yytext[i];
         if (c < ' ' || c > '~') {
             fprintf(stderr, "\\%X", c);

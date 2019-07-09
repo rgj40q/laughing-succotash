@@ -2,9 +2,9 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include <string.h>
 
 #define YYSTYPE struct node *
-#define YYDEBUG 1
 
 struct node {
     YYSTYPE left;
