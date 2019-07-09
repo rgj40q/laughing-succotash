@@ -1,8 +1,12 @@
-Requires a POSIX environment to build (e.g. Cygwin on Windows), specifically there should be utilities: cc, lex, yacc, and sh.
+Requires a POSIX environment to build (e.g. Cygwin on Windows), specifically there should be utilities: cc, lex (or flex), yacc (or bison), and sh. Tested with gcc v4.2.1 and v8.3.0 and clang v7.0.1.
 
 To build, type in the shell in the source code directory:
 
     make build
+
+or if on *BSD
+
+    make buildbsd
 
 Usage:
 
