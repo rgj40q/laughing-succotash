@@ -61,7 +61,7 @@ VERB is the only finite part of speech in a sentence. Verb has the following moo
     * *ventoza* 'Let it be windy!'
     * *te dormeza* '\[You\] sleep!'
     * *one platteza* 'May it be a dish!'
-    * *elle iniza francie* 'May she be is in France!'
+    * *elle iniza francie* 'May she be in France!'
     * *nose cerciza le pome* 'Let us look for the apple!'
     * *le pome cerciaza te* 'May the apple be looked for by you!'
 
