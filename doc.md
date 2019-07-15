@@ -348,7 +348,7 @@ NOUN PHRASE consists of a main phrase, then optional adverb type B phrase, and t
 * *amici* 'friend'
 * *amici bellel* 'beautiful friend'
 * *amici bonem* 'good friend' i.e. good at being friend
-* *amici bonem bellel* 'beautiful good friend
+* *amici bonem bellel* 'beautiful good friend'
 * *lu zero exactem* 'number zero exactly'
 
 Similarly, NOUN SUBPHRASE consists of a main phrase, then optional adverb type B subphrase, and then optional appositive subphrase.
