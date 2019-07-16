@@ -663,7 +663,7 @@ Adverbial:
 
 'It is difficult to decide where to go.'
 
-* *anen nose debit credir ce nuncen*
+* *anen nose crediza ce nuncen*
 
 'What are we to believe now?'
 
