@@ -12,11 +12,11 @@ The LETTERS used are the conventional twenty-six letters of the Roman alphabet. 
 
 ## §2.1
 
-A word belongs to one of the parts of speech. There are two types: open class and closed class. Open class are: verb, infinitive, gerund, noun, adverb type A, adverb type B, and appositive. Closed class are: articles, conjunctions, and numerals.
+There are two classes of parts of speech: open and closed. The open consists of verb, infinitive, gerund, noun, adverb, participle, and appositive. The closed consists of article, conjunction, and numeral.
 
 ## §2.2
 
-The open class parts of speech expect a word stem to be of one of four types: impersonal, intransitive, transitive, or transitive passive. The transitiveness is determined by the stem ending, no exceptions. All borrowed stems including proper names should be assimilated as one of types above. In most cases it just means to add *e* after the final consonant, or to replace the final vowel with *e*. A stem should not consist of sole ending. The endings are:
+There are four types of stems to be used with the open class: impersonal, intransitive, transitive, and transitive passive. The transitiveness is determined by the stem ending (no exceptions). All borrowed stems including proper names should be assimilated as one of types above. In most cases it just means to add *e* after the final consonant, or to replace the final vowel with *e*. A stem should not consist of sole ending. The endings are:
 * *-o*, impersonal
     * *vento-* 'wind'
 * *-e*, intransitive
@@ -124,33 +124,33 @@ Pronouns are equal to intransitive nouns, and are productive in the same way. Th
 
 ## §2.7
 
-ADVERB TYPE A is derived from verb with meaning 'in a way/manner of \[verb\]ing, \[verb\]ingly'. It modifies verbs only. It has pretty free position in a sentence. Impersonal adverbs are forbidden. The ending is -n.
+ADVERB is derived from verb with meaning 'in a way/manner of \[verb\]ing, \[verb\]ingly'. It modifies verbs only. It has pretty free position in a sentence. Impersonal adverbs are forbidden. The ending is -n.
 * *me __dormen__ promenet* 'I wander sleepily.' 
 * *ille perdiva un die __cercin__ le pome* 'He lost a day in searches for the apple.'
 * *__inin__ francie elle vivet* 'She lives in France.'
 
 ## §2.8
 
-Like adverb type A, ADVERB TYPE B is derived from verb with meaning 'in a way/manner of \[verb\]ing, \[verb\]ingly'. Unlike adverb type A, it modifies infinitives, gerunds, nouns, adverbs, and appositives, and its position is strictly after the main word. There are two additional flavours of it: subadverb type B, and subsubadverb type B, which are used on lower levels of sentence. Levels are discussed in §3 "Syntax". The endings are:
-* *-m*, adverb type B
+Like adverb, PARTICIPLE is derived from verb with meaning 'in a way/manner of \[verb\]ing, \[verb\]ingly'. Unlike adverb, it modifies infinitives, gerunds, nouns, adverbs, participles, and appositives, and its position is strictly after the main word. The type to be used (I, II, or III) depends on the level of the phrase in the sentence. Levels are discussed in §3 Syntax. The endings are:
+* *-m*, participle
     * *un homine __verem__ odoret comin roses* 'A true man smells like roses.'
     * *le vivenda __inim__ francie laborioset* 'The life in France is hard-working.'
-* *-f*, subadverb type B
+* *-f*, participle II
     * *le homine essit bone multem __assef__* 'The man is so very good.'
     * *elle volit tentir le vivenda __inif__ francie* 'She wants to try the life in France.'
-* *-p*, subsubadverb type B
+* *-p*, participle III
     * *le homine essit bone rarem multef __assatisep__* 'The man is pretty much exceptionally good.'
 
 ## §2.9
 
-APPOSITIVE is a secondary noun, which describes the same thing as a main noun. It is derived from verb with meaning 'while being the one that \[verb\]s'. It is often translated as adjective in English. There are two additional flavours of it: subappositive and subsubappositive, which are used on lower levels of sentence.
+APPOSITIVE is a secondary noun, which describes the same thing as a main noun. It is derived from verb with meaning 'while being the one that \[verb\]s'. It is often translated as adjective in English. The type to be used (I, II, or III) depends on the level of the phrase in the sentence.
 * *-l*, appositive
     * *me incontrit un homine __bonel__* 'I meet a good man.'
     * *me incontrit un homine __exil__ francie* 'I meet a man from France.'
-* *-h*, subappositive
+* *-h*, appositive II
     * *me volit incontrir un homine __boneh__* 'I'd like to meet a good man.'
     * *me volit incontrir un homine __exih__ francie* 'I'd like to meet a man from France.'
-* *-c*, subsubappositive
+* *-c*, appositive III
     * *me volit incontrir un amici dih un homine __bonec__* 'I'd like to meet a friend of a good man.'
 
 ## §2.10
@@ -167,20 +167,20 @@ ARTICLES are *le* and *un*.
 
 ## §2.11
 
-CONJUNCTIONS are classified by the phrases they enumerate. There are just two core conjunctions *e* 'and' and *o* 'or', which may connect sentences and any of its parts, so they have many forms. All other conjunctions may only connect sentences and have one form. The endings are similar to the corresponding part of speech:
+CONJUNCTIONS are classified by the phrases they connect. There are just two core conjunctions *e* 'and' and *o* 'or', which may connect sentences and any of its parts, so they have many forms. All other conjunctions may only connect sentences and have one form. The endings are similar to the corresponding part of speech:
 
-                                    'and'   'or'    'but'   'so'    'for'
-        sentence                    e       o       ma      itaque  nam
-        argument                    er      or      -       -       -
-        subargument                 eri     ori     -       -       -
-        subsubargument              eru     oru     -       -       -
-        adverb type A phrase        en      on      -       -       -
-        adverb type B phrase        em      om      -       -       -
-        subadverb type B phrase     ef      of      -       -       -
-        subsubadverb type B phrase  ep      op      -       -       -
-        appositive phrase           el      ol      -       -       -
-        subappositive phrase        eh      oh      -       -       -
-        subsubappositive phrase     ec      oc      -       -       -
+                                  'and'   'or'    'but'   'so'    'for'
+        sentence                  e       o       ma      itaque  nam
+        argument                  er      or      -       -       -
+        argument II               eri     ori     -       -       -
+        argument III              eru     oru     -       -       -
+        adverb phrase             en      on      -       -       -
+        participle phrase         em      om      -       -       -
+        participle II phrase      ef      of      -       -       -
+        participle III phrase     ep      op      -       -       -
+        appositive phrase         el      ol      -       -       -
+        appositive II phrase      eh      oh      -       -       -
+        appositive III phrase     ec      oc      -       -       -
 
 For exmaple:
 * *ventot __e__ ille dormet* 'It is windy. He sleeps.'
@@ -305,7 +305,7 @@ SENTENCE phrase order is limited to the point that subject precedes object. Othe
 where V is verb, S is subject, or the first argument, and O is object, or the second argument. One may drop neither subject, nor object, which are all obligatory. One may use dummy noun 'une' instead to leave an argument unspecified.
 * *te une amiza e te une amiaza* 'Love and be loved!'
 
-The sentence may be extended with adverb type A phrase in any place before, after, and between arguments and verb, e.g.:
+The sentence may be extended with adverb phrase in any place before, after, and between arguments and verb, e.g.:
 * *maximen me te amit* 'I love you very much.'
 * *me maximen te amit* 'I love you very much.'
 * *me te maximen amit* 'I love you very much.'
@@ -324,7 +324,7 @@ ARGUMENT is either single noun/infinitive/gerund phrase, or multiple one with pa
 * *le patri er matri* 'the father and mother'
 * *un homine er patri or un matri er le platte* 'a man, and father, or a mother, and the dish'
 
-Similarly, SUBARGUMENTS are separated by subargument conjunction *eri*, *ori*.
+Similarly, ARGUMENTS II are separated by argument II conjunctions *eri*, *ori*.
 * *patri*
 * *un patrir*
 * *le patrinda*
@@ -333,7 +333,7 @@ Similarly, SUBARGUMENTS are separated by subargument conjunction *eri*, *ori*.
 * *le patri eri matri*
 * *un homine eri patri ori un matri eri le platte*
 
-Similarly, SUBSUBARGUMENTS are separated by subsubargument conjunction *eru*, *oru*.
+Similarly, ARGUMENTS III are separated by argument III conjunctions *eru*, *oru*.
 * *patri*
 * *un patrir*
 * *le patrinda*
@@ -344,28 +344,28 @@ Similarly, SUBSUBARGUMENTS are separated by subsubargument conjunction *eru*, *o
 
 ## §3.4
 
-NOUN PHRASE consists of a main phrase, then optional adverb type B phrase, and then optional appositive phrase. Main phrase is either a noun (one word), or a numeral (one or many words).
+NOUN PHRASE consists of a main phrase, then optional participle phrase, and then optional appositive phrase. Main phrase is either a noun (one word), or a numeral (one or many words).
 * *amici* 'friend'
 * *amici bellel* 'beautiful friend'
 * *amici bonem* 'good friend' i.e. good at being friend
 * *amici bonem bellel* 'beautiful good friend'
 * *lu zero exactem* 'number zero exactly'
 
-Similarly, NOUN SUBPHRASE consists of a main phrase, then optional adverb type B subphrase, and then optional appositive subphrase.
+Similarly, NOUN PHRASE II consists of a main phrase, then optional participle II phrase, and then optional appositive II phrase.
 * *amici*
 * *amici belleh*
 * *amici bonef*
 * *amici bonef belleh*
 * *lu zero exactef*
 
-Similarly, NOUN SUBSUBPHRASE consists of a main phrase, then optional adverb type B subsubphrase, and then optional appositive subsubphrase.
+Similarly, NOUN PHRASE III consists of a main phrase, then optional participle III phrase, and then optional appositive III phrase.
 * *amici*
 * *amici bellec*
 * *amici bonep*
 * *amici bonep bellec*
 * *lu zero exactep*
 
-Syntactically gerunds are equal to nouns. If one needs to specify arguments of the source verb in the gerund, there are prepositional adverbs 'peri-' for subject and 'di-' for object:
+Syntactically gerunds are equal to nouns. If one needs to specify arguments of the source verb in the gerund, there are prepositional participles 'peri-' for subject and 'di-' for object:
 * *me te amit* 'I love you.'
 * *aminda dim te perim me* 'my love to you', literally 'love of you by me'
 
@@ -375,27 +375,27 @@ Other 'prepositional' phrases may be retained:
 
 ## §3.5
 
-There are two types of INFINITIVE PHRASES. The first consists of an intransitive infinitive, optionally followed by an adverb type B phrase.
+There are two types of INFINITIVE PHRASES. The first consists of an intransitive infinitive, optionally followed by an participle phrase.
 * *dormer* 'to sleep'
 * *dormer longem* 'to sleep for a long time'
 
-The second type consists of transitive infinitive, optionally followed by an adverb type B phrase, and then (obligatory) subargument phrase.
+The second type consists of transitive infinitive, optionally followed by an participle phrase, and then (obligatory) argument II phrase.
 * *amir te* 'to love you'
 * *amir maximem te* 'to love you much'
 
-Note the level shift, this is to distinguish adverb phrase for the main word and adverb phrase for the dependent words.
+Note the level shift, this is to distinguish participle phrase for the main word and participle phrase for the dependent words.
 * *amir maximem (↓) un amici boneh* 'to love a good friend much'
 * *amir maximem bonem (↓) un amici* 'to love a friend much and well'
 
-Similarly, INFINITIVE SUBPHRASE is one of two types. The first consists of an intransitive infinitive, optionally followed by an adverb type B subphrase.
+Similarly, INFINITIVE II PHRASE is one of two types. The first consists of an intransitive infinitive, optionally followed by an participle phrase.
 * *dormer* 'to sleep'
 * *dormer longef* 'to sleep for a long time'
 
-The second type consists of transitive infinitive, optionally followed by an adverb type B subphrase, and then (obligatory) subsubargument phrase.
+The second type consists of transitive infinitive, optionally followed by an participle II phrase, and then (obligatory) argument III phrase.
 * *amir te* 'to love you'
 * *amir maximef te* 'to love you much'
 
-Note however that INFINITIVE SUBSUBPHRASE may only consist of intransitive infinitive, optionally followed by an adverb type B subsubphrase. The limitation is there because a phrase may not extend anymore through arguments.
+Note however that INFINITIVE III PHRASE may only consist of intransitive infinitive, optionally followed by an participle III phrase. The limitation is there because a phrase may not extend anymore through arguments.
 * *dormer* 'to sleep'
 * *dormer longep* 'to sleep for a long time'
 
@@ -408,17 +408,17 @@ APPOSITIVE PHRASE may be single or multiple. If multiple, parts may be separated
 * *el bonel el bellel* 'both good and beautiful'
 * *bonel el bellel ol malel el fedel* 'beautiful and good or bad and ugly'
 
-Note that if one uses a conjunction at least once in the multiple phrase, then all its parts must be separated with conjunctions. One cannot mix conjunctioned and conjunctionless phrases in one.
+Note that if one uses a conjunction at least once in the multiple phrase, then all its parts must be separated with conjunctions. One cannot mix conjunctioned and conjunctionless phrases in a row.
 
-Each single is of two types. The first consists of intransitive appositive, optionally followed by an adverb type B phrase.
+Each single is of two types. The first consists of intransitive appositive, optionally followed by an participle phrase.
 * *bellel* 'beautiful'
 * *bellel multem* 'very beautiful'
 
-The second consists of transitive appositive, then optional adverb type B phrase, then obligatory subargument (note the level shift). This may be translated as a phrase with preposition or as a participle phrase in English.
+The second consists of transitive appositive, then optional participle phrase, then obligatory argument II (note the level shift). This may be translated as a phrase with preposition or as a participle phrase in English.
 * *exil (↓) francie* 'from France'
 * *exil exactem (↓) francie* 'exactly from France'
 
-Similarly, APPOSITIVE SUBPHRASE may be separated with subappositive conjunction *eh*, *oh*, and each single is of two types. The first consists of intransitive subappositive, optionally followed by an adverb type B subphrase. The second consists of transitive subappositive, then optional adverb type B subphrase, then obligatory subsubargument (note the level shift).
+Similarly, APPOSITIVE II PHRASE may be separated with appositive II conjunction *eh*, *oh*, and each single is of two types. The first consists of intransitive appositive II, optionally followed by an participle II phrase. The second consists of transitive appositive II, then optional participle II phrase, then obligatory argument III (note the level shift).
 * *boneh* 'good'
 * *boneh belleh* 'beautiful good'
 * *boneh eh belleh* 'good and beautiful'
@@ -429,7 +429,7 @@ Similarly, APPOSITIVE SUBPHRASE may be separated with subappositive conjunction 
 * *exih (↓) francie* 'from France'
 * *exih exactef (↓) francie* 'exactly from France'
 
-Like infinitive subsubphrase, there is only one single APPOSITIVE SUBSUBPHRASE, which consists of intransitive subsubappositive, optionally followed by an adverb type B subsubphrase. The limitation is there because a phrase may not extend anymore through arguments. Multiple has parts separated with subsubappositive conjunction *ec*, *oc*.
+Like infinitive III phrase, there is only one single APPOSITIVE III PHRASE, which consists of intransitive appositive III, optionally followed by an participle III phrase. The limitation is there because a phrase may not extend anymore through arguments. Multiple has parts separated with appositive III conjunction *ec*, *oc*.
 * *bonec* 'good'
 * *bonec bellec* 'beautiful good'
 * *bonec ec bellec* 'good and beautiful'
@@ -440,7 +440,7 @@ Like infinitive subsubphrase, there is only one single APPOSITIVE SUBSUBPHRASE, 
 
 ## §3.7
 
-Like appositive, ADVERB A PHRASE may be single or multiple. Unlike appositive, it modifies the main word. In case of type A the word modified is verb. If multiple, parts may be separated with adverb A conjunction *en*, *on*, and if they are, there may be an adverb A conjunction in the beginning.
+Like appositive, ADVERB PHRASE may be single or multiple. Unlike appositive, it modifies the main word. In case of adverb the word modified is verb only. If multiple, parts may be separated with adverb conjunction *en*, *on*, and if they are, there may be an adverb conjunction in the beginning.
 * *me dormeva bonen* 'I slept well.'
 * *me dormeva bonen longen* 'I slept long and well.'
 * *me dormeva bonen en longen* 'I slept long and well.'
