@@ -1,0 +1,150 @@
+[text]
+    [sentence]
+        [argument]
+            [noun phrase]
+                patri: noun, singular
+                [appositive phrase]
+                    nostrel: appositive, intransitive
+                [appositive phrase]
+                    inil: appositive, transitive
+                    [argument II]
+                        [noun II phrase]
+                            celes: noun, plural
+        tet: verb, intransitive, present
+    e: conjunction for sentence
+    [sentence]
+        [argument]
+            [noun phrase]
+                nomine: noun, singular
+                [appositive phrase]
+                    tuel: appositive, intransitive
+        sanctificiaza: verb, transitive, imperative, passive
+        [argument]
+            [noun phrase]
+                une: noun, singular
+    e: conjunction for sentence
+    [sentence]
+        [argument]
+            [noun phrase]
+                regne: noun, singular
+                [appositive phrase]
+                    tuel: appositive, intransitive
+        veneza: verb, intransitive, imperative
+    e: conjunction for sentence
+    [sentence]
+        [argument]
+            [noun phrase]
+                voluntate: noun, singular
+                [appositive phrase]
+                    tuel: appositive, intransitive
+        faciaza: verb, transitive, imperative, passive
+        [argument]
+            [noun phrase]
+                une: noun, singular
+        [adverb phrase]
+            inin: adverb, transitive
+            [argument II]
+                le: article
+                [noun II phrase]
+                    cele: noun, singular
+                    [participle II phrase]
+                        comef: participle II, intransitive
+        en: conjunction for adverb
+        [adverb phrase]
+            superin: adverb, transitive
+            [argument II]
+                le: article
+                [noun II phrase]
+                    terre: noun, singular
+                    [participle II phrase]
+                        etiamef: participle II, intransitive
+    e: conjunction for sentence
+    [sentence]
+        [argument]
+            [noun phrase]
+                te: noun, singular
+        daiza: verb, transitive, imperative
+        [adverb phrase]
+            ain: adverb, transitive
+            [argument II]
+                [noun II phrase]
+                    nose: noun, singular
+        [adverb phrase]
+            hodien: adverb, intransitive
+        [argument]
+            [noun phrase]
+                pane: noun, singular
+                [appositive phrase]
+                    nostrel: appositive, intransitive
+                [appositive phrase]
+                    quotidianel: appositive, intransitive
+    e: conjunction for sentence
+    [sentence]
+        [argument]
+            [noun phrase]
+                te: noun, singular
+        pardoniza: verb, transitive, imperative
+        [adverb phrase]
+            ain: adverb, transitive
+            [argument II]
+                [noun II phrase]
+                    nose: noun, singular
+        [argument]
+            [noun phrase]
+                debites: noun, plural
+                [appositive phrase]
+                    nostrel: appositive, intransitive
+    e: conjunction for sentence
+    [sentence]
+        [adverb phrase]
+            comen: adverb, intransitive
+            [participle phrase]
+                etiamem: participle, intransitive
+        [argument]
+            [noun phrase]
+                nose: noun, singular
+        [argument]
+            [noun phrase]
+                ones: noun, plural
+        pardonit: verb, transitive, present
+        [adverb phrase]
+            ain: adverb, transitive
+            [argument II]
+                [noun II phrase]
+                    debitores: noun, plural
+                    [appositive II phrase]
+                        nostreh: appositive II, intransitive
+    e: conjunction for sentence
+    [sentence]
+        [argument]
+            [noun phrase]
+                te: noun, singular
+        [adverb phrase]
+            nonen: adverb, intransitive
+        induciza: verb, transitive, imperative
+        [argument]
+            [noun phrase]
+                nose: noun, singular
+        [adverb phrase]
+            inin: adverb, transitive
+            [argument II]
+                [noun II phrase]
+                    tentatione: noun, singular
+    sed: conjunction for sentence
+    [sentence]
+        [argument]
+            [noun phrase]
+                te: noun, singular
+        liberiza: verb, transitive, imperative
+        [argument]
+            [noun phrase]
+                nose: noun, singular
+        [adverb phrase]
+            din: adverb, transitive
+            [argument II]
+                le: article
+                [noun II phrase]
+                    male: noun, singular
+    e: conjunction for sentence
+    [sentence]
+        amenot: verb, impersonal, present
