@@ -295,7 +295,7 @@ participle_phrase
     : /* empty */           { $$ = mknode0(""); }             /* ()      */
     | aux21                 { $$ = mknode1("", $1); }         /* a+      */
     | aux23 aux22           { $$ = mknode2("", $1, $2); }     /* a(ca)+  */
-    | CONJ_ADV aux23 aux22  { $$ = mknode3("", $1, $2, $3); } /* ca(ca)+ */
+    | CONJ_PTCP aux23 aux22 { $$ = mknode3("", $1, $2, $3); } /* ca(ca)+ */
     ;
 
 aux21
@@ -304,15 +304,15 @@ aux21
     ;
 
 aux22
-    : CONJ_ADV aux23       { $$ = mknode2("", $1, $2); }
-    | aux22 CONJ_ADV aux23 { $$ = mknode3("", $1, $2, $3); }
+    : CONJ_PTCP aux23       { $$ = mknode2("", $1, $2); }
+    | aux22 CONJ_PTCP aux23 { $$ = mknode3("", $1, $2, $3); }
     ;
 
 aux23
-    : ADV_V1 participle_L2_phrase {
+    : PTCP_V1 participle_L2_phrase {
             $$ = mknode2("[participle phrase]", $1, $2);
         }
-    | ADV_V2 participle_L2_phrase argument_L2 {
+    | PTCP_V2 participle_L2_phrase argument_L2 {
             $$ = mknode3("[participle phrase]", $1, $2, $3);
         }
     ;
