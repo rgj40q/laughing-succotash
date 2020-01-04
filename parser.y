@@ -34,14 +34,14 @@ int printtree_level = 0;
 %start START
 %token V_V0 V_V1 V_V2
 %token ART
-%token CONJ_ARG CONJ_ARG_L1 CONJ_ARG_L2 CONJ_APP CONJ_APP_L1 CONJ_APP_L2
-%token CONJ_SENT CONJ_ADVA
-%token CONJ_ADVB CONJ_ADVB_L1 CONJ_ADVB_L2
+%token CONJ_ARG CONJ_ARG_L2 CONJ_ARG_L3 CONJ_APP CONJ_APP_L2 CONJ_APP_L3
+%token CONJ_SENT CONJ_ADV
+%token CONJ_PTCP CONJ_PTCP_L2 CONJ_PTCP_L3
 %token INF_V1 INF_V2
 %token N_V0 N_V1 N_V2
-%token APP_V1 APP_V2 APP_L1_V1 APP_L1_V2 APP_L2_V1
-%token ADVA_V1 ADVA_V2
-%token ADVB_V1 ADVB_V2 ADVB_L1_V1 ADVB_L1_V2 ADVB_L2_V1
+%token APP_V1 APP_V2 APP_L2_V1 APP_L2_V2 APP_L3_V1
+%token ADV_V1 ADV_V2
+%token PTCP_V1 PTCP_V2 PTCP_L2_V1 PTCP_L2_V2 PTCP_L3_V1
 %token NUM_0 NUM_1 NUM_2 NUM_3 NUM_4 NUM_5 NUM_6 NUM_7 NUM_8 NUM_9 NUM_10
 %token NUM_20 NUM_30 NUM_40 NUM_50 NUM_60 NUM_70 NUM_80 NUM_90 NUM_100
 %token NUM_1E3 NUM_1E6 NUM_1E9 NUM_1E12 NUM_1E15 NUM_1E18 NUM_1E21 NUM_1E24
@@ -65,22 +65,22 @@ aux
     ;
 
 sentence
-    : adverbA_phrase V_V0 adverbA_phrase { /* V */
+    : adverb_phrase V_V0 adverb_phrase { /* V */
             $$ = mknode3("[sentence]", $1, $2, $3);
         }
-    | adverbA_phrase argument adverbA_phrase V_V1 adverbA_phrase { /* SV */
+    | adverb_phrase argument adverb_phrase V_V1 adverb_phrase { /* SV */
             $$ = mknode5("[sentence]", $1, $2, $3, $4, $5);
         }
-    | adverbA_phrase V_V1 adverbA_phrase argument adverbA_phrase { /* VS */
+    | adverb_phrase V_V1 adverb_phrase argument adverb_phrase { /* VS */
             $$ = mknode5("[sentence]", $1, $2, $3, $4, $5);
         }
-    | adverbA_phrase argument adverbA_phrase V_V2 adverbA_phrase argument adverbA_phrase { /* SVO */
+    | adverb_phrase argument adverb_phrase V_V2 adverb_phrase argument adverb_phrase { /* SVO */
             $$ = mknode7("[sentence]", $1, $2, $3, $4, $5, $6, $7);
         }
-    | adverbA_phrase argument adverbA_phrase argument adverbA_phrase V_V2 adverbA_phrase { /* SOV */
+    | adverb_phrase argument adverb_phrase argument adverb_phrase V_V2 adverb_phrase { /* SOV */
             $$ = mknode7("[sentence]", $1, $2, $3, $4, $5, $6, $7);
         }
-    | adverbA_phrase V_V2 adverbA_phrase argument adverbA_phrase argument adverbA_phrase { /* VSO */
+    | adverb_phrase V_V2 adverb_phrase argument adverb_phrase argument adverb_phrase { /* VSO */
             $$ = mknode7("[sentence]", $1, $2, $3, $4, $5, $6, $7);
         }
     ;
@@ -97,96 +97,96 @@ aux0
     | infinitive_phrase     { $$ = mknode1("[argument]", $1); }
     ;
 
-argument_L1
+argument_L2
     : aux1                         { $$ = mknode1("", $1); }         /* a      */
-    | argument_L1 CONJ_ARG_L1 aux1 { $$ = mknode3("", $1, $2, $3); } /* a(ca)+ */
+    | argument_L2 CONJ_ARG_L2 aux1 { $$ = mknode3("", $1, $2, $3); } /* a(ca)+ */
     ;
 
 aux1
-    : ART noun_L1_phrase       { $$ = mknode2("[subargument]", $1, $2); }
-    | ART infinitive_L1_phrase { $$ = mknode2("[subargument]", $1, $2); }
-    | noun_L1_phrase           { $$ = mknode1("[subargument]", $1); }
-    | infinitive_L1_phrase     { $$ = mknode1("[subargument]", $1); }
+    : ART noun_L2_phrase       { $$ = mknode2("[argument II]", $1, $2); }
+    | ART infinitive_L2_phrase { $$ = mknode2("[argument II]", $1, $2); }
+    | noun_L2_phrase           { $$ = mknode1("[argument II]", $1); }
+    | infinitive_L2_phrase     { $$ = mknode1("[argument II]", $1); }
     ;
 
-argument_L2
+argument_L3
     : aux2                         { $$ = mknode1("", $1); }         /* a      */
-    | argument_L2 CONJ_ARG_L2 aux2 { $$ = mknode3("", $1, $2, $3); } /* a(ca)+ */
+    | argument_L3 CONJ_ARG_L3 aux2 { $$ = mknode3("", $1, $2, $3); } /* a(ca)+ */
     ;
 
 aux2
-    : ART noun_L2_phrase       { $$ = mknode2("[subsubargument]", $1, $2); }
-    | ART infinitive_L2_phrase { $$ = mknode2("[subsubargument]", $1, $2); }
-    | noun_L2_phrase           { $$ = mknode1("[subsubargument]", $1); }
-    | infinitive_L2_phrase     { $$ = mknode1("[subsubargument]", $1); }
+    : ART noun_L3_phrase       { $$ = mknode2("[argument III]", $1, $2); }
+    | ART infinitive_L3_phrase { $$ = mknode2("[argument III]", $1, $2); }
+    | noun_L3_phrase           { $$ = mknode1("[argument III]", $1); }
+    | infinitive_L3_phrase     { $$ = mknode1("[argument III]", $1); }
     ;
 
 noun_phrase
-    : N_V0 adverbB_phrase appositive_phrase {
+    : N_V0 participle_phrase appositive_phrase {
             $$ = mknode3("[noun phrase]", $1, $2, $3);
         }
-    | N_V1 adverbB_phrase appositive_phrase {
+    | N_V1 participle_phrase appositive_phrase {
             $$ = mknode3("[noun phrase]", $1, $2, $3);
         }
-    | numeral adverbB_phrase appositive_phrase {
+    | numeral participle_phrase appositive_phrase {
             $$ = mknode3("[noun phrase]", $1, $2, $3);
         }
-    | N_V2 adverbB_phrase appositive_phrase {
+    | N_V2 participle_phrase appositive_phrase {
             $$ = mknode3("[noun phrase]", $1, $2, $3);
-        }
-    ;
-
-noun_L1_phrase
-    : N_V0 adverbB_L1_phrase appositive_L1_phrase {
-            $$ = mknode3("[noun subphrase]", $1, $2, $3);
-        }
-    | N_V1 adverbB_L1_phrase appositive_L1_phrase {
-            $$ = mknode3("[noun subphrase]", $1, $2, $3);
-        }
-    | numeral adverbB_L1_phrase appositive_L1_phrase {
-            $$ = mknode3("[noun subphrase]", $1, $2, $3);
-        }
-    | N_V2 adverbB_L1_phrase appositive_L1_phrase {
-            $$ = mknode3("[noun subphrase]", $1, $2, $3);
         }
     ;
 
 noun_L2_phrase
-    : N_V0 adverbB_L2_phrase appositive_L2_phrase {
-            $$ = mknode3("[noun subsubphrase]", $1, $2, $3);
+    : N_V0 participle_L2_phrase appositive_L2_phrase {
+            $$ = mknode3("[noun II phrase]", $1, $2, $3);
         }
-    | N_V1 adverbB_L2_phrase appositive_L2_phrase {
-            $$ = mknode3("[noun subsubphrase]", $1, $2, $3);
+    | N_V1 participle_L2_phrase appositive_L2_phrase {
+            $$ = mknode3("[noun II phrase]", $1, $2, $3);
         }
-    | numeral adverbB_L2_phrase appositive_L2_phrase {
-            $$ = mknode3("[noun subsubphrase]", $1, $2, $3);
+    | numeral participle_L2_phrase appositive_L2_phrase {
+            $$ = mknode3("[noun II phrase]", $1, $2, $3);
         }
-    | N_V2 adverbB_L2_phrase appositive_L2_phrase {
-            $$ = mknode3("[noun subsubphrase]", $1, $2, $3);
+    | N_V2 participle_L2_phrase appositive_L2_phrase {
+            $$ = mknode3("[noun II phrase]", $1, $2, $3);
+        }
+    ;
+
+noun_L3_phrase
+    : N_V0 participle_L3_phrase appositive_L3_phrase {
+            $$ = mknode3("[noun III phrase]", $1, $2, $3);
+        }
+    | N_V1 participle_L3_phrase appositive_L3_phrase {
+            $$ = mknode3("[noun III phrase]", $1, $2, $3);
+        }
+    | numeral participle_L3_phrase appositive_L3_phrase {
+            $$ = mknode3("[noun III phrase]", $1, $2, $3);
+        }
+    | N_V2 participle_L3_phrase appositive_L3_phrase {
+            $$ = mknode3("[noun III phrase]", $1, $2, $3);
         }
     ;
 
 infinitive_phrase
-    : INF_V1 adverbB_phrase {
+    : INF_V1 participle_phrase {
             $$ = mknode2("[infinitive phrase]", $1, $2);
         }
-    | INF_V2 adverbB_phrase argument_L1 {
+    | INF_V2 participle_phrase argument_L2 {
             $$ = mknode3("[infinitive phrase]", $1, $2, $3);
         }
     ;
 
-infinitive_L1_phrase
-    : INF_V1 adverbB_L1_phrase {
-            $$ = mknode2("[infinitive subphrase]", $1, $2);
+infinitive_L2_phrase
+    : INF_V1 participle_L2_phrase {
+            $$ = mknode2("[infinitive II phrase]", $1, $2);
         }
-    | INF_V2 adverbB_L1_phrase argument_L2 {
-            $$ = mknode3("[infinitive subphrase]", $1, $2, $3);
+    | INF_V2 participle_L2_phrase argument_L3 {
+            $$ = mknode3("[infinitive II phrase]", $1, $2, $3);
         }
     ;
 
-infinitive_L2_phrase
-    : INF_V1 adverbB_L2_phrase {
-            $$ = mknode2("[infinitive subsubphrase]", $1, $2);
+infinitive_L3_phrase
+    : INF_V1 participle_L3_phrase {
+            $$ = mknode2("[infinitive III phrase]", $1, $2);
         }
     ;
 
@@ -208,19 +208,19 @@ aux4
     ;
 
 aux5 
-    : APP_V1 adverbB_phrase {
+    : APP_V1 participle_phrase {
             $$ = mknode2("[appositive phrase]", $1, $2);
         }
-    | APP_V2 adverbB_phrase argument_L1 {
+    | APP_V2 participle_phrase argument_L2 {
             $$ = mknode3("[appositive phrase]", $1, $2, $3);
         }
     ;
 
-appositive_L1_phrase
+appositive_L2_phrase
     : /* empty */           { $$ = mknode0(""); }             /* ()      */
     | aux6                  { $$ = mknode1("", $1); }         /* a+      */
     | aux8 aux7             { $$ = mknode2("", $1, $2); }     /* a(ca)+  */
-    | CONJ_APP_L1 aux8 aux7 { $$ = mknode3("", $1, $2, $3); } /* ca(ca)+ */
+    | CONJ_APP_L2 aux8 aux7 { $$ = mknode3("", $1, $2, $3); } /* ca(ca)+ */
     ;
 
 aux6 
@@ -229,24 +229,24 @@ aux6
     ;
 
 aux7 
-    : CONJ_APP_L1 aux8      { $$ = mknode2("", $1, $2); }
-    | aux7 CONJ_APP_L1 aux8 { $$ = mknode3("", $1, $2, $3); }
+    : CONJ_APP_L2 aux8      { $$ = mknode2("", $1, $2); }
+    | aux7 CONJ_APP_L2 aux8 { $$ = mknode3("", $1, $2, $3); }
     ;
 
 aux8
-    : APP_L1_V1 adverbB_L1_phrase {
-            $$ = mknode2("[appositive subphrase]", $1, $2);
+    : APP_L2_V1 participle_L2_phrase {
+            $$ = mknode2("[appositive II phrase]", $1, $2);
         }
-    | APP_L1_V2 adverbB_L1_phrase argument_L2 {
-            $$ = mknode3("[appositive subphrase]", $1, $2, $3);
+    | APP_L2_V2 participle_L2_phrase argument_L3 {
+            $$ = mknode3("[appositive II phrase]", $1, $2, $3);
         }
     ;
 
-appositive_L2_phrase
+appositive_L3_phrase
     : /* empty */             { $$ = mknode0(""); }             /* ()      */
     | aux9                    { $$ = mknode1("", $1); }         /* a+      */
     | aux11 aux10             { $$ = mknode2("", $1, $2); }     /* a(ca)+  */
-    | CONJ_APP_L2 aux11 aux10 { $$ = mknode3("", $1, $2, $3); } /* ca(ca)+ */
+    | CONJ_APP_L3 aux11 aux10 { $$ = mknode3("", $1, $2, $3); } /* ca(ca)+ */
     ;
 
 aux9
@@ -255,21 +255,21 @@ aux9
     ;
 
 aux10
-    : CONJ_APP_L2 aux11       { $$ = mknode2("", $1, $2); }
-    | aux10 CONJ_APP_L2 aux11 { $$ = mknode3("", $1, $2, $3); }
+    : CONJ_APP_L3 aux11       { $$ = mknode2("", $1, $2); }
+    | aux10 CONJ_APP_L3 aux11 { $$ = mknode3("", $1, $2, $3); }
     ;
 
 aux11
-    : APP_L2_V1 adverbB_L2_phrase {
-            $$ = mknode2("[appositive subsubphrase]", $1, $2);
+    : APP_L3_V1 participle_L3_phrase {
+            $$ = mknode2("[appositive III phrase]", $1, $2);
         }
     ;
 
-adverbA_phrase
+adverb_phrase
     : /* empty */           { $$ = mknode0(""); }             /* ()      */
     | aux12                 { $$ = mknode1("", $1); }         /* a+      */
     | aux14 aux13           { $$ = mknode2("", $1, $2); }     /* a(ca)+  */
-    | CONJ_ADVA aux14 aux13 { $$ = mknode3("", $1, $2, $3); } /* ca(ca)+ */
+    | CONJ_ADV aux14 aux13  { $$ = mknode3("", $1, $2, $3); } /* ca(ca)+ */
     ;
 
 aux12
@@ -278,24 +278,24 @@ aux12
     ;
 
 aux13
-    : CONJ_ADVA aux14       { $$ = mknode2("", $1, $2); }
-    | aux13 CONJ_ADVA aux14 { $$ = mknode3("", $1, $2, $3); }
+    : CONJ_ADV aux14       { $$ = mknode2("", $1, $2); }
+    | aux13 CONJ_ADV aux14 { $$ = mknode3("", $1, $2, $3); }
     ;
 
 aux14
-    : ADVA_V1 adverbB_phrase {
-            $$ = mknode2("[adverbA phrase]", $1, $2);
+    : ADV_V1 participle_phrase {
+            $$ = mknode2("[adverb phrase]", $1, $2);
         }
-    | ADVA_V2 adverbB_phrase argument_L1 {
-            $$ = mknode3("[adverbA phrase]", $1, $2, $3);
+    | ADV_V2 participle_phrase argument_L2 {
+            $$ = mknode3("[adverb phrase]", $1, $2, $3);
         }
     ;
 
-adverbB_phrase
+participle_phrase
     : /* empty */           { $$ = mknode0(""); }             /* ()      */
     | aux21                 { $$ = mknode1("", $1); }         /* a+      */
     | aux23 aux22           { $$ = mknode2("", $1, $2); }     /* a(ca)+  */
-    | CONJ_ADVB aux23 aux22 { $$ = mknode3("", $1, $2, $3); } /* ca(ca)+ */
+    | CONJ_ADV aux23 aux22  { $$ = mknode3("", $1, $2, $3); } /* ca(ca)+ */
     ;
 
 aux21
@@ -304,24 +304,24 @@ aux21
     ;
 
 aux22
-    : CONJ_ADVB aux23       { $$ = mknode2("", $1, $2); }
-    | aux22 CONJ_ADVB aux23 { $$ = mknode3("", $1, $2, $3); }
+    : CONJ_ADV aux23       { $$ = mknode2("", $1, $2); }
+    | aux22 CONJ_ADV aux23 { $$ = mknode3("", $1, $2, $3); }
     ;
 
 aux23
-    : ADVB_V1 adverbB_L1_phrase {
-            $$ = mknode2("[adverbB phrase]", $1, $2);
+    : ADV_V1 participle_L2_phrase {
+            $$ = mknode2("[participle phrase]", $1, $2);
         }
-    | ADVB_V2 adverbB_L1_phrase argument_L1 {
-            $$ = mknode3("[adverbB phrase]", $1, $2, $3);
+    | ADV_V2 participle_L2_phrase argument_L2 {
+            $$ = mknode3("[participle phrase]", $1, $2, $3);
         }
     ;
 
-adverbB_L1_phrase
+participle_L2_phrase
     : /* empty */              { $$ = mknode0(""); }             /* ()      */
     | aux24                    { $$ = mknode1("", $1); }         /* a+      */
     | aux26 aux25              { $$ = mknode2("", $1, $2); }     /* a(ca)+  */
-    | CONJ_ADVB_L1 aux26 aux25 { $$ = mknode3("", $1, $2, $3); } /* ca(ca)+ */
+    | CONJ_PTCP_L2 aux26 aux25 { $$ = mknode3("", $1, $2, $3); } /* ca(ca)+ */
     ;
 
 aux24
@@ -330,24 +330,24 @@ aux24
     ;
 
 aux25
-    : CONJ_ADVB_L1 aux26       { $$ = mknode2("", $1, $2); }
-    | aux25 CONJ_ADVB_L1 aux26 { $$ = mknode3("", $1, $2, $3); }
+    : CONJ_PTCP_L2 aux26       { $$ = mknode2("", $1, $2); }
+    | aux25 CONJ_PTCP_L2 aux26 { $$ = mknode3("", $1, $2, $3); }
     ;
 
 aux26
-    : ADVB_L1_V1 adverbB_L2_phrase {
-            $$ = mknode2("[adverbB subphrase]", $1, $2);
+    : PTCP_L2_V1 participle_L3_phrase {
+            $$ = mknode2("[participle II phrase]", $1, $2);
         }
-    | ADVB_L1_V2 adverbB_L2_phrase argument_L2 {
-            $$ = mknode3("[adverbB subphrase]", $1, $2, $3);
+    | PTCP_L2_V2 participle_L3_phrase argument_L3 {
+            $$ = mknode3("[participle II phrase]", $1, $2, $3);
         }
     ;
 
-adverbB_L2_phrase
+participle_L3_phrase
     : /* empty */              { $$ = mknode0(""); }             /* ()      */
     | aux27                    { $$ = mknode1("", $1); }         /* a+      */
     | aux29 aux28              { $$ = mknode2("", $1, $2); }     /* a(ca)+  */
-    | CONJ_ADVB_L2 aux29 aux28 { $$ = mknode3("", $1, $2, $3); } /* ca(ca)+ */
+    | CONJ_PTCP_L3 aux29 aux28 { $$ = mknode3("", $1, $2, $3); } /* ca(ca)+ */
     ;
 
 aux27
@@ -356,12 +356,12 @@ aux27
     ;
 
 aux28
-    : CONJ_ADVB_L2 aux29       { $$ = mknode2("", $1, $2); }
-    | aux28 CONJ_ADVB_L2 aux29 { $$ = mknode3("", $1, $2, $3); }
+    : CONJ_PTCP_L3 aux29       { $$ = mknode2("", $1, $2); }
+    | aux28 CONJ_PTCP_L3 aux29 { $$ = mknode3("", $1, $2, $3); }
     ;
 
 aux29
-    : ADVB_L2_V1 { $$ = mknode1("[adverbB subsubphrase]", $1); }
+    : PTCP_L3_V1 { $$ = mknode1("[participle III phrase]", $1); }
     ;
 
 numeral
