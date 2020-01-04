@@ -446,17 +446,17 @@ Like appositive, ADVERB PHRASE may be single or multiple. Unlike appositive, it 
 * *me dormeva bonen en longen* 'I slept long and well.'
 * *me dormeva en bonen en longen* 'I slept both long and well.'
 
-Each single is of two types. The first consists of intransitive adverb type A, optionally followed by an adverb type B phrase.
+Each single is of two types. The first consists of intransitive adverb, optionally followed by a participle phrase.
 * *elle bellet multen* 'She is very beautiful.'
 * *elle bellet raren multem* 'She is very rarely beautiful.'
 
-The second consists of transitive adverb type A, then optional adverb type B phrase, then obligatory subargument (note the level shift).
+The second consists of transitive adverb, then optional participle phrase, then obligatory argument II (note the level shift).
 * *ille vivet inin francie* 'He lives in France.'
 * *ille vivet inin exactem francie* 'He lives exactly in France.'
 
 ## §3.8
 
-Like adverb A, ADVERB B PHRASE may be single or multiple. If multiple, parts may be separated with adverb B conjunction *em*, *om*, and if they are, there may be an adverb B conjunction in the beginning. Type B modifies all open-class parts of speech except verb. Each single is of two types. The first consists of intransitive adverb type B, optionally followed by an adverb type B subphrase.
+Like adverb, PARTICIPLE PHRASE may be single or multiple. If multiple, parts may be separated with participle conjunction *em*, *om*, and if they are, there may be an participle conjunction in the beginning. Participle modifies all open-class parts of speech except verb. Each single is of two types. The first consists of intransitive participle, optionally followed by an adverb type B subphrase.
 * *bonem* 'well'
 * *bonem multef* 'very well'
 * *bonem em longem* 'well and long'
