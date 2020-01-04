@@ -456,27 +456,27 @@ The second consists of transitive adverb, then optional participle phrase, then 
 
 ## §3.8
 
-Like adverb, PARTICIPLE PHRASE may be single or multiple. If multiple, parts may be separated with participle conjunction *em*, *om*, and if they are, there may be an participle conjunction in the beginning. Participle modifies all open-class parts of speech except verb. Each single is of two types. The first consists of intransitive participle, optionally followed by an adverb type B subphrase.
+Like adverb, PARTICIPLE PHRASE may be single or multiple. If multiple, parts may be separated with participle conjunction *em*, *om*, and if they are, there may be an participle conjunction in the beginning. Participle modifies all open-class parts of speech except verb. Each single is of two types. The first consists of intransitive participle, optionally followed by a participle II phrase.
 * *bonem* 'well'
 * *bonem multef* 'very well'
 * *bonem em longem* 'well and long'
 * *om bonem om longem* 'either well or long'
 
-The second consists of transitive adverb type B, then optional adverb type B phrase, then obligatory subargument (note the level shift).
+The second consists of transitive participle, then optional participle II phrase, then obligatory argument II (note the level shift).
 * *dim corde boneh* 'gladly'
 * *dim totef corde boneh* 'absolutely gladly'
 
-Similarly, ADVERB B SUBPHRASE may be single or multiple. If multiple, parts may be separated with subadverb B conjunction *ef*, *of*, and if they are, there may be an subadverb B conjunction in the beginning. Each single is of two types. The first consists of intransitive subadverb type B, optionally followed by an adverb type B subsubphrase.
+Similarly, PARTICIPLE II PHRASE may be single or multiple. If multiple, parts may be separated with participle II conjunction *ef*, *of*, and if they are, there may be an participle II conjunction in the beginning. Each single is of two types. The first consists of intransitive participle II, optionally followed by an participle III phrase.
 * *bonef* 'well'
 * *bonef multep* 'very well'
 * *bonef ef longef* 'well and long'
 * *of bonef of longef* 'either well or long'
 
-The second consists of transitive subadverb type A, then optional adverb type B subsubphrase, then obligatory subsubargument (note the level shift).
+The second consists of transitive participle II, then optional participle III phrase, then obligatory argument III (note the level shift).
 * *dif corde bonec* 'gladly'
 * *dif totep corde bonec* 'absolutely gladly'
 
-Like infinitive subsubphrase, there is only one single ADVERB TYPE B SUBSUBPHRASE, which consists of intransitive subsubadverb type B. Multiple has parts separated with subsubadverb type B conjunction *ep*, *op*.
+Like infinitive III phrase, there is only single PARTICIPLE III PHRASE, which consists of intransitive participle III. Multiple has parts separated with participle III conjunction *ep*, *op*.
 * *bonep* 'well'
 * *bonep ep longep* 'well and long'
 * *op bonep op longep* 'either well or long'
@@ -653,7 +653,11 @@ Adverbial:
 
 'In vain have I tried to convince him.'
 
+// to do: more tricky examples
+
 * ...
+
+// to do: these infinitives must be done other way
 
 * *me nonen sapit facir ce*
 
@@ -670,5 +674,3 @@ Adverbial:
 * *nose nonen sapiva prendir primem pisce qualeh*
 
 'We did not know what fish to catch first.'
-
-// to do: more tricky examples
