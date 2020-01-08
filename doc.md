@@ -634,43 +634,28 @@ Adverbial:
 'We are thinking of going to the theater.'
 
 * *nose aspirit realisir ideales nostreh*
-
-'We strive to realize our ideals.'
+  * 'We strive to realize our ideals.'
 
 * *porte istel nonen facilet ain aperiar une*
-
-'This door is not easy to open.'
+  * 'This door is not easy to open.'
 
 * *ille venera proin reparir le fenestre*
-
-'He came (in order) to repair the window.'
+  * 'He came (in order) to repair the window.'
 
 * *me mangiit une proin viver sed me vivet proin mangiinda quando nose habit globes dim patate*
-
-'I eat to live but when we have potato dumplings I live to eat.'
+  * 'I eat to live but when we have potato dumplings I live to eat.'
 
 * *inin vane me habit tentir convincir ille*
+  * 'In vain have I tried to convince him.'
 
-'In vain have I tried to convince him.'
+* *me nonen sapit le cose debil facianda*
+  * 'I don't know what to do.'
 
-// to do: more tricky examples
-
-* ...
-
-// to do: these infinitives must be done other way
-
-* *me nonen sapit facir ce*
-
-'I don't know what to do.'
-
-* *difficilet decidir vader ubef*
-
-'It is difficult to decide where to go.'
+* *difficilet decidir le loce aiah vader*
+  * 'It is difficult to decide where to go.'
 
 * *anen nose crediza ce nuncen*
+  * 'What are we to believe now?'
 
-'What are we to believe now?'
-
-* *nose nonen sapiva prendir primem pisce qualeh*
-
-'We did not know what fish to catch first.'
+* *nose nonen sapiva pisce qualel debil prendianda primef*
+  * 'We did not know what fish to catch first.'
