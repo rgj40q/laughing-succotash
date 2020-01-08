@@ -586,52 +586,40 @@ Adverbial:
 # §4 EXAMPLES
 
 * *vidinda essit credinda*
-
-'Seeing is believing.'
+  * 'Seeing is believing.'
 
 * *viagier istem dim un paise alim un altere essit fatigante*
-
-'This traveling from one country to another is fatiguing.'
+  * 'This traveling from one country to another is fatiguing.'
 
 * *le ier er vener perim le clientes infinitet*
-
-'The coming and going of customers is endless.'
+  * 'The coming and going of customers is endless.'
 
 * *le facis perim le formices essit interessante aim observinda*
-
-'The doings of ants are interesting to watch.'
+  * 'The doings of ants are interesting to watch.'
 
 * *illes ille condemniva sinin audir defense suec*
-
-'They condemned him without listening to his defense.'
+  * 'They condemned him without listening to his defense.'
 
 * *perin rumpir le osse une potira rectificir forsanem gambe sueh*
-
-'By breaking the bone one may perhaps be able to straighten his leg.'
+  * 'By breaking the bone one may perhaps be able to straighten his leg.'
 
 * *postquam une habit passir le suburbies e une potit avantier rapidem plusef*
-
-'After having passed the suburbs one can get ahead faster.'
+  * 'After having passed the suburbs one can get ahead faster.'
 
 * *me volit bonen humiliir antim ille usquim corrigir grammatice suec usquim nonef pagir debites suec me*
-
-'I am willing to humiliate myself before him to (the point of) correcting his grammar but not to (the point of) paying his debts.'
+  * 'I am willing to humiliate myself before him to (the point of) correcting his grammar but not to (the point of) paying his debts.'
 
 * *le sale aim attender debirea equipiar dim un machine aif scribinda une*
-
-'The waiting room ought to be equipped with a typewriter.'
+  * 'The waiting room ought to be equipped with a typewriter.'
 
 * *te comenciiza studies tuel perim ardir libres omnec*
-
-'Begin your studies by burning all books.'
+  * 'Begin your studies by burning all books.'
 
 * *elle capacet din perdir le traine*
-
-'She is capable of missing the train.'
+  * 'She is capable of missing the train.'
 
 * *nose pensit ier alim le theatre*
-
-'We are thinking of going to the theater.'
+  * 'We are thinking of going to the theater.'
 
 * *nose aspirit realisir ideales nostreh*
   * 'We strive to realize our ideals.'
